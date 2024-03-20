@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AEC3960D2BA9D9B200A1F46A /* CandleHub in Resources */ = {isa = PBXBuildFile; fileRef = AEC3960C2BA9D9B200A1F46A /* CandleHub */; };
+		335805F12BA9CE830031E3A1 /* CandleHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335805F02BA9CE830031E3A1 /* CandleHubApp.swift */; };
+		335805F32BA9CE830031E3A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335805F22BA9CE830031E3A1 /* ContentView.swift */; };
+		335805F52BA9CE850031E3A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 335805F42BA9CE850031E3A1 /* Assets.xcassets */; };
+		335805F92BA9CE850031E3A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 335805F82BA9CE850031E3A1 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		335805ED2BA9CE830031E3A1 /* CandleHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CandleHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEC3960C2BA9D9B200A1F46A /* CandleHub */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CandleHub; sourceTree = "<group>"; };
+		335805F02BA9CE830031E3A1 /* CandleHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleHubApp.swift; sourceTree = "<group>"; };
+		335805F22BA9CE830031E3A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		335805F42BA9CE850031E3A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		335805F62BA9CE850031E3A1 /* CandleHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CandleHub.entitlements; sourceTree = "<group>"; };
+		335805F82BA9CE850031E3A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,7 +36,7 @@
 		335805E42BA9CE830031E3A1 = {
 			isa = PBXGroup;
 			children = (
-				AEC3960C2BA9D9B200A1F46A /* CandleHub */,
+				335805EF2BA9CE830031E3A1 /* CandleHub */,
 				335805EE2BA9CE830031E3A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,6 +47,26 @@
 				335805ED2BA9CE830031E3A1 /* CandleHub.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		335805EF2BA9CE830031E3A1 /* CandleHub */ = {
+			isa = PBXGroup;
+			children = (
+				335805F02BA9CE830031E3A1 /* CandleHubApp.swift */,
+				335805F22BA9CE830031E3A1 /* ContentView.swift */,
+				335805F42BA9CE850031E3A1 /* Assets.xcassets */,
+				335805F62BA9CE850031E3A1 /* CandleHub.entitlements */,
+				335805F72BA9CE850031E3A1 /* Preview Content */,
+			);
+			path = CandleHub;
+			sourceTree = "<group>";
+		};
+		335805F72BA9CE850031E3A1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				335805F82BA9CE850031E3A1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,7 +127,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEC3960D2BA9D9B200A1F46A /* CandleHub in Resources */,
+				335805F92BA9CE850031E3A1 /* Preview Assets.xcassets in Resources */,
+				335805F52BA9CE850031E3A1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				335805F32BA9CE830031E3A1 /* ContentView.swift in Sources */,
+				335805F12BA9CE830031E3A1 /* CandleHubApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
