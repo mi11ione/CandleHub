@@ -1,7 +1,9 @@
 name: Code Formatter
 
 on:
-  push:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   Formate:
@@ -17,4 +19,3 @@ jobs:
 
       - name: Format code
         run: swiftformat --lint --swiftversion 5.5 .
-
