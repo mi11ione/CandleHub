@@ -1,13 +1,13 @@
 //
-//  TickersView.swift
+//  Tickers.swift
 //  CandleHub
 //
-//  Created by mi11ion on 20/3/24.
+//  Created by mi11ion on 21/3/24.
 //
 
 import SwiftUI
 
-struct TickersView: View {
+struct Tickers: View {
     var tickers: [Ticker] {
         (0..<8).map { _ in
             Ticker(tickerTitle: "",

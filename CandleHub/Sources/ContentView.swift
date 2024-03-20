@@ -1,59 +1,27 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var navigationPath = NavigationPath()
-    @State private var selectedTab: Int = 1
-    @Environment(\.colorScheme) var colorScheme
+    @AppStorage("selectedTab") var selectedTab: Tab = .tickers
     
     var body: some View {
-        TabView(selection: $selectedTab) {
-            Text("Candles")
-                .tabItem {
-                    Label("Candles", systemImage: "alternatingcurrent")
-                }
-                .tag(0)
-
-            NavigationStack(path: $navigationPath) {
-                mainContent
-                    .navigationDestination(for: String.self) { value in
-                        Text(value)
+        NavigationStack() {
+            ZStack {
+                Group {
+                    switch selectedTab {
+                    case .tickers:
+                        TickersView()
+                    case .candles:
+                        CandlesView()
+                    case .settings:
+                        SettingsView()
                     }
-            }
-            .tabItem {
-                Label("Tickers", systemImage: "dollarsign.arrow.circlepath")
-            }
-            .tag(1)
-
-            Text("Settings")
-                .tabItem {
-                    Label("Settings", systemImage: "checkmark.shield.fill")
                 }
-                .tag(2)
-        }
-    }
-
-    private var mainContent: some View {
-        ZStack {
-            VStack {
-                Filters()
-                TickersView()
+                .safeAreaInset(edge: .bottom) {
+                    VStack {}.frame(height: 44)
+                }
+                TabBar()
             }
-            .navigationBarTitle("CandleHub")
-            .padding(.top, 5)
-            .navigationBarItems(trailing: tickerSwitchButton)
         }
-    }
-
-    private var tickerSwitchButton: some View {
-        Button(action: {
-            // todo
-        }) {
-            Image(systemName: "bolt.horizontal.fill")
-                .font(.title)
-                .imageScale(.medium)
-                .foregroundColor(colorScheme == .dark ? .white : .black)
-        }
-        .padding(.top, 87)
     }
 }
 
