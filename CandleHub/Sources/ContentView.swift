@@ -47,7 +47,7 @@ struct ContentView: View {
         Button(action: {
             // todo
         }) {
-            Image(systemName: "bolt.circle")
+            Image(systemName: "bolt.horizontal.fill")
                 .font(.title)
                 .imageScale(.medium)
                 .foregroundColor(.black)
