@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var navigationPath = NavigationPath()
     @State private var selectedTab: Int = 1
-
+    
     var body: some View {
         TabView(selection: $selectedTab) {
             Text("Candles")
@@ -11,7 +11,7 @@ struct ContentView: View {
                     Label("Candles", systemImage: "alternatingcurrent")
                 }
                 .tag(0)
-            
+
             NavigationStack(path: $navigationPath) {
                 mainContent
                     .navigationDestination(for: String.self) { value in
@@ -22,7 +22,7 @@ struct ContentView: View {
                 Label("Tickers", systemImage: "dollarsign.arrow.circlepath")
             }
             .tag(1)
-            
+
             Text("Settings")
                 .tabItem {
                     Label("Settings", systemImage: "checkmark.shield.fill")
@@ -42,7 +42,7 @@ struct ContentView: View {
             .navigationBarItems(trailing: tickerSwitchButton)
         }
     }
-    
+
     private var tickerSwitchButton: some View {
         Button(action: {
             // todo

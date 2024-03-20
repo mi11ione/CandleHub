@@ -10,7 +10,7 @@ import SwiftUI
 struct FilterButton: View {
     var filter: String
     var options: [String]
-
+    
     @State private var isMenuOpen: Bool = false
     @State private var selectedOptions: Set<String> = []
 

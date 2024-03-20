@@ -16,8 +16,7 @@ struct Filters: View {
         ("5 filter", []),
         ("6 filter", []),
         ("7 filter", []),
-        ("8 filter", []),
-    ]
+        ("8 filter", [])]
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {

@@ -21,7 +21,7 @@ struct Ticker: Hashable {
     }
 
     static func == (lhs: Ticker, rhs: Ticker) -> Bool {
-        return lhs.tickerTitle == rhs.tickerTitle &&
+        lhs.tickerTitle == rhs.tickerTitle &&
         lhs.tickerPrice == rhs.tickerPrice &&
         lhs.tickerGraph == rhs.tickerGraph &&
         lhs.tickerImage == rhs.tickerImage
