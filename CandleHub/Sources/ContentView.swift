@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var navigationPath = NavigationPath()
     @State private var selectedTab: Int = 1
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -50,7 +51,7 @@ struct ContentView: View {
             Image(systemName: "bolt.horizontal.fill")
                 .font(.title)
                 .imageScale(.medium)
-                .foregroundColor(.black)
+                .foregroundColor(colorScheme == .dark ? .white : .black)
         }
         .padding(.top, 87)
     }

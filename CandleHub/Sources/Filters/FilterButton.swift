@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FilterButton: View {
+    @Environment(\.colorScheme) var colorScheme
+    
     var filter: String
     var options: [String]
     
@@ -32,10 +34,10 @@ struct FilterButton: View {
         } label: {
             Text(filter)
                 .font(.headline)
-                .foregroundColor(selectedOptions.isEmpty ? Color.black : Color.white)
+                .foregroundColor(self.textColor)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
-                .background(selectedOptions.isEmpty ? Color.gray.opacity(0.2) : Color.black)
+                .background(self.backgroundColor)
                 .cornerRadius(10)
         }
         .onTapGesture {
@@ -56,6 +58,22 @@ struct FilterButton: View {
             isMenuOpen = false
         } else {
             isMenuOpen = true
+        }
+    }
+    
+    private var textColor: Color {
+        if selectedOptions.isEmpty {
+            return colorScheme == .dark ? .white : .black
+        } else {
+            return colorScheme == .dark ? .black : .white
+        }
+    }
+
+    private var backgroundColor: Color {
+        if selectedOptions.isEmpty {
+            return colorScheme == .dark ? Color.white.opacity(0.2) : Color.gray.opacity(0.2)
+        } else {
+            return colorScheme == .dark ? .white : .black
         }
     }
 }
