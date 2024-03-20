@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		1C952F6268ED96F1066CFB2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879B0FC4A003425D16DE20C7 /* ContentView.swift */; };
 		22064EB78E2BDBEB2265A30C /* TuistAssets+CandleHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55CA2C4FAE97A4B4912AF54 /* TuistAssets+CandleHub.swift */; };
+		33D3E40F2BAB259700A56DDA /* TickersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3E40E2BAB259700A56DDA /* TickersListView.swift */; };
+		33D3E4112BAB281600A56DDA /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3E4102BAB281600A56DDA /* Filters.swift */; };
+		33D3E4162BAB46CC00A56DDA /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3E4152BAB46CC00A56DDA /* Ticker.swift */; };
+		33D3E4192BAB46EE00A56DDA /* TickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3E4182BAB46EE00A56DDA /* TickerView.swift */; };
+		33D3E41B2BAB471A00A56DDA /* TickersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3E41A2BAB471A00A56DDA /* TickersView.swift */; };
+		33D3E41D2BAB474400A56DDA /* DetailedTickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3E41C2BAB474400A56DDA /* DetailedTickerView.swift */; };
+		33D3E4202BAB479500A56DDA /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3E41F2BAB479500A56DDA /* FilterButton.swift */; };
 		586D143B74732600E264A203 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F31467DA628392289E9BB9B0 /* Preview Assets.xcassets */; };
 		62B144F212D385EBF52A14E4 /* CandleHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */; };
 		B5BDCD8C3452CCD3118DCDEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346BEF51999A85EE1B26A7C7 /* Assets.xcassets */; };
@@ -51,6 +58,13 @@
 
 /* Begin PBXFileReference section */
 		0A3CF217A9F7C98936191796 /* CandleHubTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CandleHubTests-Info.plist"; sourceTree = "<group>"; };
+		33D3E40E2BAB259700A56DDA /* TickersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersListView.swift; sourceTree = "<group>"; };
+		33D3E4102BAB281600A56DDA /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
+		33D3E4152BAB46CC00A56DDA /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
+		33D3E4182BAB46EE00A56DDA /* TickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerView.swift; sourceTree = "<group>"; };
+		33D3E41A2BAB471A00A56DDA /* TickersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersView.swift; sourceTree = "<group>"; };
+		33D3E41C2BAB474400A56DDA /* DetailedTickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTickerView.swift; sourceTree = "<group>"; };
+		33D3E41F2BAB479500A56DDA /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		346BEF51999A85EE1B26A7C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61634B87A7767804D38F56FD /* CandleHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CandleHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleHubApp.swift; sourceTree = "<group>"; };
@@ -107,6 +121,27 @@
 			name = Project;
 			sourceTree = "<group>";
 		};
+		33D3E4142BAB46AB00A56DDA /* Tickers */ = {
+			isa = PBXGroup;
+			children = (
+				33D3E40E2BAB259700A56DDA /* TickersListView.swift */,
+				33D3E4152BAB46CC00A56DDA /* Ticker.swift */,
+				33D3E4182BAB46EE00A56DDA /* TickerView.swift */,
+				33D3E41A2BAB471A00A56DDA /* TickersView.swift */,
+				33D3E41C2BAB474400A56DDA /* DetailedTickerView.swift */,
+			);
+			path = Tickers;
+			sourceTree = "<group>";
+		};
+		33D3E41E2BAB477E00A56DDA /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				33D3E4102BAB281600A56DDA /* Filters.swift */,
+				33D3E41F2BAB479500A56DDA /* FilterButton.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
 		4071A4C9BAB85398650072C7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +154,8 @@
 		40A232D52B3C7AB4E7BE3A2E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				33D3E41E2BAB477E00A56DDA /* Filters */,
+				33D3E4142BAB46AB00A56DDA /* Tickers */,
 				70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */,
 				879B0FC4A003425D16DE20C7 /* ContentView.swift */,
 			);
@@ -299,10 +336,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D3E41B2BAB471A00A56DDA /* TickersView.swift in Sources */,
 				62B144F212D385EBF52A14E4 /* CandleHubApp.swift in Sources */,
+				33D3E4162BAB46CC00A56DDA /* Ticker.swift in Sources */,
 				1C952F6268ED96F1066CFB2C /* ContentView.swift in Sources */,
+				33D3E40F2BAB259700A56DDA /* TickersListView.swift in Sources */,
+				33D3E4112BAB281600A56DDA /* Filters.swift in Sources */,
+				33D3E4202BAB479500A56DDA /* FilterButton.swift in Sources */,
 				22064EB78E2BDBEB2265A30C /* TuistAssets+CandleHub.swift in Sources */,
 				F5295DB90B37882622BC0944 /* TuistBundle+CandleHub.swift in Sources */,
+				33D3E4192BAB46EE00A56DDA /* TickerView.swift in Sources */,
+				33D3E41D2BAB474400A56DDA /* DetailedTickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
