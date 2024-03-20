@@ -7,23 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		335805F12BA9CE830031E3A1 /* CandleHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335805F02BA9CE830031E3A1 /* CandleHubApp.swift */; };
-		335805F32BA9CE830031E3A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335805F22BA9CE830031E3A1 /* ContentView.swift */; };
-		335805F52BA9CE850031E3A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 335805F42BA9CE850031E3A1 /* Assets.xcassets */; };
-		335805F92BA9CE850031E3A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 335805F82BA9CE850031E3A1 /* Preview Assets.xcassets */; };
+		1C952F6268ED96F1066CFB2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879B0FC4A003425D16DE20C7 /* ContentView.swift */; };
+		22064EB78E2BDBEB2265A30C /* TuistAssets+CandleHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55CA2C4FAE97A4B4912AF54 /* TuistAssets+CandleHub.swift */; };
+		586D143B74732600E264A203 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F31467DA628392289E9BB9B0 /* Preview Assets.xcassets */; };
+		62B144F212D385EBF52A14E4 /* CandleHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */; };
+		B5BDCD8C3452CCD3118DCDEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346BEF51999A85EE1B26A7C7 /* Assets.xcassets */; };
+		F5295DB90B37882622BC0944 /* TuistBundle+CandleHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06755176204E80DA842F124 /* TuistBundle+CandleHub.swift */; };
+		FE4D8F95B8EDBA9ED4487517 /* CandleHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938817186F191291621E964F /* CandleHubTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B016286B5D0B44696E10F105 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B58470910F18865ECC6FACC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8EB70B46EF254346ED7710F;
+			remoteInfo = CandleHub;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3B37858A14D201095A221923 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF69C3B12F3B5F1B041D20B5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		335805ED2BA9CE830031E3A1 /* CandleHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CandleHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		335805F02BA9CE830031E3A1 /* CandleHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleHubApp.swift; sourceTree = "<group>"; };
-		335805F22BA9CE830031E3A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		335805F42BA9CE850031E3A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		335805F62BA9CE850031E3A1 /* CandleHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CandleHub.entitlements; sourceTree = "<group>"; };
-		335805F82BA9CE850031E3A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0A3CF217A9F7C98936191796 /* CandleHubTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CandleHubTests-Info.plist"; sourceTree = "<group>"; };
+		346BEF51999A85EE1B26A7C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		61634B87A7767804D38F56FD /* CandleHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CandleHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleHubApp.swift; sourceTree = "<group>"; };
+		879B0FC4A003425D16DE20C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8F49A6197360E812E457ECA7 /* CandleHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CandleHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		938817186F191291621E964F /* CandleHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleHubTests.swift; sourceTree = "<group>"; };
+		A06755176204E80DA842F124 /* TuistBundle+CandleHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+CandleHub.swift"; sourceTree = "<group>"; };
+		B32DC36E8BAFBC6C2D3308B8 /* CandleHub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CandleHub-Info.plist"; sourceTree = "<group>"; };
+		F31467DA628392289E9BB9B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F55CA2C4FAE97A4B4912AF54 /* TuistAssets+CandleHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+CandleHub.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		335805EA2BA9CE830031E3A1 /* Frameworks */ = {
+		0581810C9D432BA6C10F162D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB512C490A9388BD78855C9E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,52 +81,130 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		335805E42BA9CE830031E3A1 = {
+		0043AEFEDAC68331A4A6E084 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				335805EF2BA9CE830031E3A1 /* CandleHub */,
-				335805EE2BA9CE830031E3A1 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		335805EE2BA9CE830031E3A1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				335805ED2BA9CE830031E3A1 /* CandleHub.app */,
+				61634B87A7767804D38F56FD /* CandleHub.app */,
+				8F49A6197360E812E457ECA7 /* CandleHubTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		335805EF2BA9CE830031E3A1 /* CandleHub */ = {
+		14777FFE1A251899F17264CC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				335805F02BA9CE830031E3A1 /* CandleHubApp.swift */,
-				335805F22BA9CE830031E3A1 /* ContentView.swift */,
-				335805F42BA9CE850031E3A1 /* Assets.xcassets */,
-				335805F62BA9CE850031E3A1 /* CandleHub.entitlements */,
-				335805F72BA9CE850031E3A1 /* Preview Content */,
+				938817186F191291621E964F /* CandleHubTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		328F090E9EC078A09025E7C1 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				D9451CE1A747BA70EF6DABFE /* CandleHub */,
+				C18E97D7DF55FC16EC4E050D /* Derived */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		4071A4C9BAB85398650072C7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F55CA2C4FAE97A4B4912AF54 /* TuistAssets+CandleHub.swift */,
+				A06755176204E80DA842F124 /* TuistBundle+CandleHub.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		40A232D52B3C7AB4E7BE3A2E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */,
+				879B0FC4A003425D16DE20C7 /* ContentView.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		41581F7010080297E4358182 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				774F01D912282288147106A0 /* Preview Content */,
+				346BEF51999A85EE1B26A7C7 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		62B1A2C8E5732003591590BE /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cache;
+			sourceTree = "<group>";
+		};
+		774F01D912282288147106A0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F31467DA628392289E9BB9B0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8C257E64977FB1AB360671A0 /* InfoPlists */ = {
+			isa = PBXGroup;
+			children = (
+				B32DC36E8BAFBC6C2D3308B8 /* CandleHub-Info.plist */,
+				0A3CF217A9F7C98936191796 /* CandleHubTests-Info.plist */,
+			);
+			path = InfoPlists;
+			sourceTree = "<group>";
+		};
+		C18E97D7DF55FC16EC4E050D /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				8C257E64977FB1AB360671A0 /* InfoPlists */,
+				4071A4C9BAB85398650072C7 /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		D1717776E4A800D4C17773D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9451CE1A747BA70EF6DABFE /* CandleHub */ = {
+			isa = PBXGroup;
+			children = (
+				41581F7010080297E4358182 /* Resources */,
+				40A232D52B3C7AB4E7BE3A2E /* Sources */,
+				14777FFE1A251899F17264CC /* Tests */,
 			);
 			path = CandleHub;
 			sourceTree = "<group>";
 		};
-		335805F72BA9CE850031E3A1 /* Preview Content */ = {
+		F2344CBFEB7788A3030EDBBC = {
 			isa = PBXGroup;
 			children = (
-				335805F82BA9CE850031E3A1 /* Preview Assets.xcassets */,
+				328F090E9EC078A09025E7C1 /* Project */,
+				D1717776E4A800D4C17773D7 /* Frameworks */,
+				62B1A2C8E5732003591590BE /* Cache */,
+				0043AEFEDAC68331A4A6E084 /* Products */,
 			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		335805EC2BA9CE830031E3A1 /* CandleHub */ = {
+		C8EB70B46EF254346ED7710F /* CandleHub */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 335805FC2BA9CE850031E3A1 /* Build configuration list for PBXNativeTarget "CandleHub" */;
+			buildConfigurationList = BFF63198E39A34F4D1B1D310 /* Build configuration list for PBXNativeTarget "CandleHub" */;
 			buildPhases = (
-				335805E92BA9CE830031E3A1 /* Sources */,
-				335805EA2BA9CE830031E3A1 /* Frameworks */,
-				335805EB2BA9CE830031E3A1 /* Resources */,
+				D0AD59BFC076AA48D6538B18 /* Sources */,
+				F2FF152C00CA50D564BC87F9 /* Resources */,
+				EF69C3B12F3B5F1B041D20B5 /* Embed Frameworks */,
+				0581810C9D432BA6C10F162D /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -86,75 +212,148 @@
 			);
 			name = CandleHub;
 			productName = CandleHub;
-			productReference = 335805ED2BA9CE830031E3A1 /* CandleHub.app */;
+			productReference = 61634B87A7767804D38F56FD /* CandleHub.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D6809EAC72FE4630A42E9991 /* CandleHubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40066CF2C5ADFFA3D1699B6C /* Build configuration list for PBXNativeTarget "CandleHubTests" */;
+			buildPhases = (
+				096ACFCA8D506F1ADC8B4A48 /* Sources */,
+				583D3201BD4BEF8D801273BA /* Resources */,
+				3B37858A14D201095A221923 /* Embed Frameworks */,
+				DB512C490A9388BD78855C9E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FE0899AED405A633507EB80 /* PBXTargetDependency */,
+			);
+			name = CandleHubTests;
+			productName = CandleHubTests;
+			productReference = 8F49A6197360E812E457ECA7 /* CandleHubTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		335805E52BA9CE830031E3A1 /* Project object */ = {
+		5B58470910F18865ECC6FACC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					335805EC2BA9CE830031E3A1 = {
-						CreatedOnToolsVersion = 15.3;
+					D6809EAC72FE4630A42E9991 = {
+						TestTargetID = C8EB70B46EF254346ED7710F;
 					};
 				};
 			};
-			buildConfigurationList = 335805E82BA9CE830031E3A1 /* Build configuration list for PBXProject "CandleHub" */;
+			buildConfigurationList = C2E1B4041E2B080B61281CA8 /* Build configuration list for PBXProject "CandleHub" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = 335805E42BA9CE830031E3A1;
-			productRefGroup = 335805EE2BA9CE830031E3A1 /* Products */;
+			mainGroup = F2344CBFEB7788A3030EDBBC;
+			productRefGroup = 0043AEFEDAC68331A4A6E084 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				335805EC2BA9CE830031E3A1 /* CandleHub */,
+				C8EB70B46EF254346ED7710F /* CandleHub */,
+				D6809EAC72FE4630A42E9991 /* CandleHubTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		335805EB2BA9CE830031E3A1 /* Resources */ = {
+		583D3201BD4BEF8D801273BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				335805F92BA9CE850031E3A1 /* Preview Assets.xcassets in Resources */,
-				335805F52BA9CE850031E3A1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2FF152C00CA50D564BC87F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5BDCD8C3452CCD3118DCDEE /* Assets.xcassets in Resources */,
+				586D143B74732600E264A203 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		335805E92BA9CE830031E3A1 /* Sources */ = {
+		096ACFCA8D506F1ADC8B4A48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				335805F32BA9CE830031E3A1 /* ContentView.swift in Sources */,
-				335805F12BA9CE830031E3A1 /* CandleHubApp.swift in Sources */,
+				FE4D8F95B8EDBA9ED4487517 /* CandleHubTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0AD59BFC076AA48D6538B18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62B144F212D385EBF52A14E4 /* CandleHubApp.swift in Sources */,
+				1C952F6268ED96F1066CFB2C /* ContentView.swift in Sources */,
+				22064EB78E2BDBEB2265A30C /* TuistAssets+CandleHub.swift in Sources */,
+				F5295DB90B37882622BC0944 /* TuistBundle+CandleHub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9FE0899AED405A633507EB80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CandleHub;
+			target = C8EB70B46EF254346ED7710F /* CandleHub */;
+			targetProxy = B016286B5D0B44696E10F105 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		335805FA2BA9CE850031E3A1 /* Debug */ = {
+		41F3C20F1402F8B901A6DC00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/CandleHubTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.CandleHubTests;
+				PRODUCT_NAME = CandleHubTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CandleHub.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CandleHub";
+				TEST_TARGET_NAME = CandleHub;
+			};
+			name = Release;
+		};
+		871033C9066DFF171B4EE37B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -181,11 +380,124 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		880CBF95285EF7AC02F70F42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZZWB6X2U7F;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/CandleHub-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Torch.CandleHub;
+				PRODUCT_NAME = CandleHub;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF99EAE792E3F5B546AE22D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Derived/InfoPlists/CandleHubTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.CandleHubTests;
+				PRODUCT_NAME = CandleHubTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CandleHub.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CandleHub";
+				TEST_TARGET_NAME = CandleHub;
+			};
+			name = Debug;
+		};
+		F39E50DCFC65DF02656BCCD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -199,147 +511,36 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		335805FB2BA9CE850031E3A1 /* Release */ = {
+		F783C3BA48F22677C4567C74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZZWB6X2U7F;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/CandleHub-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Torch.CandleHub;
+				PRODUCT_NAME = CandleHub;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_COMPILATION_MODE = wholemodule;
-			};
-			name = Release;
-		};
-		335805FD2BA9CE850031E3A1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = CandleHub/CandleHub.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CandleHub/Preview Content\"";
-				DEVELOPMENT_TEAM = ZZWB6X2U7F;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = CandleHub;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Torch.CandleHub;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		335805FE2BA9CE850031E3A1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = CandleHub/CandleHub.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CandleHub/Preview Content\"";
-				DEVELOPMENT_TEAM = ZZWB6X2U7F;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = CandleHub;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Torch.CandleHub;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -348,25 +549,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		335805E82BA9CE830031E3A1 /* Build configuration list for PBXProject "CandleHub" */ = {
+		40066CF2C5ADFFA3D1699B6C /* Build configuration list for PBXNativeTarget "CandleHubTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				335805FA2BA9CE850031E3A1 /* Debug */,
-				335805FB2BA9CE850031E3A1 /* Release */,
+				AF99EAE792E3F5B546AE22D6 /* Debug */,
+				41F3C20F1402F8B901A6DC00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		335805FC2BA9CE850031E3A1 /* Build configuration list for PBXNativeTarget "CandleHub" */ = {
+		BFF63198E39A34F4D1B1D310 /* Build configuration list for PBXNativeTarget "CandleHub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				335805FD2BA9CE850031E3A1 /* Debug */,
-				335805FE2BA9CE850031E3A1 /* Release */,
+				880CBF95285EF7AC02F70F42 /* Debug */,
+				F783C3BA48F22677C4567C74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2E1B4041E2B080B61281CA8 /* Build configuration list for PBXProject "CandleHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F39E50DCFC65DF02656BCCD8 /* Debug */,
+				871033C9066DFF171B4EE37B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 335805E52BA9CE830031E3A1 /* Project object */;
+	rootObject = 5B58470910F18865ECC6FACC /* Project object */;
 }
