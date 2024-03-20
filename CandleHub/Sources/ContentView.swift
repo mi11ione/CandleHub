@@ -6,24 +6,22 @@ struct ContentView: View {
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            
             Text("Candles")
                 .tabItem {
                     Label("Candles", systemImage: "alternatingcurrent")
                 }
                 .tag(0)
             
-            
             NavigationStack(path: $navigationPath) {
                 mainContent
-                .navigationDestination(for: String.self) { value in
-                    Text(value)
-                }
+                    .navigationDestination(for: String.self) { value in
+                        Text(value)
+                    }
             }
-                .tabItem {
-                    Label("Tickers", systemImage: "dollarsign.arrow.circlepath")
-                }
-                .tag(1)
+            .tabItem {
+                Label("Tickers", systemImage: "dollarsign.arrow.circlepath")
+            }
+            .tag(1)
             
             Text("Settings")
                 .tabItem {
