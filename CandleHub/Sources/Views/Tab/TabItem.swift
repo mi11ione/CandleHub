@@ -16,7 +16,7 @@ struct TabItem: Identifiable {
 }
 
 var tabItems = [
-    TabItem(name: "Candles", icon: "alternatingcurrent", color: .teal, selection: .candles),
+    TabItem(name: "Patterns", icon: "alternatingcurrent", color: .teal, selection: .patterns),
     TabItem(name: "Tickers", icon: "dollarsign.arrow.circlepath", color: .red, selection: .tickers),
     TabItem(name: "Settings", icon: "checkmark.shield.fill", color: .blue, selection: .settings)
 ]

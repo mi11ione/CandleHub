@@ -18,24 +18,18 @@ struct TickersView: View {
                         .font(.largeTitle).bold()
                         .padding([.top, .leading])
                     Spacer()
-                    tickerSwitchButton
-                        .padding(.trailing)
+                    TickersViewSwitch()
                 }
                 Filters()
                 Tickers()
             }
         }
     }
-    
-    private var tickerSwitchButton: some View {
-        Button(action: {
-            // todo
-        }) {
-            Image(systemName: "bolt.horizontal.fill")
-                .font(.title)
-                .imageScale(.medium)
-                .foregroundColor(colorScheme == .dark ? .white : .black)
-        }
-        .padding(.top, 10)
-    }
+}
+
+#Preview {
+    ContentView().preferredColorScheme(.dark)
+}
+#Preview {
+    ContentView().preferredColorScheme(.light)
 }

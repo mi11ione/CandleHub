@@ -10,8 +10,8 @@ struct ContentView: View {
                     switch selectedTab {
                     case .tickers:
                         TickersView()
-                    case .candles:
-                        CandlesView()
+                    case .patterns:
+                        PatternsView()
                     case .settings:
                         SettingsView()
                     }
@@ -26,5 +26,8 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView().preferredColorScheme(.dark)
+}
+#Preview {
+    ContentView().preferredColorScheme(.light)
 }
