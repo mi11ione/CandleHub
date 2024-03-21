@@ -12,11 +12,3 @@ struct SettingsView: View {
         Text("Settings")
     }
 }
-
-#Preview {
-    ContentView().preferredColorScheme(.dark)
-}
-
-#Preview {
-    ContentView().preferredColorScheme(.light)
-}

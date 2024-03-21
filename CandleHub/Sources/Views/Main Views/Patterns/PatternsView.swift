@@ -52,11 +52,3 @@ struct PatternsView: View {
         }
     }
 }
-
-#Preview {
-    ContentView().preferredColorScheme(.dark)
-}
-
-#Preview {
-    ContentView().preferredColorScheme(.light)
-}
