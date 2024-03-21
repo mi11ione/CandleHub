@@ -17,7 +17,8 @@ struct OutlineVerticalModifier: ViewModifier {
                     .linearGradient(
                         colors: [.black.opacity(0.2), .white.opacity(0.6)],
                         startPoint: .top,
-                        endPoint: .bottom)
+                        endPoint: .bottom
+                    )
                 )
                 .blendMode(.overlay)
         )

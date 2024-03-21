@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TickerView: View {
     let ticker: Ticker
-    
+
     var body: some View {
         NavigationLink(value: ticker) {
             HStack {

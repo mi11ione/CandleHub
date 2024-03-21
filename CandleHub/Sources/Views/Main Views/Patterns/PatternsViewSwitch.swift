@@ -9,9 +9,9 @@ import SwiftUI
 
 struct PatternsViewSwitch: View {
     var options = ["2 columns", "3 columns"]
-    
+
     @Environment(\.colorScheme) var colorScheme
-    
+
     @State private var isMenuOpen: Bool = false
     @State var selectedOption: Set<String> = ["2 columns"]
 
@@ -43,12 +43,11 @@ struct PatternsViewSwitch: View {
             .cornerRadius(10)
         }
         .padding(.trailing)
-
         .actionSheet(isPresented: $isMenuOpen) {
             ActionSheet(title: Text("Select grid"), message: nil, buttons: [
                 .default(Text("3 columns"), action: { toggleOption("3") }),
                 .default(Text("2 columns"), action: { toggleOption("2") }),
-                .cancel()
+                .cancel(),
             ])
         }
     }

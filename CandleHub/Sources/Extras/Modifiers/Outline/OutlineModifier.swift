@@ -18,11 +18,12 @@ struct OutlineModifier: ViewModifier {
                     .linearGradient(
                         colors: [
                             .white.opacity(colorScheme == .dark ? 0.1 : 0.3),
-                            .black.opacity(0.1)],
+                            .black.opacity(0.1),
+                        ],
                         startPoint: .topLeading,
                         endPoint: .bottomTrailing
+                    )
                 )
-            )
         )
     }
 }

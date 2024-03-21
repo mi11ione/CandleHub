@@ -13,7 +13,7 @@ struct TabBar: View {
     @State var x: [CGFloat] = [0, 0, 0, 0]
 
     @AppStorage("selectedTab") var selectedTab: Tab = .tickers
-    
+
     var body: some View {
         GeometryReader { proxy in
             let hasHomeIndicator = proxy.safeAreaInsets.bottom > 0

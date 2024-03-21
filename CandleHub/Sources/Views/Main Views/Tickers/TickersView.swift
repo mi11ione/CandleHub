@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TickersView: View {
     @Environment(\.colorScheme) var colorScheme
-    
+
     var body: some View {
         VStack {
             VStack {
@@ -30,6 +30,7 @@ struct TickersView: View {
 #Preview {
     ContentView().preferredColorScheme(.dark)
 }
+
 #Preview {
     ContentView().preferredColorScheme(.light)
 }

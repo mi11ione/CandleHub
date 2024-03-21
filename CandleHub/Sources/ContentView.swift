@@ -2,9 +2,9 @@ import SwiftUI
 
 struct ContentView: View {
     @AppStorage("selectedTab") var selectedTab: Tab = .tickers
-    
+
     var body: some View {
-        NavigationStack() {
+        NavigationStack {
             ZStack {
                 Group {
                     switch selectedTab {
@@ -28,6 +28,7 @@ struct ContentView: View {
 #Preview {
     ContentView().preferredColorScheme(.dark)
 }
+
 #Preview {
     ContentView().preferredColorScheme(.light)
 }

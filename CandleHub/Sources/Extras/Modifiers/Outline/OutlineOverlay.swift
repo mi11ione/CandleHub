@@ -18,10 +18,11 @@ struct OutlineOverlay: ViewModifier {
                     .linearGradient(
                         colors: [
                             .white.opacity(colorScheme == .dark ? 0.2 : 0.6),
-                            .black.opacity(colorScheme == .dark ? 0.1 : 0.3)
+                            .black.opacity(colorScheme == .dark ? 0.1 : 0.3),
                         ],
                         startPoint: .top,
-                        endPoint: .bottom)
+                        endPoint: .bottom
+                    )
                 )
                 .blendMode(.overlay)
         )

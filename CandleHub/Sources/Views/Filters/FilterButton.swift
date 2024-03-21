@@ -9,10 +9,10 @@ import SwiftUI
 
 struct FilterButton: View {
     @Environment(\.colorScheme) var colorScheme
-    
+
     var filter: String
     var options: [String]
-    
+
     @State private var selectedOptions: Set<String> = []
 
     var body: some View {
@@ -33,7 +33,7 @@ struct FilterButton: View {
         } label: {
             Text(filter)
                 .font(.headline)
-                .foregroundColor(self.textColor)
+                .foregroundColor(textColor)
                 .padding(.horizontal, 15)
                 .padding(.vertical, 5)
                 .background(backgroundView)
@@ -47,13 +47,13 @@ struct FilterButton: View {
     }
 
     private func toggleOption(_ option: String) {
-            if selectedOptions.contains(option) {
-                selectedOptions.remove(option)
-            } else {
-                selectedOptions.insert(option)
-            }
+        if selectedOptions.contains(option) {
+            selectedOptions.remove(option)
+        } else {
+            selectedOptions.insert(option)
         }
-        
+    }
+
     private var textColor: Color {
         selectedOptions.isEmpty ? (colorScheme == .dark ? .white : .black) : (colorScheme == .dark ? .black : .white)
     }

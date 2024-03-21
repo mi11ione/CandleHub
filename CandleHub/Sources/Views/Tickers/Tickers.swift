@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Tickers: View {
     var tickers: [Ticker] {
-        (0..<8).map { _ in
+        (0 ..< 8).map { _ in
             Ticker(tickerTitle: "",
                    tickerPrice: "",
                    tickerGraph: "",

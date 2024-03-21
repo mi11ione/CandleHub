@@ -9,12 +9,12 @@ import SwiftUI
 
 struct PatternsView: View {
     @Environment(\.colorScheme) var colorScheme
-    
-    private var data  = Array(1...100)
+
+    private var data = Array(1 ... 100)
     private let adaptiveColumn = [
-        GridItem(.adaptive(minimum: 150))
+        GridItem(.adaptive(minimum: 150)),
     ]
-    
+
     var body: some View {
         VStack {
             VStack {
@@ -22,14 +22,14 @@ struct PatternsView: View {
                     Text("Patterns")
                         .font(.largeTitle).bold()
                         .padding([.top, .leading])
-                    
+
                     Spacer()
                     PatternsViewSwitch()
                         .padding(.top, 13)
                 }
                 Filters()
             }
-        
+
             ScrollView {
                 LazyVGrid(columns: adaptiveColumn, spacing: 20) {
                     ForEach(data, id: \.self) { item in
@@ -40,7 +40,7 @@ struct PatternsView: View {
                                 .cornerRadius(20)
                                 .foregroundColor(colorScheme == .dark ? .white : .black)
                                 .font(.title)
-                            
+
                             Text("Subtitle \(item)")
                                 .foregroundColor(colorScheme == .dark ? .white : .black)
                                 .font(.body)
@@ -56,6 +56,7 @@ struct PatternsView: View {
 #Preview {
     ContentView().preferredColorScheme(.dark)
 }
+
 #Preview {
     ContentView().preferredColorScheme(.light)
 }
