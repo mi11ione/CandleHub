@@ -1,4 +1,5 @@
 import Foundation
+
 enum MoexApi {
     enum Method: String {
         case allTiсkers = "/iss/history/engines/stock/markets/shares/boards/tqbr/securities.json"

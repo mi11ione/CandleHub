@@ -5,9 +5,9 @@
 //  Created by mi11ion on 20/3/24.
 //
 
-//import Foundation
+// import Foundation
 //
-//struct Ticker: Hashable {
+// struct Ticker: Hashable {
 //    var tickerTitle: String
 //    var tickerPrice: String
 //    var tickerGraph: String
@@ -26,4 +26,4 @@
 //            lhs.tickerGraph == rhs.tickerGraph &&
 //            lhs.tickerImage == rhs.tickerImage
 //    }
-//}
+// }

@@ -13,9 +13,7 @@ struct TickersViewSwitch: View {
     @State private var selectedOptions: Set<String> = []
 
     var body: some View {
-        Button(action: {
-            
-        }) {
+        Button(action: {}) {
             HStack {
                 Image(systemName: "bolt.horizontal.fill")
                 Text("Crypto")

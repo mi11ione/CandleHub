@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TickersGridView: View {
     @Environment(\.colorScheme) var colorScheme
-    
+
     var data = Array(1 ... 20)
     private let adaptiveColumn = [
         GridItem(.adaptive(minimum: 300)),

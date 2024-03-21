@@ -16,7 +16,7 @@ class GridViewModel: ObservableObject {
             return [GridItem(.adaptive(minimum: 160))]
         }
     }
-    
+
     func updateLayout(for option: String) {
         switch option {
         case "1 Column":

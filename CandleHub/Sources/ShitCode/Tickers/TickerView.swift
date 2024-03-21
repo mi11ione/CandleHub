@@ -5,9 +5,9 @@
 //  Created by mi11ion on 20/3/24.
 //
 
-//import SwiftUI
+// import SwiftUI
 //
-//struct TickerView: View {
+// struct TickerView: View {
 //    let ticker: Ticker
 //
 //    var body: some View {
@@ -27,4 +27,4 @@
 //        }
 //        .padding(.vertical, 5)
 //    }
-//}
+// }

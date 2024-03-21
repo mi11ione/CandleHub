@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PatternsView: View {
     @StateObject private var viewModel = GridViewModel()
-    
+
     var body: some View {
         VStack {
             VStack {

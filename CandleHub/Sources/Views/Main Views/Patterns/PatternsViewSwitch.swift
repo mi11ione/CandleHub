@@ -11,7 +11,7 @@ struct PatternsViewSwitch: View {
     var options = ["1 Column", "2 Columns"]
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: GridViewModel
-    
+
     init(viewModel: GridViewModel) {
         self.viewModel = viewModel
     }

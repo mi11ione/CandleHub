@@ -8,7 +8,7 @@ protocol TradingDataNetworkFetching {
 
 final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObject {
     @Published var tickets: [TickerMOEX] = []
-    
+
     // usage:
 //    Task {
 //        let candles = await fetcher.getMoexTickers()
@@ -39,7 +39,7 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
 
         } while (cursor.index + cursor.pageSize) < cursor.total
 
-        self.tickets = tickers
+        tickets = tickers
         return tickers
     }
 
@@ -215,7 +215,6 @@ private func parseMoexCandles(moexCandles: MoexCandles) -> [Stock] {
             break
         }
 
-        
         let stock = Stock(
             date: dateFormatter.date(from: date) ?? Date(timeIntervalSinceNow: 0),
             openPrice: openPrice,
