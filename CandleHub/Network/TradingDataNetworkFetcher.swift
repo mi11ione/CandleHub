@@ -77,7 +77,7 @@ private func decodeJSON<T: Decodable>(type: T.Type, from data: Data) throws -> T
 }
 
 private func request(_ url: URL) async throws -> Data {
-    var configuration = URLSessionConfiguration.default
+    let configuration = URLSessionConfiguration.default
     configuration.timeoutIntervalForRequest = 10
     let session = URLSession(configuration: configuration)
     let (data, response) = try await session.data(for: URLRequest(url: url))

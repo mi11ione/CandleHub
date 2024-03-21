@@ -13,7 +13,9 @@ struct TickersViewSwitch: View {
     @State private var selectedOptions: Set<String> = []
 
     var body: some View {
-        Button(action: {}) {
+        Button(action: {
+            
+        }) {
             HStack {
                 Image(systemName: "bolt.horizontal.fill")
                 Text("Crypto")
@@ -26,6 +28,6 @@ struct TickersViewSwitch: View {
             .cornerRadius(10)
         }
         .padding(.top, 12)
-        .padding(.trailing)
+        .padding(.trailing, 20)
     }
 }

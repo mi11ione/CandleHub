@@ -21,7 +21,7 @@ struct TickersView: View {
                     TickersViewSwitch()
                 }
                 Filters()
-                Tickers()
+                TickersGridView()
             }
         }
     }
