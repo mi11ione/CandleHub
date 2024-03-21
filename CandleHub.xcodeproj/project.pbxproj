@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1C952F6268ED96F1066CFB2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879B0FC4A003425D16DE20C7 /* ContentView.swift */; };
 		22064EB78E2BDBEB2265A30C /* TuistAssets+CandleHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55CA2C4FAE97A4B4912AF54 /* TuistAssets+CandleHub.swift */; };
-		332232702BAB8DB500D40FAD /* CandlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3322326F2BAB8DB500D40FAD /* CandlesView.swift */; };
 		332232722BAB8DCD00D40FAD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332232712BAB8DCD00D40FAD /* SettingsView.swift */; };
 		332232762BAB95E500D40FAD /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332232752BAB95E500D40FAD /* TabItem.swift */; };
 		332232782BAB96A100D40FAD /* TabPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332232772BAB96A100D40FAD /* TabPreferenceKey.swift */; };
@@ -23,6 +22,9 @@
 		3322328E2BAB97FF00D40FAD /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3322328D2BAB97FF00D40FAD /* Animation.swift */; };
 		332232922BAB99DC00D40FAD /* Tickers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332232912BAB99DC00D40FAD /* Tickers.swift */; };
 		332232942BAB9A0D00D40FAD /* TickersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332232932BAB9A0D00D40FAD /* TickersView.swift */; };
+		3328CDB52BAC6855005032AF /* TickersViewSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3328CDB42BAC6855005032AF /* TickersViewSwitch.swift */; };
+		3328CDB82BAC68A3005032AF /* PatternsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3328CDB72BAC68A3005032AF /* PatternsView.swift */; };
+		3328CDBA2BAC68BC005032AF /* PatternsViewSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3328CDB92BAC68BC005032AF /* PatternsViewSwitch.swift */; };
 		33AA4BE62BAB87BC0047868E /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA4BE52BAB87BC0047868E /* TabBar.swift */; };
 		33AA4BE82BAB87CE0047868E /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA4BE72BAB87CE0047868E /* Tab.swift */; };
 		33D3E40F2BAB259700A56DDA /* TickersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3E40E2BAB259700A56DDA /* TickersListView.swift */; };
@@ -73,7 +75,6 @@
 
 /* Begin PBXFileReference section */
 		0A3CF217A9F7C98936191796 /* CandleHubTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CandleHubTests-Info.plist"; sourceTree = "<group>"; };
-		3322326F2BAB8DB500D40FAD /* CandlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlesView.swift; sourceTree = "<group>"; };
 		332232712BAB8DCD00D40FAD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		332232752BAB95E500D40FAD /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		332232772BAB96A100D40FAD /* TabPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPreferenceKey.swift; sourceTree = "<group>"; };
@@ -87,6 +88,9 @@
 		3322328D2BAB97FF00D40FAD /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		332232912BAB99DC00D40FAD /* Tickers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tickers.swift; sourceTree = "<group>"; };
 		332232932BAB9A0D00D40FAD /* TickersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersView.swift; sourceTree = "<group>"; };
+		3328CDB42BAC6855005032AF /* TickersViewSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersViewSwitch.swift; sourceTree = "<group>"; };
+		3328CDB72BAC68A3005032AF /* PatternsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsView.swift; sourceTree = "<group>"; };
+		3328CDB92BAC68BC005032AF /* PatternsViewSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsViewSwitch.swift; sourceTree = "<group>"; };
 		33AA4BE52BAB87BC0047868E /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		33AA4BE72BAB87CE0047868E /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		33D3E40E2BAB259700A56DDA /* TickersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersListView.swift; sourceTree = "<group>"; };
@@ -220,11 +224,37 @@
 		332232902BAB986A00D40FAD /* Main Views */ = {
 			isa = PBXGroup;
 			children = (
-				332232932BAB9A0D00D40FAD /* TickersView.swift */,
-				3322326F2BAB8DB500D40FAD /* CandlesView.swift */,
-				332232712BAB8DCD00D40FAD /* SettingsView.swift */,
+				3328CDBB2BAC6C46005032AF /* Settings */,
+				3328CDB62BAC6891005032AF /* Patterns */,
+				3328CDB12BAC682D005032AF /* Tickers */,
 			);
 			path = "Main Views";
+			sourceTree = "<group>";
+		};
+		3328CDB12BAC682D005032AF /* Tickers */ = {
+			isa = PBXGroup;
+			children = (
+				332232932BAB9A0D00D40FAD /* TickersView.swift */,
+				3328CDB42BAC6855005032AF /* TickersViewSwitch.swift */,
+			);
+			path = Tickers;
+			sourceTree = "<group>";
+		};
+		3328CDB62BAC6891005032AF /* Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				3328CDB72BAC68A3005032AF /* PatternsView.swift */,
+				3328CDB92BAC68BC005032AF /* PatternsViewSwitch.swift */,
+			);
+			path = Patterns;
+			sourceTree = "<group>";
+		};
+		3328CDBB2BAC6C46005032AF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				332232712BAB8DCD00D40FAD /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		33AA4BE42BAB87AD0047868E /* Tab */ = {
@@ -453,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3328CDBA2BAC68BC005032AF /* PatternsViewSwitch.swift in Sources */,
 				62B144F212D385EBF52A14E4 /* CandleHubApp.swift in Sources */,
 				33D3E4162BAB46CC00A56DDA /* Ticker.swift in Sources */,
 				33AA4BE62BAB87BC0047868E /* TabBar.swift in Sources */,
@@ -461,11 +492,12 @@
 				3322327E2BAB970400D40FAD /* OutlineVerticalModifier.swift in Sources */,
 				332232922BAB99DC00D40FAD /* Tickers.swift in Sources */,
 				33D3E40F2BAB259700A56DDA /* TickersListView.swift in Sources */,
+				3328CDB52BAC6855005032AF /* TickersViewSwitch.swift in Sources */,
 				3322328B2BAB97CF00D40FAD /* ViewExtension.swift in Sources */,
 				33D3E4112BAB281600A56DDA /* Filters.swift in Sources */,
 				33AA4BE82BAB87CE0047868E /* Tab.swift in Sources */,
 				33D3E4202BAB479500A56DDA /* FilterButton.swift in Sources */,
-				332232702BAB8DB500D40FAD /* CandlesView.swift in Sources */,
+				3328CDB82BAC68A3005032AF /* PatternsView.swift in Sources */,
 				332232942BAB9A0D00D40FAD /* TickersView.swift in Sources */,
 				22064EB78E2BDBEB2265A30C /* TuistAssets+CandleHub.swift in Sources */,
 				332232862BAB978500D40FAD /* BackgroundStyle.swift in Sources */,

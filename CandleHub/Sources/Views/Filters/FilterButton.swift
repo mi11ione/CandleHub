@@ -13,7 +13,6 @@ struct FilterButton: View {
     var filter: String
     var options: [String]
     
-    @State private var isMenuOpen: Bool = false
     @State private var selectedOptions: Set<String> = []
 
     var body: some View {
@@ -35,9 +34,9 @@ struct FilterButton: View {
             Text(filter)
                 .font(.headline)
                 .foregroundColor(self.textColor)
-                .padding(.horizontal, 10)
+                .padding(.horizontal, 15)
                 .padding(.vertical, 5)
-                .background(self.backgroundColor)
+                .background(backgroundView)
                 .cornerRadius(10)
         }
         .onTapGesture {
@@ -48,32 +47,24 @@ struct FilterButton: View {
     }
 
     private func toggleOption(_ option: String) {
-        if selectedOptions.contains(option) {
-            selectedOptions.remove(option)
-        } else {
-            selectedOptions.insert(option)
+            if selectedOptions.contains(option) {
+                selectedOptions.remove(option)
+            } else {
+                selectedOptions.insert(option)
+            }
         }
-
-        if selectedOptions.isEmpty {
-            isMenuOpen = false
-        } else {
-            isMenuOpen = true
-        }
-    }
-    
+        
     private var textColor: Color {
-        if selectedOptions.isEmpty {
-            return colorScheme == .dark ? .white : .black
-        } else {
-            return colorScheme == .dark ? .black : .white
-        }
+        selectedOptions.isEmpty ? (colorScheme == .dark ? .white : .black) : (colorScheme == .dark ? .black : .white)
     }
 
-    private var backgroundColor: Color {
-        if selectedOptions.isEmpty {
-            return colorScheme == .dark ? Color.white.opacity(0.2) : Color.gray.opacity(0.2)
-        } else {
-            return colorScheme == .dark ? .white : .black
+    private var backgroundView: some View {
+        Group {
+            if selectedOptions.isEmpty {
+                Rectangle().fill(Material.ultraThin)
+            } else {
+                Rectangle().fill(colorScheme == .dark ? Color.white : Color.black)
+            }
         }
     }
 }
