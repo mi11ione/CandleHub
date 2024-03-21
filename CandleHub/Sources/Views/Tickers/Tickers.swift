@@ -18,7 +18,7 @@ struct Tickers: View {
     }
 
     var body: some View {
-        NavigationView {
+        VStack {
             TickersListView(tickers: tickers)
         }
     }
