@@ -18,6 +18,9 @@ struct ContentView: View {
                 }
                 TabBar()
             }
+            .safeAreaInset(edge: .bottom) {
+                VStack {}.frame(height: 50)
+            }
         }
     }
 }
