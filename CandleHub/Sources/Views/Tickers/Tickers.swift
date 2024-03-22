@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct Tickers: View {
-
     var tickers: [TickerMOEX]
 
     init(tickers: [TickerMOEX]) {

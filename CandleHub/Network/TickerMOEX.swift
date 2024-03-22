@@ -7,7 +7,7 @@ class TickerMOEX: Hashable, ObservableObject {
     @Published var priceChange: Money
     @Published var tickerGraph: String?
     @Published var tickerImage: String?
-    
+
     init(title: String, subTitle: String, price: Money, priceChange: Money, tickerGraph: String? = nil, tickerImage: String? = nil) {
         self.title = title
         self.subTitle = subTitle
@@ -16,7 +16,7 @@ class TickerMOEX: Hashable, ObservableObject {
         self.tickerGraph = tickerGraph
         self.tickerImage = tickerImage
     }
-    
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(title)
         hasher.combine(subTitle)
@@ -28,10 +28,10 @@ class TickerMOEX: Hashable, ObservableObject {
 
     static func == (lhs: TickerMOEX, rhs: TickerMOEX) -> Bool {
         lhs.title == rhs.title &&
-        lhs.subTitle == rhs.subTitle &&
-        lhs.price == rhs.price &&
-        lhs.priceChange == rhs.priceChange &&
-        lhs.tickerGraph == rhs.tickerGraph &&
-        lhs.tickerImage == rhs.tickerImage
+            lhs.subTitle == rhs.subTitle &&
+            lhs.price == rhs.price &&
+            lhs.priceChange == rhs.priceChange &&
+            lhs.tickerGraph == rhs.tickerGraph &&
+            lhs.tickerImage == rhs.tickerImage
     }
 }

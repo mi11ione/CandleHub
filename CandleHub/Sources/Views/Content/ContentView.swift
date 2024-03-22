@@ -9,7 +9,7 @@ struct ContentView: View {
                 Group {
                     switch selectedTab {
                     case .tickers:
-                        TickersView(tickersArray: .init())
+                        TickersView()
                     case .patterns:
                         PatternsView()
                     case .settings:
