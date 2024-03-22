@@ -12,10 +12,6 @@ struct PatternsGridView: View {
     @ObservedObject var viewModel: GridViewModel
     var selectedOption: String
 
-//    init(viewModel: GridViewModel) {
-//        self.viewModel = viewModel
-//    }
-
     var data = Array(1 ... 20)
 
     var body: some View {
