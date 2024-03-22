@@ -32,7 +32,3 @@ struct TickersView: View {
         }
     }
 }
-
-#Preview {
-    ContentView()
-}
