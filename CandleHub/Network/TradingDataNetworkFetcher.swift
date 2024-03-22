@@ -2,7 +2,7 @@ import Foundation
 
 protocol TradingDataNetworkFetching {
     func getMoexTickers() async -> [TickerMOEX]?
-    func getMoexCandles(ticker: String, timePeriod: ChartTimePeriod) async -> [Stock]?
+    func getMoexCandles(ticker: String, timePeriod: ChartTimePeriod) async -> [Candle]?
 }
 
 final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObject {
@@ -39,7 +39,7 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
         return tickers
     }
 
-    func getMoexCandles(ticker: String, timePeriod: ChartTimePeriod) async -> [Stock]? {
+    func getMoexCandles(ticker: String, timePeriod: ChartTimePeriod) async -> [Candle]? {
         var queryItems = [URLQueryItem]()
         queryItems.append(URLQueryItem(name: "iss.reverse", value: "true"))
         queryItems.append(timePeriod.queryItem)
@@ -138,14 +138,14 @@ private func parseMoexTikers(moexTickers: MoexTiсkers) -> [TickerMOEX] {
     return tickers
 }
 
-private func parseMoexCandles(moexCandles: MoexCandles) -> [Stock] {
+private func parseMoexCandles(moexCandles: MoexCandles) -> [Candle] {
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return formatter
     }()
 
-    var stocks = [Stock]()
+    var stocks = [Candle]()
     for i in 0 ..< moexCandles.candles.data.count {
         var date = ""
         let rawDate = moexCandles.candles.data[i][6]
@@ -211,7 +211,7 @@ private func parseMoexCandles(moexCandles: MoexCandles) -> [Stock] {
             break
         }
 
-        let stock = Stock(
+        let stock = Candle(
             date: dateFormatter.date(from: date) ?? Date(timeIntervalSinceNow: 0),
             openPrice: openPrice,
             closePrice: closePrice,
