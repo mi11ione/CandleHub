@@ -11,13 +11,13 @@ struct PatternsGridView: View {
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: GridViewModel
     var selectedOption: String
-    
+
 //    init(viewModel: GridViewModel) {
 //        self.viewModel = viewModel
 //    }
-    
+
     var data = Array(1 ... 20)
-    
+
     var body: some View {
         ScrollView {
             LazyVGrid(columns: viewModel.adaptiveColumn, spacing: 20) {
@@ -29,7 +29,7 @@ struct PatternsGridView: View {
                             .cornerRadius(30)
                             .foregroundColor(colorScheme == .dark ? .white : .black)
                             .font(.title)
-                        
+
                         Text("Subtitle \(item)")
                             .foregroundColor(colorScheme == .dark ? .white : .black)
                             .font(.body)
