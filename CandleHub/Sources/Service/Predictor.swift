@@ -33,6 +33,14 @@ struct CandlePredictor: Predictor {
     
 }
 
+struct Predictions {
+    let openModelInput: OpenRegressionModelInput
+    let closeModelInput: CloseRegressionModelInput
+    let highModelInput: HighRegressionModel_Input
+    let lowModelInput: LowRegressionModelInput
+    
+}
+
 protocol Predictor {
     
     func predict(modelInput: OpenRegressionModelInput) -> Double
