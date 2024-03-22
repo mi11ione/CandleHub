@@ -36,6 +36,7 @@ struct TickerGridItemView: View {
             Text(ticker.subTitle)
                 .font(.title3)
                 .bold()
+                .padding(.trailing, -3)
             Text("$\(ticker.title)\n")
             priceView
             priceChangeView
