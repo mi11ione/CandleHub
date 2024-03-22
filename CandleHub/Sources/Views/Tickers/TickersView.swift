@@ -21,7 +21,6 @@ class TickersViewModel: ObservableObject {
     }
 }
 
-
 struct TickersView: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var searchText: String = ""
@@ -45,7 +44,7 @@ struct TickersView: View {
                     .padding(.horizontal, 22)
                     .padding(.vertical, -3)
                 TickersGridView(tickers: tickersViewModel.array ?? [])
-            }.onAppear() {
+            }.onAppear {
                 tickersViewModel.fetchTickers()
             }
         }
