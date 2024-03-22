@@ -19,6 +19,7 @@ struct PatternsView: View {
         VStack {
             VStack {
                 HStack {
+                    Text
                     Text("Patterns")
                         .font(.largeTitle).bold()
                         .padding([.top, .leading])
