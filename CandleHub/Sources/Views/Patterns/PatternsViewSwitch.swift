@@ -11,25 +11,21 @@ struct PatternsViewSwitch: View {
     var options = ["1 Column", "2 Columns"]
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: GridViewModel
-
-    init(viewModel: GridViewModel) {
-        self.viewModel = viewModel
-    }
-
-    @State private var isMenuOpen: Bool = false
-    @State var selectedOption: Set<String> = ["1 Column"]
+    @Binding var selectedOption: String
 
     var body: some View {
         Menu {
             ForEach(options, id: \.self) { option in
                 Button(action: {
-                    toggleOption(option)
-                    viewModel.updateLayout(for: option)
+                    withAnimation(.spring) {
+                        toggleOption(option)
+                        viewModel.updateLayout(for: option)
+                    }
                 }) {
                     HStack {
                         Text(option)
                         Spacer()
-                        if selectedOption.contains(option) {
+                        if selectedOption == option {
                             Image(systemName: "checkmark")
                         }
                     }
@@ -51,7 +47,7 @@ struct PatternsViewSwitch: View {
     }
 
     private func toggleOption(_ option: String) {
-        selectedOption.removeAll()
-        selectedOption.insert(option)
+        selectedOption = option
+        viewModel.updateLayout(for: option)
     }
 }

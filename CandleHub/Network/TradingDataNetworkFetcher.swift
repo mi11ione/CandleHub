@@ -1,4 +1,3 @@
-
 import Foundation
 
 protocol TradingDataNetworkFetching {
@@ -6,7 +5,7 @@ protocol TradingDataNetworkFetching {
     func getMoexCandles(ticker: String, timePeriod: ChartTimePeriod) async -> [Stock]?
 }
 
-final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObject {    
+final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObject {
     // usage:
 //    Task {
 //        let candles = await fetcher.getMoexTickers()

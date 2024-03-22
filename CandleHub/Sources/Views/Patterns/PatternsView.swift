@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PatternsView: View {
     @StateObject private var viewModel = GridViewModel()
+    @AppStorage("selectedGridOption") var selectedOption: String = "1 Column"
 
     var body: some View {
         VStack {
@@ -19,12 +20,15 @@ struct PatternsView: View {
                         .padding([.top, .leading])
 
                     Spacer()
-                    PatternsViewSwitch(viewModel: viewModel)
+                    PatternsViewSwitch(viewModel: viewModel, selectedOption: $selectedOption)
                         .padding(.top, 13)
                 }
                 Filters()
             }
-            PatternsGridView(viewModel: viewModel)
+            PatternsGridView(viewModel: viewModel, selectedOption: selectedOption)
+        }
+        .onAppear {
+            viewModel.updateLayout(for: selectedOption)
         }
     }
 }

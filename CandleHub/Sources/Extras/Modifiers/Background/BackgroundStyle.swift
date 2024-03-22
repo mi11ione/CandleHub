@@ -14,7 +14,6 @@ struct BackgroundStyle: ViewModifier {
 
     func body(content: Content) -> some View {
         content
-            .backgroundColor(opacity: opacity)
             .cornerRadius(cornerRadius)
             .modifier(OutlineOverlay(cornerRadius: cornerRadius))
     }
