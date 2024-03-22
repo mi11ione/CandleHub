@@ -25,8 +25,18 @@ struct TickersView: View {
                 SearchBar(checkAmount: $searchText)
                     .padding(.horizontal, 22)
                     .padding(.vertical, -3)
-                TickersGridView(tickers: tickersViewModel.array ?? [])
-            }.onAppear {
+
+                if tickersViewModel.isLoading == false {
+                    TickersGridView(tickers: tickersViewModel.array ?? [])
+                } else {
+                    ProgressView()
+                        .scaleEffect(1.5, anchor: .center)
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .padding(.top, 50)
+                    Spacer()
+                }
+            }
+            .onAppear {
                 tickersViewModel.fetchTickers()
             }
         }
