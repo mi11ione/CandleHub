@@ -8,23 +8,24 @@
 import SwiftUI
 
 struct PatternsViewSwitch: View {
-    var options = ["2 columns", "3 columns"]
-
+    var options = ["1 Column", "2 Columns"]
     @Environment(\.colorScheme) var colorScheme
-
-    @State private var isMenuOpen: Bool = false
-    @State var selectedOption: Set<String> = ["2 columns"]
+    @ObservedObject var viewModel: GridViewModel
+    @Binding var selectedOption: String
 
     var body: some View {
         Menu {
             ForEach(options, id: \.self) { option in
                 Button(action: {
-                    toggleOption(option)
+                    withAnimation(.spring) {
+                        toggleOption(option)
+                        viewModel.updateLayout(for: option)
+                    }
                 }) {
                     HStack {
                         Text(option)
                         Spacer()
-                        if selectedOption.contains(option) {
+                        if selectedOption == option {
                             Image(systemName: "checkmark")
                         }
                     }
@@ -42,18 +43,11 @@ struct PatternsViewSwitch: View {
             .background(.ultraThinMaterial)
             .cornerRadius(10)
         }
-        .padding(.trailing)
-        .actionSheet(isPresented: $isMenuOpen) {
-            ActionSheet(title: Text("Select grid"), message: nil, buttons: [
-                .default(Text("3 columns"), action: { toggleOption("3") }),
-                .default(Text("2 columns"), action: { toggleOption("2") }),
-                .cancel(),
-            ])
-        }
+        .padding(.trailing, 20)
     }
 
     private func toggleOption(_ option: String) {
-        selectedOption.removeAll()
-        selectedOption.insert(option)
+        selectedOption = option
+        viewModel.updateLayout(for: option)
     }
 }

@@ -10,8 +10,6 @@ import SwiftUI
 struct TickersViewSwitch: View {
     @Environment(\.colorScheme) var colorScheme
 
-    @State private var selectedOptions: Set<String> = []
-
     var body: some View {
         Button(action: {}) {
             HStack {
@@ -26,6 +24,6 @@ struct TickersViewSwitch: View {
             .cornerRadius(10)
         }
         .padding(.top, 12)
-        .padding(.trailing)
+        .padding(.trailing, 20)
     }
 }
