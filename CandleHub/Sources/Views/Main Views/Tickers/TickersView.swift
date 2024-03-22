@@ -9,6 +9,11 @@ import SwiftUI
 
 struct TickersView: View {
     @Environment(\.colorScheme) var colorScheme
+    @State private var searchText: String = ""
+    @State private var isRefreshing = false
+    @State private var scrollOffset: CGFloat = 0
+    @State private var lastOffset: CGFloat = 0
+    @State private var refreshThreshold: CGFloat = 0
 
     var body: some View {
         VStack {
@@ -20,9 +25,15 @@ struct TickersView: View {
                     Spacer()
                     TickersViewSwitch()
                 }
-                Filters()
+                SearchBar(checkAmount: $searchText)
+                    .padding(.horizontal, 22)
+                    .padding(.vertical, -3)
                 TickersGridView()
             }
         }
     }
+}
+
+#Preview {
+    ContentView()
 }

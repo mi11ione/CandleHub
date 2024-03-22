@@ -17,7 +17,7 @@ struct PatternsViewSwitch: View {
         Menu {
             ForEach(options, id: \.self) { option in
                 Button(action: {
-                    withAnimation {
+                    withAnimation(.spring) {
                         toggleOption(option)
                         viewModel.updateLayout(for: option)
                     }

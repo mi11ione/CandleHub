@@ -9,21 +9,18 @@ import SwiftUI
 
 struct Filters: View {
     let filters = [
-        ("1 filter", ["1", "2", "3", "4"]),
-        ("2 filter", []),
-        ("3 filter", []),
-        ("4 filter", []),
-        ("5 filter", []),
-        ("6 filter", []),
-        ("7 filter", []),
-        ("8 filter", []),
+        "Single",
+        "Double",
+        "Triple",
+        "Continuation",
+        "Complex",
     ]
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                ForEach(filters, id: \.0) { filter, options in
-                    FilterButton(filter: filter, options: options)
+                ForEach(filters, id: \.self) { filter in
+                    FilterButton(filter: filter)
                 }
                 Spacer()
             }
