@@ -1,4 +1,4 @@
-struct Money {
+struct Money : Hashable {
     let amount: Double
     let currency: Currency
 }

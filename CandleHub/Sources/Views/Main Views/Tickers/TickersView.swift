@@ -7,9 +7,17 @@
 
 import SwiftUI
 
+class TickersArray: ObservableObject {
+    init(array: [TickerMOEX]? = nil) {
+        self.array = array
+    }
+    @Published var array: [TickerMOEX]?
+}
+
 struct TickersView: View {
     @Environment(\.colorScheme) var colorScheme
-
+    @StateObject var tickersArray: TickersArray
+    
     var body: some View {
         VStack {
             VStack {
@@ -21,7 +29,11 @@ struct TickersView: View {
                     TickersViewSwitch()
                 }
                 Filters()
-                Tickers()
+                Tickers(tickers: tickersArray.array ?? [])
+            }.onAppear() {
+                Task {
+                    tickersArray.array = await TradingDataNetworkFetcher().getMoexTickers() ?? []
+                }
             }
         }
     }

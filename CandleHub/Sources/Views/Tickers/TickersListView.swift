@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct TickersListView: View {
-    let tickers: [Ticker]
+    let tickers: [TickerMOEX]
 
     var body: some View {
         List {
-            ForEach(tickers, id: \.tickerTitle) { ticker in
+            ForEach(tickers, id: \.title) { ticker in
                 Section {
                     TickerView(ticker: ticker)
                 }

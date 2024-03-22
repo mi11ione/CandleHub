@@ -6,9 +6,7 @@ protocol TradingDataNetworkFetching {
     func getMoexCandles(ticker: String, timePeriod: ChartTimePeriod) async -> [Stock]?
 }
 
-final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObject {
-    @Published var tickets: [TickerMOEX] = []
-    
+final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObject {    
     // usage:
 //    Task {
 //        let candles = await fetcher.getMoexTickers()
@@ -39,7 +37,6 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
 
         } while (cursor.index + cursor.pageSize) < cursor.total
 
-        self.tickets = tickers
         return tickers
     }
 

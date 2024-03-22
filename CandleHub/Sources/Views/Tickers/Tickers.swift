@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct Tickers: View {
-    var tickers: [Ticker] {
-        (0 ..< 8).map { _ in
-            Ticker(tickerTitle: "",
-                   tickerPrice: "",
-                   tickerGraph: "",
-                   tickerImage: "")
-        }
+
+    var tickers: [TickerMOEX]
+
+    init(tickers: [TickerMOEX]) {
+        self.tickers = tickers
     }
 
     var body: some View {

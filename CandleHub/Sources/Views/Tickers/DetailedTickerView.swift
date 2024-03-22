@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct DetailedTickerView: View {
-    var ticker: Ticker
+    var ticker: TickerMOEX
     var body: some View {
-        Text(ticker.tickerTitle)
+        Text(ticker.title)
     }
 }
