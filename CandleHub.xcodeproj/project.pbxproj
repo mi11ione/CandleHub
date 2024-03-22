@@ -17,6 +17,7 @@
 		048819C22BAC77FD00AFDA24 /* MoexTiсkers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819BA2BAC77FD00AFDA24 /* MoexTiсkers.swift */; };
 		1C952F6268ED96F1066CFB2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879B0FC4A003425D16DE20C7 /* ContentView.swift */; };
 		22064EB78E2BDBEB2265A30C /* TuistAssets+CandleHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55CA2C4FAE97A4B4912AF54 /* TuistAssets+CandleHub.swift */; };
+		3305E93F2BAE1DBD0029EBD5 /* TickerGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3305E93E2BAE1DBD0029EBD5 /* TickerGridItemView.swift */; };
 		332232722BAB8DCD00D40FAD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332232712BAB8DCD00D40FAD /* SettingsView.swift */; };
 		332232762BAB95E500D40FAD /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332232752BAB95E500D40FAD /* TabItem.swift */; };
 		332232782BAB96A100D40FAD /* TabPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332232772BAB96A100D40FAD /* TabPreferenceKey.swift */; };
@@ -32,6 +33,7 @@
 		3328CDB82BAC68A3005032AF /* PatternsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3328CDB72BAC68A3005032AF /* PatternsView.swift */; };
 		3328CDBA2BAC68BC005032AF /* PatternsViewSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3328CDB92BAC68BC005032AF /* PatternsViewSwitch.swift */; };
 		334D84212BAD8A8900252A7C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334D84202BAD8A8900252A7C /* SearchBar.swift */; };
+		336C9CAB2BADEC030093DE16 /* CandleStickChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336C9CAA2BADEC030093DE16 /* CandleStickChart.swift */; };
 		33AA4BE62BAB87BC0047868E /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA4BE52BAB87BC0047868E /* TabBar.swift */; };
 		33AA4BE82BAB87CE0047868E /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA4BE72BAB87CE0047868E /* Tab.swift */; };
 		33C15C162BACE1D0000464CE /* TickersGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C15C152BACE1D0000464CE /* TickersGridView.swift */; };
@@ -90,6 +92,7 @@
 		048819B92BAC77FD00AFDA24 /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 		048819BA2BAC77FD00AFDA24 /* MoexTiсkers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoexTiсkers.swift"; sourceTree = "<group>"; };
 		0A3CF217A9F7C98936191796 /* CandleHubTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CandleHubTests-Info.plist"; sourceTree = "<group>"; };
+		3305E93E2BAE1DBD0029EBD5 /* TickerGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerGridItemView.swift; sourceTree = "<group>"; };
 		332232712BAB8DCD00D40FAD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		332232752BAB95E500D40FAD /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		332232772BAB96A100D40FAD /* TabPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPreferenceKey.swift; sourceTree = "<group>"; };
@@ -105,6 +108,7 @@
 		3328CDB72BAC68A3005032AF /* PatternsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsView.swift; sourceTree = "<group>"; };
 		3328CDB92BAC68BC005032AF /* PatternsViewSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsViewSwitch.swift; sourceTree = "<group>"; };
 		334D84202BAD8A8900252A7C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		336C9CAA2BADEC030093DE16 /* CandleStickChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleStickChart.swift; sourceTree = "<group>"; };
 		33AA4BE52BAB87BC0047868E /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		33AA4BE72BAB87CE0047868E /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		33C15C152BACE1D0000464CE /* TickersGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersGridView.swift; sourceTree = "<group>"; };
@@ -252,11 +256,13 @@
 		3328CDB12BAC682D005032AF /* Tickers */ = {
 			isa = PBXGroup;
 			children = (
+				336C9CA92BADEBE60093DE16 /* Candlestick Charts */,
 				33E932F12BAD9B2B0080D003 /* Search */,
 				33C15C152BACE1D0000464CE /* TickersGridView.swift */,
 				3328CDB42BAC6855005032AF /* TickersViewSwitch.swift */,
 				332232932BAB9A0D00D40FAD /* TickersView.swift */,
 				33E932F32BADC90F0080D003 /* TickersViewModel.swift */,
+				3305E93E2BAE1DBD0029EBD5 /* TickerGridItemView.swift */,
 			);
 			path = Tickers;
 			sourceTree = "<group>";
@@ -287,6 +293,14 @@
 				3322327F2BAB972100D40FAD /* SlideFadeIn.swift */,
 			);
 			path = Slide;
+			sourceTree = "<group>";
+		};
+		336C9CA92BADEBE60093DE16 /* Candlestick Charts */ = {
+			isa = PBXGroup;
+			children = (
+				336C9CAA2BADEC030093DE16 /* CandleStickChart.swift */,
+			);
+			path = "Candlestick Charts";
 			sourceTree = "<group>";
 		};
 		33AA4BE42BAB87AD0047868E /* Tab */ = {
@@ -538,8 +552,10 @@
 				048819C12BAC77FD00AFDA24 /* Money.swift in Sources */,
 				334D84212BAD8A8900252A7C /* SearchBar.swift in Sources */,
 				332232942BAB9A0D00D40FAD /* TickersView.swift in Sources */,
+				3305E93F2BAE1DBD0029EBD5 /* TickerGridItemView.swift in Sources */,
 				22064EB78E2BDBEB2265A30C /* TuistAssets+CandleHub.swift in Sources */,
 				332232862BAB978500D40FAD /* BackgroundStyle.swift in Sources */,
+				336C9CAB2BADEC030093DE16 /* CandleStickChart.swift in Sources */,
 				F5295DB90B37882622BC0944 /* TuistBundle+CandleHub.swift in Sources */,
 				332232762BAB95E500D40FAD /* TabItem.swift in Sources */,
 				332232802BAB972100D40FAD /* SlideFadeIn.swift in Sources */,

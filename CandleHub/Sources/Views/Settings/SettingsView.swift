@@ -9,14 +9,8 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        VStack {
-            HStack {
-                Text("Settings")
-                    .font(.largeTitle).bold()
-                    .padding([.top, .leading])
-
-                Spacer()
-            }
-        }
+        Text("Settings")
+            .font(.largeTitle).bold()
+            .padding([.top, .leading])
     }
 }
