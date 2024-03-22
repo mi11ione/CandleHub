@@ -10,8 +10,7 @@ import SwiftUI
 struct TickersView: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var searchText: String = ""
-
-    @StateObject var tickersViewModel = TickersViewModel()
+    @ObservedObject var tickersViewModel: TickersViewModel
 
     var body: some View {
         VStack {
@@ -32,4 +31,8 @@ struct TickersView: View {
             }
         }
     }
+}
+
+#Preview {
+    ContentView()
 }

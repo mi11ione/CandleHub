@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var tickersViewModel = TickersViewModel()
     @AppStorage("selectedTab") var selectedTab: Tab = .tickers
 
     var body: some View {
@@ -9,7 +10,7 @@ struct ContentView: View {
                 Group {
                     switch selectedTab {
                     case .tickers:
-                        TickersView()
+                        TickersView(tickersViewModel: tickersViewModel)
                     case .patterns:
                         PatternsView()
                     case .settings:
