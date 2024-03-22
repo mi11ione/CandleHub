@@ -10,17 +10,21 @@ import SwiftUI
 struct TickersGridView: View {
     @Environment(\.colorScheme) var colorScheme
 
-    var data = Array(1 ... 20)
+    var tickers: [TickerMOEX]
     private let adaptiveColumn = [
         GridItem(.adaptive(minimum: 300)),
     ]
 
+    init(tickers: [TickerMOEX]) {
+        self.tickers = tickers
+    }
+
     var body: some View {
         ScrollView {
             LazyVGrid(columns: adaptiveColumn, spacing: 20) {
-                ForEach(data, id: \.self) { item in
+                ForEach(tickers, id: \.title) { item in
                     VStack {
-                        Text("Ticker \(String(item))")
+                        Text("Ticker " + item.title)
                             .frame(width: 350, height: 160, alignment: .center)
                             .background(Rectangle().fill(Material.thin))
                             .cornerRadius(30)
