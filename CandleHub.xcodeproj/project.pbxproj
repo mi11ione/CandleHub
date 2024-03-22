@@ -41,8 +41,7 @@
 		33D3E4202BAB479500A56DDA /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3E41F2BAB479500A56DDA /* FilterButton.swift */; };
 		586D143B74732600E264A203 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F31467DA628392289E9BB9B0 /* Preview Assets.xcassets */; };
 		62B144F212D385EBF52A14E4 /* CandleHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */; };
-		AEE833642BAD775D00786D60 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = AEE833632BAD775D00786D60 /* Data */; };
-		AEE833672BAD788C00786D60 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE833662BAD788C00786D60 /* Model.swift */; };
+		AEE833672BAD788C00786D60 /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE833662BAD788C00786D60 /* Predictor.swift */; };
 		AEE8336B2BAD84B200786D60 /* OpenRegressionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AEE8336A2BAD84B200786D60 /* OpenRegressionModel.mlmodel */; };
 		B5BDCD8C3452CCD3118DCDEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346BEF51999A85EE1B26A7C7 /* Assets.xcassets */; };
 		F5295DB90B37882622BC0944 /* TuistBundle+CandleHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06755176204E80DA842F124 /* TuistBundle+CandleHub.swift */; };
@@ -122,7 +121,7 @@
 		938817186F191291621E964F /* CandleHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleHubTests.swift; sourceTree = "<group>"; };
 		A06755176204E80DA842F124 /* TuistBundle+CandleHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+CandleHub.swift"; sourceTree = "<group>"; };
 		AEE833632BAD775D00786D60 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
-		AEE833662BAD788C00786D60 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		AEE833662BAD788C00786D60 /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
 		AEE8336A2BAD84B200786D60 /* OpenRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = OpenRegressionModel.mlmodel; path = CandleHub/Resources/MLModel/OpenRegressionModel.mlmodel; sourceTree = "<group>"; };
 		B32DC36E8BAFBC6C2D3308B8 /* CandleHub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CandleHub-Info.plist"; sourceTree = "<group>"; };
 		F31467DA628392289E9BB9B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -342,7 +341,7 @@
 		40A232D52B3C7AB4E7BE3A2E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				AEE833652BAD787900786D60 /* Models */,
+				AEE833652BAD787900786D60 /* Service */,
 				3322328F2BAB983700D40FAD /* Views */,
 				3322327A2BAB96D200D40FAD /* Extras */,
 				70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */,
@@ -384,12 +383,12 @@
 			path = InfoPlists;
 			sourceTree = "<group>";
 		};
-		AEE833652BAD787900786D60 /* Models */ = {
+		AEE833652BAD787900786D60 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				AEE833662BAD788C00786D60 /* Model.swift */,
+				AEE833662BAD788C00786D60 /* Predictor.swift */,
 			);
-			path = Models;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		C18E97D7DF55FC16EC4E050D /* Derived */ = {
@@ -515,7 +514,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5BDCD8C3452CCD3118DCDEE /* Assets.xcassets in Resources */,
-				AEE833642BAD775D00786D60 /* Data in Resources */,
 				586D143B74732600E264A203 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,9 +560,8 @@
 				048819C02BAC77FD00AFDA24 /* MoexApi.swift in Sources */,
 				048819BC2BAC77FD00AFDA24 /* ChartTimePeriod.swift in Sources */,
 				332232822BAB974C00D40FAD /* OutlineOverlay.swift in Sources */,
-				332232842BAB976100D40FAD /* BackgroundColor.swift in Sources */,
 				AEE8336B2BAD84B200786D60 /* OpenRegressionModel.mlmodel in Sources */,
-				AEE833672BAD788C00786D60 /* Model.swift in Sources */,
+				AEE833672BAD788C00786D60 /* Predictor.swift in Sources */,
 				332232782BAB96A100D40FAD /* TabPreferenceKey.swift in Sources */,
 				048819BF2BAC77FD00AFDA24 /* TickerMOEX.swift in Sources */,
 				3322328E2BAB97FF00D40FAD /* Animation.swift in Sources */,
