@@ -30,10 +30,11 @@ struct PatternsGridView: View {
                             .foregroundColor(colorScheme == .dark ? .white : .black)
                             .font(.body)
                     }
-                    .padding(.bottom, -11)
                 }
+                .padding(.bottom, -11)
             }
-            .padding()
+            .padding(.top)
+            .padding(.horizontal, 10)
         }
         .onAppear {
             viewModel.updateLayout(for: selectedOption)

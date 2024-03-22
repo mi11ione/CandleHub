@@ -6,8 +6,6 @@ protocol TradingDataNetworkFetching {
 }
 
 final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObject {
-    @Published var tickets: [TickerMOEX] = []
-
     // usage:
 //    Task {
 //        let candles = await fetcher.getMoexTickers()
@@ -38,7 +36,6 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
 
         } while (cursor.index + cursor.pageSize) < cursor.total
 
-        tickets = tickers
         return tickers
     }
 

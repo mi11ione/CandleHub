@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PatternsView: View {
     @StateObject private var viewModel = GridViewModel()
-    @AppStorage("selectedGridOption") var selectedOption: String = "1 Column"
+    @AppStorage("selectedGridOption") var selectedOption: String = "Big patterns"
 
     var body: some View {
         VStack {
