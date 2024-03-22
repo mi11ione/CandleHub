@@ -239,27 +239,18 @@
 		3322328F2BAB983700D40FAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				332232902BAB986A00D40FAD /* Main Views */,
-				33AA4BE42BAB87AD0047868E /* Tab */,
+				33E932F22BAD9B490080D003 /* Content */,
+				3328CDB12BAC682D005032AF /* Tickers */,
+				3328CDB62BAC6891005032AF /* Patterns */,
+				3328CDBB2BAC6C46005032AF /* Settings */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		332232902BAB986A00D40FAD /* Main Views */ = {
-			isa = PBXGroup;
-			children = (
-				3328CDBB2BAC6C46005032AF /* Settings */,
-				3328CDB62BAC6891005032AF /* Patterns */,
-				3328CDB12BAC682D005032AF /* Tickers */,
-			);
-			path = "Main Views";
 			sourceTree = "<group>";
 		};
 		3328CDB12BAC682D005032AF /* Tickers */ = {
 			isa = PBXGroup;
 			children = (
-				33D3E41E2BAB477E00A56DDA /* Filters */,
-				334D84202BAD8A8900252A7C /* SearchBar.swift */,
+				33E932F12BAD9B2B0080D003 /* Search */,
 				33C15C152BACE1D0000464CE /* TickersGridView.swift */,
 				3328CDB42BAC6855005032AF /* TickersViewSwitch.swift */,
 				332232932BAB9A0D00D40FAD /* TickersView.swift */,
@@ -270,6 +261,7 @@
 		3328CDB62BAC6891005032AF /* Patterns */ = {
 			isa = PBXGroup;
 			children = (
+				33D3E41E2BAB477E00A56DDA /* Filters */,
 				33C15C172BACE20F000464CE /* PatternsGridView.swift */,
 				3328CDB92BAC68BC005032AF /* PatternsViewSwitch.swift */,
 				3328CDB72BAC68A3005032AF /* PatternsView.swift */,
@@ -314,6 +306,23 @@
 			path = Filters;
 			sourceTree = "<group>";
 		};
+		33E932F12BAD9B2B0080D003 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				334D84202BAD8A8900252A7C /* SearchBar.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		33E932F22BAD9B490080D003 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				879B0FC4A003425D16DE20C7 /* ContentView.swift */,
+				33AA4BE42BAB87AD0047868E /* Tab */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		4071A4C9BAB85398650072C7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,7 +338,6 @@
 				3322328F2BAB983700D40FAD /* Views */,
 				3322327A2BAB96D200D40FAD /* Extras */,
 				70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */,
-				879B0FC4A003425D16DE20C7 /* ContentView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
