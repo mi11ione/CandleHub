@@ -10,12 +10,13 @@ import SwiftUI
 struct PatternsGridView: View {
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: GridViewModel
+    var selectedOption: String
 
-    init(viewModel: GridViewModel) {
-        self.viewModel = viewModel
-    }
+//    init(viewModel: GridViewModel) {
+//        self.viewModel = viewModel
+//    }
 
-    private var data = Array(1 ... 20)
+    var data = Array(1 ... 20)
 
     var body: some View {
         ScrollView {
@@ -37,6 +38,9 @@ struct PatternsGridView: View {
                 }
             }
             .padding()
+        }
+        .onAppear {
+            viewModel.updateLayout(for: selectedOption)
         }
     }
 }
