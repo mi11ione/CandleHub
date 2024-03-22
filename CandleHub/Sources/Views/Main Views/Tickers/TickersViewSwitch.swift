@@ -26,6 +26,6 @@ struct TickersViewSwitch: View {
             .cornerRadius(10)
         }
         .padding(.top, 12)
-        .padding(.trailing)
+        .padding(.trailing, 20)
     }
 }

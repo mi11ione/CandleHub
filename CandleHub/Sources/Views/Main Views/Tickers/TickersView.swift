@@ -29,6 +29,7 @@ struct TickersView: View {
                     TickersViewSwitch()
                 }
                 Filters()
+                TickersGridView()
                 Tickers(tickers: tickersArray.array ?? [])
             }.onAppear() {
                 Task {

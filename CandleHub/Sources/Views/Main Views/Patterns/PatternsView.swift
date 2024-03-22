@@ -8,12 +8,7 @@
 import SwiftUI
 
 struct PatternsView: View {
-    @Environment(\.colorScheme) var colorScheme
-
-    private var data = Array(1 ... 100)
-    private let adaptiveColumn = [
-        GridItem(.adaptive(minimum: 150)),
-    ]
+    @StateObject private var viewModel = GridViewModel()
 
     var body: some View {
         VStack {
@@ -24,31 +19,12 @@ struct PatternsView: View {
                         .padding([.top, .leading])
 
                     Spacer()
-                    PatternsViewSwitch()
+                    PatternsViewSwitch(viewModel: viewModel)
                         .padding(.top, 13)
                 }
                 Filters()
             }
-
-            ScrollView {
-                LazyVGrid(columns: adaptiveColumn, spacing: 20) {
-                    ForEach(data, id: \.self) { item in
-                        VStack {
-                            Text(String(item))
-                                .frame(width: 160, height: 160, alignment: .center)
-                                .background(Rectangle().fill(Material.thin))
-                                .cornerRadius(20)
-                                .foregroundColor(colorScheme == .dark ? .white : .black)
-                                .font(.title)
-
-                            Text("Subtitle \(item)")
-                                .foregroundColor(colorScheme == .dark ? .white : .black)
-                                .font(.body)
-                        }
-                    }
-                }
-                .padding()
-            }
+            PatternsGridView(viewModel: viewModel)
         }
     }
 }
