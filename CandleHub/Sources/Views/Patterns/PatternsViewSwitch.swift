@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PatternsViewSwitch: View {
-    var options = ["1 Column", "2 Columns"]
+    var options = ["Big patterns", "Small patterns"]
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: GridViewModel
     @Binding var selectedOption: String

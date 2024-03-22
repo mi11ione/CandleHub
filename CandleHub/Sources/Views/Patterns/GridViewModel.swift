@@ -13,15 +13,15 @@ class GridViewModel: ObservableObject {
         if gridWidth == 350.0 {
             return [GridItem(.adaptive(minimum: 300))]
         } else {
-            return [GridItem(.adaptive(minimum: 160))]
+            return [GridItem(.adaptive(minimum: 180))]
         }
     }
 
     func updateLayout(for option: String) {
         switch option {
-        case "1 Column":
+        case "Big patterns":
             gridWidth = 350.0
-        case "2 Columns":
+        case "Small patterns":
             gridWidth = 160.0
         default:
             break
