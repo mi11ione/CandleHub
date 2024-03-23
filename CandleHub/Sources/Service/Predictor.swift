@@ -1,5 +1,5 @@
 //
-//  Model.swift
+//  Predictor.swift
 //  CandleHub
 //
 //  Created by Кирилл Кошкарёв on 22.03.2024.
@@ -9,12 +9,10 @@ import CoreML
 import SwiftUI
 
 struct CandlePredictor: Predictor {
-        
-    static func predict(candles: [Candle]) ->  [Double] {
-        
+    static func predict(candles: [Candle]) -> [Double] {
         let candleSettings: [Double] = Adapter.adaptCandle(candles: candles)
         var readyPredict: [Double] = []
-        
+
         // MARK: - OpenRegressionPredict
 
         let openModelInput = OpenRegressionModelInput(
@@ -33,12 +31,11 @@ struct CandlePredictor: Predictor {
         guard let firstModelURL = Bundle.main.url(forResource: "OpenRegressionModel", withExtension: "mlmodelc") else {
             fatalError("Failed to find YourModel.mlmodel in main bundle")
         }
-        
+
         do {
-            
             let mlModel = try MLModel(contentsOf: firstModelURL)
             let prediction = try mlModel.prediction(from: openModelInput)
-            
+
             if let doublePrediction = prediction.featureValue(for: "open_awaited")?.doubleValue {
                 readyPredict.append(doublePrediction)
             } else {
@@ -47,9 +44,9 @@ struct CandlePredictor: Predictor {
         } catch {
             fatalError("Error making prediction: \(error.localizedDescription)")
         }
-        
+
         // MARK: - CloseRegressionPredict
-        
+
         let closeModelInput = CloseRegressionModelInput(
             open: candleSettings[0], high: candleSettings[1], low: candleSettings[2],
             close: candleSettings[3], volume: candleSettings[4], open__d_1_: candleSettings[5],
@@ -66,12 +63,11 @@ struct CandlePredictor: Predictor {
         guard let secondModelURL = Bundle.main.url(forResource: "CloseRegressionModel", withExtension: "mlmodelc") else {
             fatalError("Failed to find YourModel.mlmodel in main bundle")
         }
-        
+
         do {
-            
             let mlModel = try MLModel(contentsOf: secondModelURL)
             let prediction = try mlModel.prediction(from: closeModelInput)
-            
+
             if let doublePrediction = prediction.featureValue(for: "open_awaited")?.doubleValue {
                 readyPredict.append(doublePrediction)
             } else {
@@ -80,9 +76,9 @@ struct CandlePredictor: Predictor {
         } catch {
             fatalError("Error making prediction: \(error.localizedDescription)")
         }
-        
+
         // MARK: - HighRegressionPredict
-        
+
         let highModelInput = OpenRegressionModelInput(
             open: candleSettings[0], high: candleSettings[1], low: candleSettings[2],
             close: candleSettings[3], volume: candleSettings[4], open__d_1_: candleSettings[5],
@@ -99,12 +95,11 @@ struct CandlePredictor: Predictor {
         guard let thirdModelURL = Bundle.main.url(forResource: "HighRegressionModel", withExtension: "mlmodelc") else {
             fatalError("Failed to find YourModel.mlmodel in main bundle")
         }
-        
+
         do {
-            
             let mlModel = try MLModel(contentsOf: thirdModelURL)
             let prediction = try mlModel.prediction(from: highModelInput)
-            
+
             if let doublePrediction = prediction.featureValue(for: "open_awaited")?.doubleValue {
                 readyPredict.append(doublePrediction)
             } else {
@@ -113,9 +108,9 @@ struct CandlePredictor: Predictor {
         } catch {
             fatalError("Error making prediction: \(error.localizedDescription)")
         }
-        
+
         // MARK: - LowRegressionPredict
-        
+
         let lowModelInput = OpenRegressionModelInput(
             open: candleSettings[0], high: candleSettings[1], low: candleSettings[2],
             close: candleSettings[3], volume: candleSettings[4], open__d_1_: candleSettings[5],
@@ -132,12 +127,11 @@ struct CandlePredictor: Predictor {
         guard let forthModelURL = Bundle.main.url(forResource: "LowRegressionModel", withExtension: "mlmodelc") else {
             fatalError("Failed to find YourModel.mlmodel in main bundle")
         }
-        
+
         do {
-            
             let mlModel = try MLModel(contentsOf: forthModelURL)
             let prediction = try mlModel.prediction(from: lowModelInput)
-            
+
             if let doublePrediction = prediction.featureValue(for: "open_awaited")?.doubleValue {
                 readyPredict.append(doublePrediction)
             } else {
@@ -146,15 +140,11 @@ struct CandlePredictor: Predictor {
         } catch {
             fatalError("Error making prediction: \(error.localizedDescription)")
         }
-        
+
         return readyPredict
-        
     }
-    
 }
 
 protocol Predictor {
-    
     static func predict(candles: [Candle]) -> [Double]
-    
 }

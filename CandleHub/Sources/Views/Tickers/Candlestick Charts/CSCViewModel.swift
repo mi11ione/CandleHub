@@ -10,11 +10,11 @@ import SwiftUI
 class CandleStickChartViewModel: ObservableObject {
     @Published var candles: [Candle] = []
     private var fetcher: TradingDataNetworkFetching
-    
+
     init(fetcher: TradingDataNetworkFetching) {
         self.fetcher = fetcher
     }
-    
+
     func fetchData() {
         Task {
             if let tickers = await fetcher.getMoexTickers(), let firstTicker = tickers.first {

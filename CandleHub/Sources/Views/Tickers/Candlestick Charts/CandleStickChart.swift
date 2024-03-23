@@ -13,7 +13,7 @@ struct CandleStickChart: View {
 
     var body: some View {
         Chart {
-            ForEach(Array(zip(viewModel.candles.indices, viewModel.candles)), id: \.1.id) { index, candle in
+            ForEach(Array(zip(viewModel.candles.indices, viewModel.candles)), id: \.1.id) { _, candle in
                 RectangleMark(
                     x: .value("Time", viewModel.formatDate(candle.date)),
                     yStart: .value("Low", candle.lowPrice),
@@ -38,7 +38,7 @@ struct CandleStickChart: View {
                 AxisValueLabel(centered: true)
             }
         }
-        .chartYScale(domain: 90...110)
+        .chartYScale(domain: 90 ... 110)
         .chartYAxis {
             AxisMarks(position: .trailing, values: .automatic(desiredCount: 5))
         }
@@ -47,4 +47,3 @@ struct CandleStickChart: View {
         }
     }
 }
-

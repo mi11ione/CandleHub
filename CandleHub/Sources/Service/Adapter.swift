@@ -7,20 +7,14 @@
 
 import SwiftUI
 
-struct Adapter {
-    
+enum Adapter {
     static func adaptCandle(candles: [Candle]) -> [Double] {
-        
         var candleSettings: [Double] = []
-        
-        candles.forEach { candle in
-            
+
+        for candle in candles {
             candleSettings.append(contentsOf: [candle.openPrice, candle.highPrice, candle.lowPrice, candle.closePrice, candle.volume])
-            
         }
-        
+
         return candleSettings
-        
     }
-    
 }
