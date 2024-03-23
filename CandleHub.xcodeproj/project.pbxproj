@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		048819BB2BAC77FD00AFDA24 /* TradingDataNetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B32BAC77FD00AFDA24 /* TradingDataNetworkFetcher.swift */; };
 		048819BC2BAC77FD00AFDA24 /* ChartTimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B42BAC77FD00AFDA24 /* ChartTimePeriod.swift */; };
-		048819BD2BAC77FD00AFDA24 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B52BAC77FD00AFDA24 /* Stock.swift */; };
+		048819BD2BAC77FD00AFDA24 /* Candle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B52BAC77FD00AFDA24 /* Candle.swift */; };
 		048819BE2BAC77FD00AFDA24 /* MoexCandles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B62BAC77FD00AFDA24 /* MoexCandles.swift */; };
 		048819BF2BAC77FD00AFDA24 /* TickerMOEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B72BAC77FD00AFDA24 /* TickerMOEX.swift */; };
 		048819C02BAC77FD00AFDA24 /* MoexApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B82BAC77FD00AFDA24 /* MoexApi.swift */; };
@@ -86,7 +86,7 @@
 /* Begin PBXFileReference section */
 		048819B32BAC77FD00AFDA24 /* TradingDataNetworkFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradingDataNetworkFetcher.swift; sourceTree = "<group>"; };
 		048819B42BAC77FD00AFDA24 /* ChartTimePeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartTimePeriod.swift; sourceTree = "<group>"; };
-		048819B52BAC77FD00AFDA24 /* Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		048819B52BAC77FD00AFDA24 /* Candle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candle.swift; sourceTree = "<group>"; };
 		048819B62BAC77FD00AFDA24 /* MoexCandles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoexCandles.swift; sourceTree = "<group>"; };
 		048819B72BAC77FD00AFDA24 /* TickerMOEX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerMOEX.swift; sourceTree = "<group>"; };
 		048819B82BAC77FD00AFDA24 /* MoexApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoexApi.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 				048819B62BAC77FD00AFDA24 /* MoexCandles.swift */,
 				048819BA2BAC77FD00AFDA24 /* MoexTiсkers.swift */,
 				048819B92BAC77FD00AFDA24 /* Money.swift */,
-				048819B52BAC77FD00AFDA24 /* Stock.swift */,
+				048819B52BAC77FD00AFDA24 /* Candle.swift */,
 				048819B72BAC77FD00AFDA24 /* TickerMOEX.swift */,
 				048819B32BAC77FD00AFDA24 /* TradingDataNetworkFetcher.swift */,
 			);
@@ -572,7 +572,7 @@
 				048819BF2BAC77FD00AFDA24 /* TickerMOEX.swift in Sources */,
 				3322328E2BAB97FF00D40FAD /* Animation.swift in Sources */,
 				33C15C182BACE20F000464CE /* PatternsGridView.swift in Sources */,
-				048819BD2BAC77FD00AFDA24 /* Stock.swift in Sources */,
+				048819BD2BAC77FD00AFDA24 /* Candle.swift in Sources */,
 				3322327C2BAB96E900D40FAD /* OutlineModifier.swift in Sources */,
 				048819BE2BAC77FD00AFDA24 /* MoexCandles.swift in Sources */,
 			);
