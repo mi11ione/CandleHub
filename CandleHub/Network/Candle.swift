@@ -49,14 +49,14 @@ public struct Candle: Identifiable, Equatable, Hashable {
         self.value = value
         self.volume = volume
     }
-    
+
     static func stringToDate(_ date: String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        return dateFormatter.date(from:date) ?? Date()
+        return dateFormatter.date(from: date) ?? Date()
     }
-    
+
     static func formatDateHH(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH"

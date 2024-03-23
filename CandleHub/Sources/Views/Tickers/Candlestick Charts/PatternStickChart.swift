@@ -14,7 +14,7 @@ struct PatternStickChart: View {
 
     var body: some View {
         Chart {
-            ForEach(Array(zip(pattern.candles.indices, pattern.candles)), id: \.1.id) { index, candle in
+            ForEach(Array(zip(pattern.candles.indices, pattern.candles)), id: \.1.id) { _, candle in
                 RectangleMark(
                     x: .value("Time", Candle.formatDateHH(candle.date)),
                     yStart: .value("Low", candle.lowPrice),
@@ -47,4 +47,3 @@ struct PatternStickChart: View {
         }
     }
 }
-

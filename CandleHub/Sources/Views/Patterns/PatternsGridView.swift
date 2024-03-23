@@ -21,10 +21,10 @@ struct PatternsGridView: View {
                     VStack {
                         HStack {
                             Text("\(item.name)")
-                            .padding(.leading)
+                                .padding(.leading)
                             Spacer()
                             PatternStickChart(pattern: item)
-                            .frame(width: 170)
+                                .frame(width: 170)
                         }.frame(width: viewModel.gridWidth, height: 160, alignment: .center)
                             .background(Rectangle().fill(Material.thin))
                             .cornerRadius(30)

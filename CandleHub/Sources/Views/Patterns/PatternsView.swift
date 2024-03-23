@@ -56,7 +56,7 @@ struct PatternsView: View {
                             Candle(date: Candle.stringToDate("2016-04-14T10:44:00+0000"), openPrice: 120, closePrice: 122, highPrice: 122, lowPrice: 110, value: 0, volume: 0),
                         ],
                         info: "Infoo"
-                    )
+                    ),
                 ]
             )
         }
