@@ -54,11 +54,11 @@ public struct Candle: Identifiable {
 private let minPriceDefaultValue = 0.0
 private let maxPriceDefaultValue = 1000.0
 extension Candle {
-    static func stocksMinPriceValue(_ stocks: [Candle]) -> Double {
-        stocks.min(by: { $0.lowPrice < $1.lowPrice })?.lowPrice ?? minPriceDefaultValue
+    static func candlesMinPriceValue(_ candles: [Candle]) -> Double {
+        candles.min(by: { $0.lowPrice < $1.lowPrice })?.lowPrice ?? minPriceDefaultValue
     }
 
-    static func stocksMaxPriceValue(_ stocks: [Candle]) -> Double {
-        stocks.max(by: { $0.highPrice < $1.highPrice })?.highPrice ?? maxPriceDefaultValue
+    static func candlesMaxPriceValue(_ candles: [Candle]) -> Double {
+        candles.max(by: { $0.highPrice < $1.highPrice })?.highPrice ?? maxPriceDefaultValue
     }
 }

@@ -51,8 +51,8 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
         do {
             let data = try await request(url)
             let moexCandles = try decodeJSON(type: MoexCandles.self, from: data)
-            let stocks = parseMoexCandles(moexCandles: moexCandles)
-            return stocks
+            let candles = parseMoexCandles(moexCandles: moexCandles)
+            return candles
         } catch {
             print(error)
         }
@@ -145,7 +145,7 @@ private func parseMoexCandles(moexCandles: MoexCandles) -> [Candle] {
         return formatter
     }()
 
-    var stocks = [Candle]()
+    var candles = [Candle]()
     for i in 0 ..< moexCandles.candles.data.count {
         var date = ""
         let rawDate = moexCandles.candles.data[i][6]
@@ -211,7 +211,7 @@ private func parseMoexCandles(moexCandles: MoexCandles) -> [Candle] {
             break
         }
 
-        let stock = Candle(
+        let candle = Candle(
             date: dateFormatter.date(from: date) ?? Date(timeIntervalSinceNow: 0),
             openPrice: openPrice,
             closePrice: closePrice,
@@ -220,9 +220,9 @@ private func parseMoexCandles(moexCandles: MoexCandles) -> [Candle] {
             value: value,
             volume: volume
         )
-        stocks.append(stock)
+        candles.append(candle)
     }
-    return stocks
+    return candles
 }
 
 enum NetworkingError: Error {
@@ -241,20 +241,5 @@ extension HTTPURLResponse {
     /// Otherwise false.
     var isSuccessful: Bool {
         200 ... 299 ~= statusCode
-    }
-}
-
-extension ChartTimePeriod {
-    var queryItem: URLQueryItem {
-        let value: String
-        switch self {
-        case .day:
-            value = "24"
-        case .week:
-            value = "7"
-        case .month:
-            value = "31"
-        }
-        return URLQueryItem(name: "interval", value: value)
     }
 }
