@@ -26,7 +26,7 @@ struct TickerGridItemView: View {
         HStack {
             tickerDetails
             Spacer()
-            CandleStickChart()
+            CandleStickChart(viewModel: CandleStickChartViewModel(fetcher: TradingDataNetworkFetcher()))
                 .frame(width: 170)
         }
     }

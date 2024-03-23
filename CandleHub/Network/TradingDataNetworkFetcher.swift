@@ -2,7 +2,7 @@ import Foundation
 
 protocol TradingDataNetworkFetching {
     func getMoexTickers() async -> [TickerMOEX]?
-    func getMoexCandles(ticker: String, timePeriod: ChartTimePeriod) async -> [Stock]?
+    func getMoexCandles(ticker: String, timePeriod: ChartTimePeriod) async -> [Candle]?
 }
 
 final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObject {
@@ -39,7 +39,7 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
         return tickers
     }
 
-    func getMoexCandles(ticker: String, timePeriod: ChartTimePeriod) async -> [Stock]? {
+    func getMoexCandles(ticker: String, timePeriod: ChartTimePeriod) async -> [Candle]? {
         var queryItems = [URLQueryItem]()
         queryItems.append(URLQueryItem(name: "iss.reverse", value: "true"))
         queryItems.append(timePeriod.queryItem)
@@ -51,8 +51,8 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
         do {
             let data = try await request(url)
             let moexCandles = try decodeJSON(type: MoexCandles.self, from: data)
-            let stocks = parseMoexCandles(moexCandles: moexCandles)
-            return stocks
+            let candles = parseMoexCandles(moexCandles: moexCandles)
+            return candles
         } catch {
             print(error)
         }
@@ -138,14 +138,14 @@ private func parseMoexTikers(moexTickers: MoexTiсkers) -> [TickerMOEX] {
     return tickers
 }
 
-private func parseMoexCandles(moexCandles: MoexCandles) -> [Stock] {
+private func parseMoexCandles(moexCandles: MoexCandles) -> [Candle] {
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return formatter
     }()
 
-    var stocks = [Stock]()
+    var candles = [Candle]()
     for i in 0 ..< moexCandles.candles.data.count {
         var date = ""
         let rawDate = moexCandles.candles.data[i][6]
@@ -211,7 +211,7 @@ private func parseMoexCandles(moexCandles: MoexCandles) -> [Stock] {
             break
         }
 
-        let stock = Stock(
+        let candle = Candle(
             date: dateFormatter.date(from: date) ?? Date(timeIntervalSinceNow: 0),
             openPrice: openPrice,
             closePrice: closePrice,
@@ -220,9 +220,9 @@ private func parseMoexCandles(moexCandles: MoexCandles) -> [Stock] {
             value: value,
             volume: volume
         )
-        stocks.append(stock)
+        candles.append(candle)
     }
-    return stocks
+    return candles
 }
 
 enum NetworkingError: Error {
@@ -241,20 +241,5 @@ extension HTTPURLResponse {
     /// Otherwise false.
     var isSuccessful: Bool {
         200 ... 299 ~= statusCode
-    }
-}
-
-extension ChartTimePeriod {
-    var queryItem: URLQueryItem {
-        let value: String
-        switch self {
-        case .day:
-            value = "24"
-        case .week:
-            value = "7"
-        case .month:
-            value = "31"
-        }
-        return URLQueryItem(name: "interval", value: value)
     }
 }

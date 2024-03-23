@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Stock: Identifiable {
+public struct Candle: Identifiable {
     public var id = UUID()
     public var date: Date
     public var openPrice: Double
@@ -53,12 +53,12 @@ public struct Stock: Identifiable {
 
 private let minPriceDefaultValue = 0.0
 private let maxPriceDefaultValue = 1000.0
-extension Stock {
-    static func stocksMinPriceValue(_ stocks: [Stock]) -> Double {
-        stocks.min(by: { $0.lowPrice < $1.lowPrice })?.lowPrice ?? minPriceDefaultValue
+extension Candle {
+    static func candlesMinPriceValue(_ candles: [Candle]) -> Double {
+        candles.min(by: { $0.lowPrice < $1.lowPrice })?.lowPrice ?? minPriceDefaultValue
     }
 
-    static func stocksMaxPriceValue(_ stocks: [Stock]) -> Double {
-        stocks.max(by: { $0.highPrice < $1.highPrice })?.highPrice ?? maxPriceDefaultValue
+    static func candlesMaxPriceValue(_ candles: [Candle]) -> Double {
+        candles.max(by: { $0.highPrice < $1.highPrice })?.highPrice ?? maxPriceDefaultValue
     }
 }
