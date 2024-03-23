@@ -47,12 +47,33 @@
 		62B144F212D385EBF52A14E4 /* CandleHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */; };
 		636A4BFA2BAF0EBD00420BF5 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4BF92BAF0EBD00420BF5 /* Pattern.swift */; };
 		636A4BFC2BAF1B3E00420BF5 /* PatternStickChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4BFB2BAF1B3E00420BF5 /* PatternStickChart.swift */; };
+		AE988FCF2BAF205F0036F225 /* OpenRegressionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE988FCB2BAF205F0036F225 /* OpenRegressionModel.mlmodel */; };
+		AE988FD02BAF205F0036F225 /* CloseRegressionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE988FCC2BAF205F0036F225 /* CloseRegressionModel.mlmodel */; };
+		AE988FD12BAF205F0036F225 /* HighRegressionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE988FCD2BAF205F0036F225 /* HighRegressionModel.mlmodel */; };
+		AE988FD22BAF205F0036F225 /* LowRegressionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE988FCE2BAF205F0036F225 /* LowRegressionModel.mlmodel */; };
+		AEE833672BAD788C00786D60 /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE833662BAD788C00786D60 /* Predictor.swift */; };
+		AEE8339C2BAF0A6300786D60 /* libCandleStick.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE8339B2BAF0A3100786D60 /* libCandleStick.a */; };
+		AEE833A12BAF143E00786D60 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE833732BADD4E300786D60 /* Adapter.swift */; };
 		B5BDCD8C3452CCD3118DCDEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346BEF51999A85EE1B26A7C7 /* Assets.xcassets */; };
 		F5295DB90B37882622BC0944 /* TuistBundle+CandleHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06755176204E80DA842F124 /* TuistBundle+CandleHub.swift */; };
 		FE4D8F95B8EDBA9ED4487517 /* CandleHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938817186F191291621E964F /* CandleHubTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AEE833942BAF091C00786D60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEE833902BAF091C00786D60 /* CandleStick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEE8337E2BAF07DE00786D60;
+			remoteInfo = CandleStick;
+		};
+		AEE8339A2BAF0A3100786D60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEE833962BAF0A3100786D60 /* CandleStick.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AEE8337E2BAF07DE00786D60;
+			remoteInfo = CandleStick;
+		};
 		B016286B5D0B44696E10F105 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5B58470910F18865ECC6FACC /* Project object */;
@@ -130,6 +151,14 @@
 		8F49A6197360E812E457ECA7 /* CandleHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CandleHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		938817186F191291621E964F /* CandleHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleHubTests.swift; sourceTree = "<group>"; };
 		A06755176204E80DA842F124 /* TuistBundle+CandleHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+CandleHub.swift"; sourceTree = "<group>"; };
+		AE988FCB2BAF205F0036F225 /* OpenRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = OpenRegressionModel.mlmodel; path = CandleHub/Resources/MLModel/OpenRegressionModel.mlmodel; sourceTree = "<group>"; };
+		AE988FCC2BAF205F0036F225 /* CloseRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CloseRegressionModel.mlmodel; path = CandleHub/Resources/MLModel/CloseRegressionModel.mlmodel; sourceTree = "<group>"; };
+		AE988FCD2BAF205F0036F225 /* HighRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = HighRegressionModel.mlmodel; path = CandleHub/Resources/MLModel/HighRegressionModel.mlmodel; sourceTree = "<group>"; };
+		AE988FCE2BAF205F0036F225 /* LowRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = LowRegressionModel.mlmodel; path = CandleHub/Resources/MLModel/LowRegressionModel.mlmodel; sourceTree = "<group>"; };
+		AEE833662BAD788C00786D60 /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
+		AEE833732BADD4E300786D60 /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
+		AEE833902BAF091C00786D60 /* CandleStick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CandleStick.xcodeproj; path = CandleStick/CandleStick.xcodeproj; sourceTree = "<group>"; };
+		AEE833962BAF0A3100786D60 /* CandleStick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CandleStick.xcodeproj; path = ../CandleStick/CandleStick.xcodeproj; sourceTree = "<group>"; };
 		B32DC36E8BAFBC6C2D3308B8 /* CandleHub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CandleHub-Info.plist"; sourceTree = "<group>"; };
 		F31467DA628392289E9BB9B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F55CA2C4FAE97A4B4912AF54 /* TuistAssets+CandleHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+CandleHub.swift"; sourceTree = "<group>"; };
@@ -140,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE8339C2BAF0A6300786D60 /* libCandleStick.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +218,10 @@
 		328F090E9EC078A09025E7C1 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				AE988FCC2BAF205F0036F225 /* CloseRegressionModel.mlmodel */,
+				AE988FCD2BAF205F0036F225 /* HighRegressionModel.mlmodel */,
+				AE988FCE2BAF205F0036F225 /* LowRegressionModel.mlmodel */,
+				AE988FCB2BAF205F0036F225 /* OpenRegressionModel.mlmodel */,
 				D9451CE1A747BA70EF6DABFE /* CandleHub */,
 				C18E97D7DF55FC16EC4E050D /* Derived */,
 			);
@@ -361,6 +395,7 @@
 		40A232D52B3C7AB4E7BE3A2E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				AEE833652BAD787900786D60 /* Service */,
 				3322328F2BAB983700D40FAD /* Views */,
 				3322327A2BAB96D200D40FAD /* Extras */,
 				70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */,
@@ -401,6 +436,31 @@
 			path = InfoPlists;
 			sourceTree = "<group>";
 		};
+		AEE833652BAD787900786D60 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AEE833662BAD788C00786D60 /* Predictor.swift */,
+				AEE833732BADD4E300786D60 /* Adapter.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AEE833912BAF091C00786D60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEE833952BAF091C00786D60 /* libCandleStick.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEE833972BAF0A3100786D60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEE8339B2BAF0A3100786D60 /* libCandleStick.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C18E97D7DF55FC16EC4E050D /* Derived */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +473,7 @@
 		D1717776E4A800D4C17773D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEE833902BAF091C00786D60 /* CandleStick.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -431,6 +492,7 @@
 		F2344CBFEB7788A3030EDBBC = {
 			isa = PBXGroup;
 			children = (
+				AEE833962BAF0A3100786D60 /* CandleStick.xcodeproj */,
 				328F090E9EC078A09025E7C1 /* Project */,
 				D1717776E4A800D4C17773D7 /* Frameworks */,
 				62B1A2C8E5732003591590BE /* Cache */,
@@ -503,6 +565,16 @@
 			mainGroup = F2344CBFEB7788A3030EDBBC;
 			productRefGroup = 0043AEFEDAC68331A4A6E084 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AEE833912BAF091C00786D60 /* Products */;
+					ProjectRef = AEE833902BAF091C00786D60 /* CandleStick.xcodeproj */;
+				},
+				{
+					ProductGroup = AEE833972BAF0A3100786D60 /* Products */;
+					ProjectRef = AEE833962BAF0A3100786D60 /* CandleStick.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C8EB70B46EF254346ED7710F /* CandleHub */,
@@ -510,6 +582,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AEE833952BAF091C00786D60 /* libCandleStick.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCandleStick.a;
+			remoteRef = AEE833942BAF091C00786D60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AEE8339B2BAF0A3100786D60 /* libCandleStick.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCandleStick.a;
+			remoteRef = AEE8339A2BAF0A3100786D60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		583D3201BD4BEF8D801273BA /* Resources */ = {
@@ -543,6 +632,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE833A12BAF143E00786D60 /* Adapter.swift in Sources */,
 				3328CDBA2BAC68BC005032AF /* PatternsViewSwitch.swift in Sources */,
 				62B144F212D385EBF52A14E4 /* CandleHubApp.swift in Sources */,
 				33E932F42BADC90F0080D003 /* TickersViewModel.swift in Sources */,
@@ -572,14 +662,19 @@
 				332232762BAB95E500D40FAD /* TabItem.swift in Sources */,
 				332232802BAB972100D40FAD /* SlideFadeIn.swift in Sources */,
 				33C15C1A2BACE7B5000464CE /* GridViewModel.swift in Sources */,
+				AE988FD02BAF205F0036F225 /* CloseRegressionModel.mlmodel in Sources */,
 				048819C22BAC77FD00AFDA24 /* MoexTiсkers.swift in Sources */,
 				048819C02BAC77FD00AFDA24 /* MoexApi.swift in Sources */,
 				048819BC2BAC77FD00AFDA24 /* ChartTimePeriod.swift in Sources */,
 				332232822BAB974C00D40FAD /* OutlineOverlay.swift in Sources */,
+				AEE833672BAD788C00786D60 /* Predictor.swift in Sources */,
+				AE988FCF2BAF205F0036F225 /* OpenRegressionModel.mlmodel in Sources */,
 				332232782BAB96A100D40FAD /* TabPreferenceKey.swift in Sources */,
 				048819BF2BAC77FD00AFDA24 /* TickerMOEX.swift in Sources */,
 				3322328E2BAB97FF00D40FAD /* Animation.swift in Sources */,
+				AE988FD22BAF205F0036F225 /* LowRegressionModel.mlmodel in Sources */,
 				33C15C182BACE20F000464CE /* PatternsGridView.swift in Sources */,
+				AE988FD12BAF205F0036F225 /* HighRegressionModel.mlmodel in Sources */,
 				048819BD2BAC77FD00AFDA24 /* Candle.swift in Sources */,
 				3322327C2BAB96E900D40FAD /* OutlineModifier.swift in Sources */,
 				048819BE2BAC77FD00AFDA24 /* MoexCandles.swift in Sources */,

@@ -45,7 +45,7 @@ struct TickerGridItemView: View {
     }
 
     private var priceView: some View {
-        Text("\(ticker.price)")
+        Text("\(ticker.price.description)")
             .font(.title3)
             .bold()
     }
