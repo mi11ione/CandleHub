@@ -9,6 +9,7 @@ import SwiftUI
 
 class CandleStickChartViewModel: ObservableObject {
     @Published var candles: [Candle] = []
+    @Published var candlesByTicker: [String: [Candle]] = [:]
     private var fetcher: TradingDataNetworkFetching
     
     init(fetcher: TradingDataNetworkFetching) {
@@ -17,11 +18,12 @@ class CandleStickChartViewModel: ObservableObject {
     
     func fetchData() {
         Task {
-            if let tickers = await fetcher.getMoexTickers(), let firstTicker = tickers.first {
-                let allCandles = await fetcher.getMoexCandles(ticker: firstTicker.title, timePeriod: .hour) ?? []
-                DispatchQueue.main.async {
-                    self.candles = Array(allCandles.suffix(5))
-                    print(self.candles)
+            if let tickers = await fetcher.getMoexTickers() {
+                for ticker in tickers {
+                    let allCandles = await fetcher.getMoexCandles(ticker: ticker.title, timePeriod: .hour) ?? []
+                    DispatchQueue.main.async {
+                        self.candlesByTicker[ticker.title] = Array(allCandles.suffix(10))
+                    }
                 }
             }
         }
@@ -29,7 +31,20 @@ class CandleStickChartViewModel: ObservableObject {
 
     func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "HH"
+        formatter.dateFormat = "HH:mm:ss"
         return formatter.string(from: date)
+    }
+
+    func calculateYAxisDomain(for ticker: String) -> ClosedRange<Double> {
+        guard let candles = candlesByTicker[ticker], !candles.isEmpty else {
+            return 0...100
+        }
+        let lowPrices = candles.map { $0.lowPrice }
+        let highPrices = candles.map { $0.highPrice }
+        guard let minPrice = lowPrices.min(), let maxPrice = highPrices.max() else {
+            return 0...100
+        }
+        let padding = (maxPrice - minPrice) * 0.15
+        return (minPrice - padding)...(maxPrice + padding)
     }
 }
