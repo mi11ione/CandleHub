@@ -9,38 +9,41 @@ import Charts
 import SwiftUI
 
 struct CandleStickChart: View {
+    @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: CandleStickChartViewModel
+    let tickerTitle: String
 
     var body: some View {
         Chart {
-            ForEach(Array(zip(viewModel.candles.indices, viewModel.candles)), id: \.1.id) { _, candle in
-                RectangleMark(
-                    x: .value("Time", viewModel.formatDate(candle.date)),
-                    yStart: .value("Low", candle.lowPrice),
-                    yEnd: .value("High", candle.highPrice),
-                    width: .fixed(2)
-                )
-                .foregroundStyle(.secondary)
+            if let candles = viewModel.candlesByTicker[tickerTitle] {
+                ForEach(candles, id: \.id) { candle in
+                    RectangleMark(
+                        x: .value("Time", viewModel.formatDate(candle.date)),
+                        yStart: .value("Low", candle.lowPrice),
+                        yEnd: .value("High", candle.highPrice),
+                        width: .fixed(2)
+                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                    .foregroundStyle(colorScheme == .dark ? .white : .black)
 
-                RectangleMark(
-                    x: .value("Time", viewModel.formatDate(candle.date)),
-                    yStart: .value("Open", candle.openPrice),
-                    yEnd: .value("Close", candle.closePrice),
-                    width: .fixed(10)
-                )
-                .foregroundStyle(candle.openPrice < candle.closePrice ? .green : .red)
+                    RectangleMark(
+                        x: .value("Time", viewModel.formatDate(candle.date)),
+                        yStart: .value("Open", candle.openPrice),
+                        yEnd: .value("Close", candle.closePrice),
+                        width: .fixed(7)
+                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 2))
+                    .foregroundStyle(candle.openPrice < candle.closePrice ? .red : .green)
+                }
             }
         }
         .padding()
-        .chartXAxis {
-            AxisMarks(position: .bottom, values: .automatic(desiredCount: 6)) {
-                AxisGridLine(centered: true)
-                AxisValueLabel(centered: true)
-            }
-        }
-        .chartYScale(domain: 90 ... 110)
+        .chartYScale(domain: viewModel.calculateYAxisDomain(for: tickerTitle))
         .chartYAxis {
             AxisMarks(position: .trailing, values: .automatic(desiredCount: 5))
+        }
+        .chartXAxis {
+            AxisMarks(position: .bottom, values: .automatic(desiredCount: 5))
         }
         .onAppear {
             viewModel.fetchData()
