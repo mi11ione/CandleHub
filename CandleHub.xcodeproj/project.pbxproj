@@ -45,6 +45,8 @@
 		33E932F42BADC90F0080D003 /* TickersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E932F32BADC90F0080D003 /* TickersViewModel.swift */; };
 		586D143B74732600E264A203 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F31467DA628392289E9BB9B0 /* Preview Assets.xcassets */; };
 		62B144F212D385EBF52A14E4 /* CandleHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */; };
+		636A4BFA2BAF0EBD00420BF5 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4BF92BAF0EBD00420BF5 /* Pattern.swift */; };
+		636A4BFC2BAF1B3E00420BF5 /* PatternStickChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4BFB2BAF1B3E00420BF5 /* PatternStickChart.swift */; };
 		B5BDCD8C3452CCD3118DCDEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346BEF51999A85EE1B26A7C7 /* Assets.xcassets */; };
 		F5295DB90B37882622BC0944 /* TuistBundle+CandleHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06755176204E80DA842F124 /* TuistBundle+CandleHub.swift */; };
 		FE4D8F95B8EDBA9ED4487517 /* CandleHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938817186F191291621E964F /* CandleHubTests.swift */; };
@@ -121,6 +123,8 @@
 		33E932F32BADC90F0080D003 /* TickersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersViewModel.swift; sourceTree = "<group>"; };
 		346BEF51999A85EE1B26A7C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61634B87A7767804D38F56FD /* CandleHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CandleHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		636A4BF92BAF0EBD00420BF5 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
+		636A4BFB2BAF1B3E00420BF5 /* PatternStickChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternStickChart.swift; sourceTree = "<group>"; };
 		70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleHubApp.swift; sourceTree = "<group>"; };
 		879B0FC4A003425D16DE20C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8F49A6197360E812E457ECA7 /* CandleHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CandleHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -277,6 +281,7 @@
 				3328CDB92BAC68BC005032AF /* PatternsViewSwitch.swift */,
 				3328CDB72BAC68A3005032AF /* PatternsView.swift */,
 				33C15C192BACE7B5000464CE /* GridViewModel.swift */,
+				636A4BF92BAF0EBD00420BF5 /* Pattern.swift */,
 			);
 			path = Patterns;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 			children = (
 				336C9CAA2BADEC030093DE16 /* CandleStickChart.swift */,
 				336E29812BAF058600776F5B /* CSCViewModel.swift */,
+				636A4BFB2BAF1B3E00420BF5 /* PatternStickChart.swift */,
 			);
 			path = "Candlestick Charts";
 			sourceTree = "<group>";
@@ -560,6 +566,8 @@
 				336E29822BAF058600776F5B /* CSCViewModel.swift in Sources */,
 				332232862BAB978500D40FAD /* BackgroundStyle.swift in Sources */,
 				336C9CAB2BADEC030093DE16 /* CandleStickChart.swift in Sources */,
+				636A4BFA2BAF0EBD00420BF5 /* Pattern.swift in Sources */,
+				636A4BFC2BAF1B3E00420BF5 /* PatternStickChart.swift in Sources */,
 				F5295DB90B37882622BC0944 /* TuistBundle+CandleHub.swift in Sources */,
 				332232762BAB95E500D40FAD /* TabItem.swift in Sources */,
 				332232802BAB972100D40FAD /* SlideFadeIn.swift in Sources */,
