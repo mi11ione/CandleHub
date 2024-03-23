@@ -68,7 +68,7 @@ struct CandlePredictor: Predictor {
             let mlModel = try MLModel(contentsOf: secondModelURL)
             let prediction = try mlModel.prediction(from: closeModelInput)
 
-            if let doublePrediction = prediction.featureValue(for: "open_awaited")?.doubleValue {
+            if let doublePrediction = prediction.featureValue(for: "close_awaited")?.doubleValue {
                 readyPredict.append(doublePrediction)
             } else {
                 fatalError("Failed to get double prediction from ML model")
@@ -79,7 +79,7 @@ struct CandlePredictor: Predictor {
 
         // MARK: - HighRegressionPredict
 
-        let highModelInput = OpenRegressionModelInput(
+        let highModelInput = HighRegressionModelInput(
             open: candleSettings[0], high: candleSettings[1], low: candleSettings[2],
             close: candleSettings[3], volume: candleSettings[4], open__d_1_: candleSettings[5],
             high__d_1_: candleSettings[6], low__d_1_: candleSettings[7], close__d_1_: candleSettings[8],
@@ -100,7 +100,7 @@ struct CandlePredictor: Predictor {
             let mlModel = try MLModel(contentsOf: thirdModelURL)
             let prediction = try mlModel.prediction(from: highModelInput)
 
-            if let doublePrediction = prediction.featureValue(for: "open_awaited")?.doubleValue {
+            if let doublePrediction = prediction.featureValue(for: "high_awaited")?.doubleValue {
                 readyPredict.append(doublePrediction)
             } else {
                 fatalError("Failed to get double prediction from ML model")
@@ -111,7 +111,7 @@ struct CandlePredictor: Predictor {
 
         // MARK: - LowRegressionPredict
 
-        let lowModelInput = OpenRegressionModelInput(
+        let lowModelInput = LowRegressionModelInput(
             open: candleSettings[0], high: candleSettings[1], low: candleSettings[2],
             close: candleSettings[3], volume: candleSettings[4], open__d_1_: candleSettings[5],
             high__d_1_: candleSettings[6], low__d_1_: candleSettings[7], close__d_1_: candleSettings[8],
@@ -132,7 +132,7 @@ struct CandlePredictor: Predictor {
             let mlModel = try MLModel(contentsOf: forthModelURL)
             let prediction = try mlModel.prediction(from: lowModelInput)
 
-            if let doublePrediction = prediction.featureValue(for: "open_awaited")?.doubleValue {
+            if let doublePrediction = prediction.featureValue(for: "low_awaited")?.doubleValue {
                 readyPredict.append(doublePrediction)
             } else {
                 fatalError("Failed to get double prediction from ML model")

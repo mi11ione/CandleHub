@@ -17,8 +17,6 @@ struct TickersView: View {
             VStack {
                 HStack {
                     Text("CandleHub")
-                    var set = CandlePredictor.predict(candles: [Candle(date: "", openPrice: 10.0, closePrice: 10.0, highPrice: 10.0, lowPrice: 10.0, value: 10.0, volume: 10.0), Candle(date: "", openPrice: 10.0, closePrice: 10.0, highPrice: 10.0, lowPrice: 10.0, value: 10.0, volume: 10.0), Candle(date: "", openPrice: 10.0, closePrice: 10.0, highPrice: 10.0, lowPrice: 10.0, value: 10.0, volume: 10.0), Candle(date: "", openPrice: 10.0, closePrice: 10.0, highPrice: 10.0, lowPrice: 10.0, value: 10.0, volume: 10.0), Candle(date: "", openPrice: 10.0, closePrice: 10.0, highPrice: 10.0, lowPrice: 10.0, value: 10.0, volume: 10.0), Candle(date: "", openPrice: 10.0, closePrice: 10.0, highPrice: 10.0, lowPrice: 10.0, value: 10.0, volume: 10.0)])
-                    Text("\(set[0])")
                         .font(.largeTitle).bold()
                         .padding([.top, .leading])
                     Spacer()
