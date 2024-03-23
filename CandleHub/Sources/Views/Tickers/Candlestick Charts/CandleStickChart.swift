@@ -8,13 +8,6 @@
 import Charts
 import SwiftUI
 
-struct Candle: Hashable {
-    let open: Int
-    let close: Int
-    let low: Int
-    let high: Int
-}
-
 struct CandleStickChart: View {
     let candles: [Candle] = [
         .init(open: 3, close: 6, low: 1, high: 8),
