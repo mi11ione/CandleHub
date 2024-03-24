@@ -35,6 +35,7 @@
 		334D84212BAD8A8900252A7C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334D84202BAD8A8900252A7C /* SearchBar.swift */; };
 		336C9CAB2BADEC030093DE16 /* CandleStickChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336C9CAA2BADEC030093DE16 /* CandleStickChart.swift */; };
 		336E29822BAF058600776F5B /* CSCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E29812BAF058600776F5B /* CSCViewModel.swift */; };
+		33925E402BAF1F88001F168F /* TickerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33925E3F2BAF1F88001F168F /* TickerItemView.swift */; };
 		33AA4BE62BAB87BC0047868E /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA4BE52BAB87BC0047868E /* TabBar.swift */; };
 		33AA4BE82BAB87CE0047868E /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA4BE72BAB87CE0047868E /* Tab.swift */; };
 		33C15C162BACE1D0000464CE /* TickersGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C15C152BACE1D0000464CE /* TickersGridView.swift */; };
@@ -126,6 +127,7 @@
 		334D84202BAD8A8900252A7C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		336C9CAA2BADEC030093DE16 /* CandleStickChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleStickChart.swift; sourceTree = "<group>"; };
 		336E29812BAF058600776F5B /* CSCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSCViewModel.swift; sourceTree = "<group>"; };
+		33925E3F2BAF1F88001F168F /* TickerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerItemView.swift; sourceTree = "<group>"; };
 		33AA4BE52BAB87BC0047868E /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		33AA4BE72BAB87CE0047868E /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		33C15C152BACE1D0000464CE /* TickersGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersGridView.swift; sourceTree = "<group>"; };
@@ -286,13 +288,13 @@
 		3328CDB12BAC682D005032AF /* Tickers */ = {
 			isa = PBXGroup;
 			children = (
+				33925E3E2BAF1F68001F168F /* TickerItem */,
 				336C9CA92BADEBE60093DE16 /* Candlestick Charts */,
 				33E932F12BAD9B2B0080D003 /* Search */,
 				33C15C152BACE1D0000464CE /* TickersGridView.swift */,
 				3328CDB42BAC6855005032AF /* TickersViewSwitch.swift */,
 				332232932BAB9A0D00D40FAD /* TickersView.swift */,
 				33E932F32BADC90F0080D003 /* TickersViewModel.swift */,
-				3305E93E2BAE1DBD0029EBD5 /* TickerGridItemView.swift */,
 			);
 			path = Tickers;
 			sourceTree = "<group>";
@@ -334,6 +336,15 @@
 				336E29812BAF058600776F5B /* CSCViewModel.swift */,
 			);
 			path = "Candlestick Charts";
+			sourceTree = "<group>";
+		};
+		33925E3E2BAF1F68001F168F /* TickerItem */ = {
+			isa = PBXGroup;
+			children = (
+				3305E93E2BAE1DBD0029EBD5 /* TickerGridItemView.swift */,
+				33925E3F2BAF1F88001F168F /* TickerItemView.swift */,
+			);
+			path = TickerItem;
 			sourceTree = "<group>";
 		};
 		33AA4BE42BAB87AD0047868E /* Tab */ = {
@@ -633,6 +644,7 @@
 				22064EB78E2BDBEB2265A30C /* TuistAssets+CandleHub.swift in Sources */,
 				336E29822BAF058600776F5B /* CSCViewModel.swift in Sources */,
 				332232862BAB978500D40FAD /* BackgroundStyle.swift in Sources */,
+				33925E402BAF1F88001F168F /* TickerItemView.swift in Sources */,
 				336C9CAB2BADEC030093DE16 /* CandleStickChart.swift in Sources */,
 				636A4BFA2BAF0EBD00420BF5 /* Pattern.swift in Sources */,
 				636A4BFC2BAF1B3E00420BF5 /* PatternStickChart.swift in Sources */,
