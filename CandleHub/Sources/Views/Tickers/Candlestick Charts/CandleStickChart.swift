@@ -52,7 +52,7 @@ struct CandleStickChart: View {
                     default:
                         AxisValueLabel(format: .dateTime.hour(.defaultDigits(amPM: .omitted)))
                     }
-                    
+
                     AxisGridLine()
                     AxisTick()
                 }
