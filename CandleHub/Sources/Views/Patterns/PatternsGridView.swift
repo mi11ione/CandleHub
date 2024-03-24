@@ -20,7 +20,7 @@ struct PatternsGridView: View {
                 ForEach(patterns, id: \.self) { item in
                     VStack {
                         PatternStickChart(pattern: item)
-                            .frame(width: viewModel.gridWidth, height: 160, alignment: .center)
+                            .frame(width: viewModel.gridWidth, height: 150, alignment: .center)
                             .background(Rectangle().fill(Material.thin))
                             .cornerRadius(30)
                             .foregroundColor(colorScheme == .dark ? .white : .black)
