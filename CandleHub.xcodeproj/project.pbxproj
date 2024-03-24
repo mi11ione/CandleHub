@@ -38,6 +38,8 @@
 		33925E402BAF1F88001F168F /* TickerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33925E3F2BAF1F88001F168F /* TickerItemView.swift */; };
 		33AA4BE62BAB87BC0047868E /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA4BE52BAB87BC0047868E /* TabBar.swift */; };
 		33AA4BE82BAB87CE0047868E /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA4BE72BAB87CE0047868E /* Tab.swift */; };
+		33ACF4072BB077F1001ACA8A /* CandleStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACF3FD2BB077F1001ACA8A /* CandleStick.swift */; };
+		33ACF4082BB077FC001ACA8A /* libCandleStick.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE833952BAF091C00786D60 /* libCandleStick.a */; };
 		33C15C162BACE1D0000464CE /* TickersGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C15C152BACE1D0000464CE /* TickersGridView.swift */; };
 		33C15C182BACE20F000464CE /* PatternsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C15C172BACE20F000464CE /* PatternsGridView.swift */; };
 		33C15C1A2BACE7B5000464CE /* GridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C15C192BACE7B5000464CE /* GridViewModel.swift */; };
@@ -60,9 +62,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3399A4A02BB06CD500A2A31B /* PBXContainerItemProxy */ = {
+		33ACF4052BB077F1001ACA8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3399A49C2BB06CD400A2A31B /* CandleStick.xcodeproj */;
+			containerPortal = 33ACF3FF2BB077F1001ACA8A /* CandleStick.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = AEE8337E2BAF07DE00786D60;
 			remoteInfo = CandleStick;
@@ -135,9 +137,10 @@
 		336C9CAA2BADEC030093DE16 /* CandleStickChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleStickChart.swift; sourceTree = "<group>"; };
 		336E29812BAF058600776F5B /* CSCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSCViewModel.swift; sourceTree = "<group>"; };
 		33925E3F2BAF1F88001F168F /* TickerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerItemView.swift; sourceTree = "<group>"; };
-		3399A49C2BB06CD400A2A31B /* CandleStick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CandleStick.xcodeproj; path = ../.Trash/CandleStick.xcodeproj; sourceTree = "<group>"; };
 		33AA4BE52BAB87BC0047868E /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		33AA4BE72BAB87CE0047868E /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		33ACF3FD2BB077F1001ACA8A /* CandleStick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandleStick.swift; sourceTree = "<group>"; };
+		33ACF3FF2BB077F1001ACA8A /* CandleStick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CandleStick.xcodeproj; sourceTree = "<group>"; };
 		33C15C152BACE1D0000464CE /* TickersGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersGridView.swift; sourceTree = "<group>"; };
 		33C15C172BACE20F000464CE /* PatternsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsGridView.swift; sourceTree = "<group>"; };
 		33C15C192BACE7B5000464CE /* GridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewModel.swift; sourceTree = "<group>"; };
@@ -170,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33ACF4082BB077FC001ACA8A /* libCandleStick.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,14 +359,6 @@
 			path = TickerItem;
 			sourceTree = "<group>";
 		};
-		3399A49D2BB06CD400A2A31B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3399A4A12BB06CD500A2A31B /* libCandleStick.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		33AA4BE42BAB87AD0047868E /* Tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +368,31 @@
 				332232772BAB96A100D40FAD /* TabPreferenceKey.swift */,
 			);
 			path = Tab;
+			sourceTree = "<group>";
+		};
+		33ACF3FE2BB077F1001ACA8A /* CandleStick */ = {
+			isa = PBXGroup;
+			children = (
+				33ACF3FD2BB077F1001ACA8A /* CandleStick.swift */,
+			);
+			path = CandleStick;
+			sourceTree = "<group>";
+		};
+		33ACF4002BB077F1001ACA8A /* CandleStick */ = {
+			isa = PBXGroup;
+			children = (
+				33ACF3FE2BB077F1001ACA8A /* CandleStick */,
+				33ACF3FF2BB077F1001ACA8A /* CandleStick.xcodeproj */,
+			);
+			path = CandleStick;
+			sourceTree = "<group>";
+		};
+		33ACF4012BB077F1001ACA8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33ACF4062BB077F1001ACA8A /* libCandleStick.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		33D3E41E2BAB477E00A56DDA /* Filters */ = {
@@ -509,7 +530,7 @@
 		F2344CBFEB7788A3030EDBBC = {
 			isa = PBXGroup;
 			children = (
-				3399A49C2BB06CD400A2A31B /* CandleStick.xcodeproj */,
+				33ACF4002BB077F1001ACA8A /* CandleStick */,
 				328F090E9EC078A09025E7C1 /* Project */,
 				D1717776E4A800D4C17773D7 /* Frameworks */,
 				62B1A2C8E5732003591590BE /* Cache */,
@@ -588,8 +609,8 @@
 					ProjectRef = AEE833902BAF091C00786D60 /* CandleStick.xcodeproj */;
 				},
 				{
-					ProductGroup = 3399A49D2BB06CD400A2A31B /* Products */;
-					ProjectRef = 3399A49C2BB06CD400A2A31B /* CandleStick.xcodeproj */;
+					ProductGroup = 33ACF4012BB077F1001ACA8A /* Products */;
+					ProjectRef = 33ACF3FF2BB077F1001ACA8A /* CandleStick.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -601,11 +622,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		3399A4A12BB06CD500A2A31B /* libCandleStick.a */ = {
+		33ACF4062BB077F1001ACA8A /* libCandleStick.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libCandleStick.a;
-			remoteRef = 3399A4A02BB06CD500A2A31B /* PBXContainerItemProxy */;
+			remoteRef = 33ACF4052BB077F1001ACA8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		AEE833952BAF091C00786D60 /* libCandleStick.a */ = {
@@ -650,6 +671,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE833A12BAF143E00786D60 /* Adapter.swift in Sources */,
+				33ACF4072BB077F1001ACA8A /* CandleStick.swift in Sources */,
 				3328CDBA2BAC68BC005032AF /* PatternsViewSwitch.swift in Sources */,
 				62B144F212D385EBF52A14E4 /* CandleHubApp.swift in Sources */,
 				33E932F42BADC90F0080D003 /* TickersViewModel.swift in Sources */,
