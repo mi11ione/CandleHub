@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TickerGridItemView: View {
-    var ticker: TickerMOEX
+    let ticker: TickerMOEX
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {

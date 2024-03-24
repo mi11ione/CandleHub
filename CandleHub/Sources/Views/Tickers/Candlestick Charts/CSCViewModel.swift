@@ -7,26 +7,21 @@
 
 import SwiftUI
 
-class CandleStickChartViewModel: ObservableObject {
-    @Published var candles: [Candle] = []
-    @Published var candlesByTicker: [String: [Candle]] = [:]
+struct CandleStickChartViewModel {
+    var candlesByTicker: [String: [Candle]]
+
     private var fetcher: TradingDataNetworkFetching
 
-    init(fetcher: TradingDataNetworkFetching) {
+    init(fetcher: TradingDataNetworkFetching, candlesByTicker: [String: [Candle]] = [:]) {
         self.fetcher = fetcher
+        self.candlesByTicker = candlesByTicker
     }
 
-    func fetchData() {
-        Task {
-            if let tickers = await fetcher.getMoexTickers() {
-                for ticker in tickers {
-                    let allCandles = await fetcher.getMoexCandles(ticker: ticker.title, timePeriod: .hour) ?? []
-                    DispatchQueue.main.async {
-                        self.candlesByTicker[ticker.title] = Array(allCandles.suffix(10))
-                    }
-                }
-            }
+    func fetchData(ticker: String) async -> [Candle]? {
+        guard let fetchedCandles = await fetcher.getMoexCandles(ticker: ticker, timePeriod: .hour) else {
+            return nil
         }
+        return Array(fetchedCandles.suffix(10))
     }
 
     func formatDate(_ date: Date) -> String {

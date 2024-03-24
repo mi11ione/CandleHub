@@ -10,8 +10,13 @@ import SwiftUI
 
 struct CandleStickChart: View {
     @Environment(\.colorScheme) var colorScheme
-    @ObservedObject var viewModel: CandleStickChartViewModel
+    @State var viewModel: CandleStickChartViewModel
     let tickerTitle: String
+
+    public init(viewModel: CandleStickChartViewModel, tickerTitle: String) {
+        self.viewModel = viewModel
+        self.tickerTitle = tickerTitle
+    }
 
     var body: some View {
         Chart {
@@ -59,7 +64,11 @@ struct CandleStickChart: View {
             }
         }
         .onAppear {
-            viewModel.fetchData()
+            Task {
+                if let data = await viewModel.fetchData(ticker: tickerTitle) {
+                    viewModel.candlesByTicker[tickerTitle] = data
+                }
+            }
         }
     }
 }

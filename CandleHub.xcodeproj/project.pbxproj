@@ -156,10 +156,10 @@
 		8F49A6197360E812E457ECA7 /* CandleHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CandleHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		938817186F191291621E964F /* CandleHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleHubTests.swift; sourceTree = "<group>"; };
 		A06755176204E80DA842F124 /* TuistBundle+CandleHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+CandleHub.swift"; sourceTree = "<group>"; };
-		AE988FCB2BAF205F0036F225 /* OpenRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = OpenRegressionModel.mlmodel; path = CandleHub/Resources/MLModel/OpenRegressionModel.mlmodel; sourceTree = "<group>"; };
-		AE988FCC2BAF205F0036F225 /* CloseRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = CloseRegressionModel.mlmodel; path = CandleHub/Resources/MLModel/CloseRegressionModel.mlmodel; sourceTree = "<group>"; };
-		AE988FCD2BAF205F0036F225 /* HighRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = HighRegressionModel.mlmodel; path = CandleHub/Resources/MLModel/HighRegressionModel.mlmodel; sourceTree = "<group>"; };
-		AE988FCE2BAF205F0036F225 /* LowRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = LowRegressionModel.mlmodel; path = CandleHub/Resources/MLModel/LowRegressionModel.mlmodel; sourceTree = "<group>"; };
+		AE988FCB2BAF205F0036F225 /* OpenRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = OpenRegressionModel.mlmodel; sourceTree = "<group>"; };
+		AE988FCC2BAF205F0036F225 /* CloseRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CloseRegressionModel.mlmodel; sourceTree = "<group>"; };
+		AE988FCD2BAF205F0036F225 /* HighRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HighRegressionModel.mlmodel; sourceTree = "<group>"; };
+		AE988FCE2BAF205F0036F225 /* LowRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = LowRegressionModel.mlmodel; sourceTree = "<group>"; };
 		AEE833662BAD788C00786D60 /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
 		AEE833732BADD4E300786D60 /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
 		AEE833902BAF091C00786D60 /* CandleStick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CandleStick.xcodeproj; path = CandleStick/CandleStick.xcodeproj; sourceTree = "<group>"; };
@@ -222,10 +222,6 @@
 		328F090E9EC078A09025E7C1 /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				AE988FCC2BAF205F0036F225 /* CloseRegressionModel.mlmodel */,
-				AE988FCD2BAF205F0036F225 /* HighRegressionModel.mlmodel */,
-				AE988FCE2BAF205F0036F225 /* LowRegressionModel.mlmodel */,
-				AE988FCB2BAF205F0036F225 /* OpenRegressionModel.mlmodel */,
 				D9451CE1A747BA70EF6DABFE /* CandleHub */,
 				C18E97D7DF55FC16EC4E050D /* Derived */,
 			);
@@ -395,6 +391,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		33ACF4092BB07832001ACA8A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AE988FCB2BAF205F0036F225 /* OpenRegressionModel.mlmodel */,
+				AE988FCE2BAF205F0036F225 /* LowRegressionModel.mlmodel */,
+				AE988FCD2BAF205F0036F225 /* HighRegressionModel.mlmodel */,
+				AE988FCC2BAF205F0036F225 /* CloseRegressionModel.mlmodel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		33D3E41E2BAB477E00A56DDA /* Filters */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,6 +526,7 @@
 		D9451CE1A747BA70EF6DABFE /* CandleHub */ = {
 			isa = PBXGroup;
 			children = (
+				33ACF4092BB07832001ACA8A /* Models */,
 				048819B22BAC777300AFDA24 /* Network */,
 				41581F7010080297E4358182 /* Resources */,
 				40A232D52B3C7AB4E7BE3A2E /* Sources */,
