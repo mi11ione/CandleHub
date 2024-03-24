@@ -12,21 +12,21 @@ struct PatternsGridView: View {
     @ObservedObject var viewModel: GridViewModel
     var selectedOption: String
 
-    var data = Array(1 ... 20)
+    var patterns: [Pattern]
 
     var body: some View {
         ScrollView {
             LazyVGrid(columns: viewModel.adaptiveColumn, spacing: 20) {
-                ForEach(data, id: \.self) { item in
+                ForEach(patterns, id: \.self) { item in
                     VStack {
-                        Text("Pattern \(String(item))")
-                            .frame(width: viewModel.gridWidth, height: 160, alignment: .center)
+                        PatternStickChart(pattern: item)
+                            .frame(width: viewModel.gridWidth, height: 150, alignment: .center)
                             .background(Rectangle().fill(Material.thin))
                             .cornerRadius(30)
                             .foregroundColor(colorScheme == .dark ? .white : .black)
                             .font(.title)
 
-                        Text("Subtitle \(item)")
+                        Text("\(item.name)")
                             .foregroundColor(colorScheme == .dark ? .white : .black)
                             .font(.body)
                     }

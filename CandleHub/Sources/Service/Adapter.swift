@@ -12,7 +12,9 @@ enum Adapter {
         var candleSettings: [Double] = []
 
         for candle in candles {
-            candleSettings.append(contentsOf: [candle.openPrice, candle.highPrice, candle.lowPrice, candle.closePrice, candle.volume])
+            let volumeValue = candle.volume ?? 0.0
+
+            candleSettings.append(contentsOf: [candle.openPrice, candle.highPrice, candle.lowPrice, candle.closePrice, volumeValue])
         }
 
         return candleSettings
