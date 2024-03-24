@@ -52,7 +52,6 @@
 		AE988FD12BAF205F0036F225 /* HighRegressionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE988FCD2BAF205F0036F225 /* HighRegressionModel.mlmodel */; };
 		AE988FD22BAF205F0036F225 /* LowRegressionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE988FCE2BAF205F0036F225 /* LowRegressionModel.mlmodel */; };
 		AEE833672BAD788C00786D60 /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE833662BAD788C00786D60 /* Predictor.swift */; };
-		AEE8339C2BAF0A6300786D60 /* libCandleStick.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEE8339B2BAF0A3100786D60 /* libCandleStick.a */; };
 		AEE833A12BAF143E00786D60 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE833732BADD4E300786D60 /* Adapter.swift */; };
 		B5BDCD8C3452CCD3118DCDEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346BEF51999A85EE1B26A7C7 /* Assets.xcassets */; };
 		F5295DB90B37882622BC0944 /* TuistBundle+CandleHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06755176204E80DA842F124 /* TuistBundle+CandleHub.swift */; };
@@ -63,13 +62,6 @@
 		AEE833942BAF091C00786D60 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AEE833902BAF091C00786D60 /* CandleStick.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AEE8337E2BAF07DE00786D60;
-			remoteInfo = CandleStick;
-		};
-		AEE8339A2BAF0A3100786D60 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AEE833962BAF0A3100786D60 /* CandleStick.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = AEE8337E2BAF07DE00786D60;
 			remoteInfo = CandleStick;
@@ -158,7 +150,6 @@
 		AEE833662BAD788C00786D60 /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
 		AEE833732BADD4E300786D60 /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
 		AEE833902BAF091C00786D60 /* CandleStick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CandleStick.xcodeproj; path = CandleStick/CandleStick.xcodeproj; sourceTree = "<group>"; };
-		AEE833962BAF0A3100786D60 /* CandleStick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CandleStick.xcodeproj; path = ../CandleStick/CandleStick.xcodeproj; sourceTree = "<group>"; };
 		B32DC36E8BAFBC6C2D3308B8 /* CandleHub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CandleHub-Info.plist"; sourceTree = "<group>"; };
 		F31467DA628392289E9BB9B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F55CA2C4FAE97A4B4912AF54 /* TuistAssets+CandleHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+CandleHub.swift"; sourceTree = "<group>"; };
@@ -169,7 +160,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEE8339C2BAF0A6300786D60 /* libCandleStick.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,14 +451,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AEE833972BAF0A3100786D60 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AEE8339B2BAF0A3100786D60 /* libCandleStick.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		C18E97D7DF55FC16EC4E050D /* Derived */ = {
 			isa = PBXGroup;
 			children = (
@@ -500,7 +482,6 @@
 		F2344CBFEB7788A3030EDBBC = {
 			isa = PBXGroup;
 			children = (
-				AEE833962BAF0A3100786D60 /* CandleStick.xcodeproj */,
 				328F090E9EC078A09025E7C1 /* Project */,
 				D1717776E4A800D4C17773D7 /* Frameworks */,
 				62B1A2C8E5732003591590BE /* Cache */,
@@ -578,10 +559,6 @@
 					ProductGroup = AEE833912BAF091C00786D60 /* Products */;
 					ProjectRef = AEE833902BAF091C00786D60 /* CandleStick.xcodeproj */;
 				},
-				{
-					ProductGroup = AEE833972BAF0A3100786D60 /* Products */;
-					ProjectRef = AEE833962BAF0A3100786D60 /* CandleStick.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -597,13 +574,6 @@
 			fileType = archive.ar;
 			path = libCandleStick.a;
 			remoteRef = AEE833942BAF091C00786D60 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		AEE8339B2BAF0A3100786D60 /* libCandleStick.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libCandleStick.a;
-			remoteRef = AEE8339A2BAF0A3100786D60 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
