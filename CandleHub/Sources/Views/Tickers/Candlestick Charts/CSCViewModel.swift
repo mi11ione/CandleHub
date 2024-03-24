@@ -11,11 +11,11 @@ class CandleStickChartViewModel: ObservableObject {
     @Published var candles: [Candle] = []
     @Published var candlesByTicker: [String: [Candle]] = [:]
     private var fetcher: TradingDataNetworkFetching
-    
+
     init(fetcher: TradingDataNetworkFetching) {
         self.fetcher = fetcher
     }
-    
+
     func fetchData() {
         Task {
             if let tickers = await fetcher.getMoexTickers() {
@@ -31,20 +31,20 @@ class CandleStickChartViewModel: ObservableObject {
 
     func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm:ss"
+        formatter.dateFormat = "HH:mm"
         return formatter.string(from: date)
     }
 
     func calculateYAxisDomain(for ticker: String) -> ClosedRange<Double> {
         guard let candles = candlesByTicker[ticker], !candles.isEmpty else {
-            return 0...100
+            return 0 ... 100
         }
-        let lowPrices = candles.map { $0.lowPrice }
-        let highPrices = candles.map { $0.highPrice }
+        let lowPrices = candles.map(\.lowPrice)
+        let highPrices = candles.map(\.highPrice)
         guard let minPrice = lowPrices.min(), let maxPrice = highPrices.max() else {
-            return 0...100
+            return 0 ... 100
         }
         let padding = (maxPrice - minPrice) * 0.15
-        return (minPrice - padding)...(maxPrice + padding)
+        return (minPrice - padding) ... (maxPrice + padding)
     }
 }
