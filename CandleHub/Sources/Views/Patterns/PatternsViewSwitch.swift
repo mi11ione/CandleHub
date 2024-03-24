@@ -17,8 +17,9 @@ struct PatternsViewSwitch: View {
         Menu {
             ForEach(options, id: \.self) { option in
                 Button(action: {
-                    toggleOption(option)
-                    viewModel.updateLayout(for: option)
+                    withAnimation {
+                        toggleOption(option)
+                    }
                 }) {
                     HStack {
                         Text(option)
@@ -45,7 +46,9 @@ struct PatternsViewSwitch: View {
     }
 
     private func toggleOption(_ option: String) {
-        selectedOption = option
-        viewModel.updateLayout(for: option)
+        if selectedOption != option {
+            selectedOption = option
+            viewModel.updateLayout(for: option)
+        }
     }
 }

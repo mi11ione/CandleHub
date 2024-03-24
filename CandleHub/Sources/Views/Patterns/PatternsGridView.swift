@@ -17,7 +17,7 @@ struct PatternsGridView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: viewModel.adaptiveColumn, spacing: 20) {
-                ForEach(patterns, id: \.self) { item in
+                ForEach(patterns, id: \.id) { item in
                     VStack {
                         PatternStickChart(pattern: item)
                             .frame(width: viewModel.gridWidth, height: 150, alignment: .center)
