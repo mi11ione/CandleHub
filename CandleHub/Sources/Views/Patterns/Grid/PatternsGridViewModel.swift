@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct PatternsGridViewModel {
-    var selectedOption: String
-
-    var gridWidth: CGFloat {
+    func gridWidth(for selectedOption: String) -> CGFloat {
         selectedOption == "Big patterns" ? 350 : 160
     }
 
-    var adaptiveColumn: [GridItem] {
-        [GridItem(.adaptive(minimum: gridWidth))]
+    func adaptiveColumn(for selectedOption: String) -> [GridItem] {
+        [GridItem(.adaptive(minimum: gridWidth(for: selectedOption)))]
     }
 }

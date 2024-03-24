@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct PatternsViewSwitch: View {
-    var options = ["Big patterns", "Small patterns"]
     @Environment(\.colorScheme) var colorScheme
-    @Binding var viewModel: PatternsGridViewModel
+    var options = ["Big patterns", "Small patterns"]
+    @Binding var selectedOption: String
 
     var body: some View {
         Menu {
             ForEach(options, id: \.self) { option in
                 Button(action: {
                     withAnimation(.spring(response: 0.5, dampingFraction: 1, blendDuration: 0)) {
-                        viewModel.selectedOption = option
+                        selectedOption = option
                     }
                 }) {
                     HStack {
                         Text(option)
                         Spacer()
-                        if viewModel.selectedOption == option {
+                        if selectedOption == option {
                             Image(systemName: "checkmark")
                         }
                     }
