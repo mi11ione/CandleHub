@@ -37,13 +37,26 @@ struct CandleStickChart: View {
                 }
             }
         }
-        .padding()
+        .padding(.horizontal)
         .chartYScale(domain: viewModel.calculateYAxisDomain(for: tickerTitle))
         .chartYAxis {
             AxisMarks(position: .trailing, values: .automatic(desiredCount: 5))
         }
         .chartXAxis {
-            AxisMarks(position: .bottom, values: .automatic(desiredCount: 5))
+            AxisMarks(values: .stride(by: .hour, count: 3)) { value in
+                if let date = value.as(Date.self) {
+                    let hour = Calendar.current.component(.hour, from: date)
+                    switch hour {
+                    case 0, 12:
+                        AxisValueLabel(format: .dateTime.hour())
+                    default:
+                        AxisValueLabel(format: .dateTime.hour(.defaultDigits(amPM: .omitted)))
+                    }
+
+                    AxisGridLine()
+                    AxisTick()
+                }
+            }
         }
         .onAppear {
             viewModel.fetchData()

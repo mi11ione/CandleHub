@@ -15,7 +15,7 @@ struct TickerGridItemView: View {
         VStack {
             tickerInformation
                 .padding()
-                .frame(width: 350, height: 160, alignment: .center)
+                .frame(width: 350, height: 150, alignment: .center)
                 .background(backgroundRectangle)
                 .cornerRadius(30)
                 .foregroundColor(textColor)
