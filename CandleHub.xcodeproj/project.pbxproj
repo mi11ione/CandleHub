@@ -310,6 +310,7 @@
 		3328CDB62BAC6891005032AF /* Patterns */ = {
 			isa = PBXGroup;
 			children = (
+				33F596B52BB005BC0019FDE9 /* CandleStick Charts */,
 				33D3E41E2BAB477E00A56DDA /* Filters */,
 				33C15C172BACE20F000464CE /* PatternsGridView.swift */,
 				3328CDB92BAC68BC005032AF /* PatternsViewSwitch.swift */,
@@ -341,7 +342,6 @@
 			children = (
 				336C9CAA2BADEC030093DE16 /* CandleStickChart.swift */,
 				336E29812BAF058600776F5B /* CSCViewModel.swift */,
-				636A4BFB2BAF1B3E00420BF5 /* PatternStickChart.swift */,
 			);
 			path = "Candlestick Charts";
 			sourceTree = "<group>";
@@ -381,6 +381,14 @@
 				33AA4BE42BAB87AD0047868E /* Tab */,
 			);
 			path = Content;
+			sourceTree = "<group>";
+		};
+		33F596B52BB005BC0019FDE9 /* CandleStick Charts */ = {
+			isa = PBXGroup;
+			children = (
+				636A4BFB2BAF1B3E00420BF5 /* PatternStickChart.swift */,
+			);
+			path = "CandleStick Charts";
 			sourceTree = "<group>";
 		};
 		4071A4C9BAB85398650072C7 /* Sources */ = {
