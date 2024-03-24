@@ -21,7 +21,7 @@ struct FilterButton: View {
                 .font(.headline)
                 .foregroundColor(textColor)
                 .padding(.horizontal, 15)
-                .padding(.vertical, 5)
+                .padding(.vertical, 7)
                 .background(backgroundView)
                 .cornerRadius(10)
         }

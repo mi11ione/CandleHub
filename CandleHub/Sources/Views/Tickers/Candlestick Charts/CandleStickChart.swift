@@ -42,7 +42,7 @@ struct CandleStickChart: View {
                 }
             }
         }
-        .padding(.horizontal)
+        .padding(.leading)
         .chartYScale(domain: viewModel.calculateYAxisDomain(for: tickerTitle))
         .chartYAxis {
             AxisMarks(position: .trailing, values: .automatic(desiredCount: 5))

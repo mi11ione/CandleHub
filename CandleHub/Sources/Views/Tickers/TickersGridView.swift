@@ -20,14 +20,12 @@ struct TickersGridView: View {
     }
 
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: adaptiveColumn, spacing: 20) {
-                ForEach(tickers, id: \.title) { ticker in
-                    TickerGridItemView(ticker: ticker)
-                        .padding(.bottom)
-                }
+        LazyVGrid(columns: adaptiveColumn, spacing: 20) {
+            ForEach(tickers, id: \.title) { ticker in
+                TickerGridItemView(ticker: ticker)
+                    .padding(.bottom)
             }
-            .padding(.top)
         }
+        .padding(.top)
     }
 }

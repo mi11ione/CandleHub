@@ -12,11 +12,11 @@ struct SearchBar: View {
     @FocusState private var amountIsFocused: Bool
 
     var body: some View {
-        TextField("Search tickers", text: $checkAmount)
-            .padding(.vertical, 7)
+        TextField("\(Image(systemName: "sparkle.magnifyingglass")) Search tickers", text: $checkAmount)
+            .padding(.vertical, 6)
             .padding(.horizontal, 12)
-            .background(Color(.secondarySystemBackground))
-            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .background(Rectangle().fill(Material.ultraThin))
+            .clipShape(RoundedRectangle(cornerRadius: 10))
             .focused($amountIsFocused)
     }
 }

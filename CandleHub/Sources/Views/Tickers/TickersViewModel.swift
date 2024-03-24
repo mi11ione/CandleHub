@@ -7,30 +7,22 @@
 
 import SwiftUI
 
-class TickersViewModel: ObservableObject {
-    @Published var isLoading = false
-    @Published var array: [TickerMOEX]?
+struct TickersViewModel {
+    var isLoading: Bool
+    var array: [TickerMOEX]?
+    private let fetcher: TradingDataNetworkFetching
 
-    init(array: [TickerMOEX]? = nil) {
+    init(fetcher: TradingDataNetworkFetching, array: [TickerMOEX]? = nil, isLoading: Bool = true) {
+        self.fetcher = fetcher
         self.array = array
+        self.isLoading = isLoading
     }
 
-    func fetchTickers(forceRefresh: Bool = false) {
-        isLoading = true
-
-        Task {
-            if array == nil || forceRefresh {
-                let fetchedArray = await TradingDataNetworkFetcher().getMoexTickers()
-
-                await MainActor.run {
-                    self.array = fetchedArray ?? []
-                    self.isLoading = false
-                }
-            } else {
-                await MainActor.run {
-                    self.isLoading = false
-                }
-            }
+    func fetchTickers(forceRefresh: Bool = false) async -> ([TickerMOEX]?, Bool) {
+        if array == nil || forceRefresh {
+            let fetchedArray = await fetcher.getMoexTickers()
+            return (fetchedArray, false)
         }
+        return (array, false)
     }
 }

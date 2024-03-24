@@ -1,23 +1,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var tickersViewModel = TickersViewModel()
-    @AppStorage("selectedTab") var selectedTab: Tab = .tickers
+    @State private var tickersViewModel = TickersViewModel(fetcher: TradingDataNetworkFetcher())
+    @State private var initialTab: Tab = .tickers
 
     var body: some View {
         NavigationStack {
             ZStack {
                 Group {
-                    switch selectedTab {
+                    switch initialTab {
                     case .tickers:
-                        TickersView(tickersViewModel: tickersViewModel)
+                        TickersView(viewModel: $tickersViewModel)
                     case .patterns:
                         PatternsView()
                     case .settings:
                         SettingsView()
                     }
                 }
-                TabBar()
+                TabBar(selectedTab: $initialTab)
             }
             .safeAreaInset(edge: .bottom) {
                 VStack {}.frame(height: 60)

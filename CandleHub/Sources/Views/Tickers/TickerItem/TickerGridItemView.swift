@@ -27,7 +27,7 @@ struct TickerGridItemView: View {
             tickerDetails
             Spacer()
             CandleStickChart(viewModel: CandleStickChartViewModel(fetcher: TradingDataNetworkFetcher()), tickerTitle: ticker.title)
-                .frame(width: 170)
+                .frame(width: 175)
         }
     }
 

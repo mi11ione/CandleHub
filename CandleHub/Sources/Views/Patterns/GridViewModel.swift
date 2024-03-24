@@ -7,24 +7,14 @@
 
 import SwiftUI
 
-class GridViewModel: ObservableObject {
-    @Published var gridWidth: CGFloat = 350.0
-    var adaptiveColumn: [GridItem] {
-        if gridWidth == 350.0 {
-            return [GridItem(.adaptive(minimum: 300))]
-        } else {
-            return [GridItem(.adaptive(minimum: 180))]
-        }
+struct GridViewModel {
+    var selectedOption: String
+
+    var gridWidth: CGFloat {
+        selectedOption == "Big patterns" ? 350 : 160
     }
 
-    func updateLayout(for option: String) {
-        switch option {
-        case "Big patterns":
-            gridWidth = 350.0
-        case "Small patterns":
-            gridWidth = 160.0
-        default:
-            break
-        }
+    var adaptiveColumn: [GridItem] {
+        [GridItem(.adaptive(minimum: gridWidth))]
     }
 }

@@ -9,18 +9,19 @@ import SwiftUI
 
 struct PatternsGridView: View {
     @Environment(\.colorScheme) var colorScheme
-    @ObservedObject var viewModel: GridViewModel
-    var selectedOption: String
-
+    @Binding var viewModel: GridViewModel
     var patterns: [Pattern]
+
+    private var columns: [GridItem] {
+        [GridItem(.adaptive(minimum: viewModel.gridWidth))]
+    }
 
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: viewModel.adaptiveColumn, spacing: 20) {
+            LazyVGrid(columns: columns, spacing: 20) {
                 ForEach(patterns, id: \.id) { item in
                     VStack {
-                        PatternStickChart(pattern: item)
-                            .frame(width: viewModel.gridWidth, height: 150, alignment: .center)
+                        PatternStickChart(pattern: item, gridWidth: viewModel.gridWidth)
                             .background(Rectangle().fill(Material.thin))
                             .cornerRadius(30)
                             .foregroundColor(colorScheme == .dark ? .white : .black)
@@ -29,15 +30,11 @@ struct PatternsGridView: View {
                         Text("\(item.name)")
                             .foregroundColor(colorScheme == .dark ? .white : .black)
                             .font(.body)
+                            .padding(.top, -6)
                     }
                 }
-                .padding(.bottom, -11)
             }
-            .padding(.top)
-            .padding(.horizontal, 10)
-        }
-        .onAppear {
-            viewModel.updateLayout(for: selectedOption)
+            .padding([.horizontal, .top])
         }
     }
 }

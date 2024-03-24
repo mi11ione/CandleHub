@@ -12,7 +12,7 @@ struct TabBar: View {
     @State var selectedX: CGFloat = 0
     @State var x: [CGFloat] = [0, 0, 0, 0]
 
-    @AppStorage("selectedTab") var selectedTab: Tab = .tickers
+    @Binding var selectedTab: Tab
 
     var body: some View {
         GeometryReader { proxy in
