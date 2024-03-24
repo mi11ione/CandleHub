@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PatternsView: View {
-    @State private var viewModel = GridViewModel(selectedOption: "Big patterns")
+    @State private var viewModel = PatternsGridViewModel(selectedOption: "Big patterns")
 
     var body: some View {
         VStack {

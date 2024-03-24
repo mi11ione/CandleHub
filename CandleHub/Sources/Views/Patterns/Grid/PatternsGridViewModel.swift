@@ -1,13 +1,13 @@
 //
-//  GridViewModel.swift
+//  PatternsGridViewModel.swift
 //  CandleHub
 //
-//  Created by mi11ion on 22/3/24.
+//  Created by mi11ion on 24/3/24.
 //
 
 import SwiftUI
 
-struct GridViewModel {
+struct PatternsGridViewModel {
     var selectedOption: String
 
     var gridWidth: CGFloat {

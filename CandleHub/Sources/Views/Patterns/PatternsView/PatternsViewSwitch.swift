@@ -10,7 +10,7 @@ import SwiftUI
 struct PatternsViewSwitch: View {
     var options = ["Big patterns", "Small patterns"]
     @Environment(\.colorScheme) var colorScheme
-    @Binding var viewModel: GridViewModel
+    @Binding var viewModel: PatternsGridViewModel
 
     var body: some View {
         Menu {

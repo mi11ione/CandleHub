@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PatternsGridView: View {
     @Environment(\.colorScheme) var colorScheme
-    @Binding var viewModel: GridViewModel
+    @Binding var viewModel: PatternsGridViewModel
     var patterns: [Pattern]
 
     private var columns: [GridItem] {
