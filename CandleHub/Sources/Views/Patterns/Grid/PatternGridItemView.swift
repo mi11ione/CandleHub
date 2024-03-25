@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PatternGridItemView: View {
     let pattern: Pattern
-    @Binding var selectedOption: String
+    @Binding var selectedOption: Option
     @Environment(\.colorScheme) var colorScheme
     var viewModel: PatternsGridViewModel
     @State private var selectedPattern: Pattern?

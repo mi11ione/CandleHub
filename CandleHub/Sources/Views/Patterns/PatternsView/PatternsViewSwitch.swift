@@ -7,10 +7,15 @@
 
 import SwiftUI
 
+enum Option: String {
+    case bigPatterns = "Big patterns"
+    case smallPatterns = "Small patterns"
+}
+
 struct PatternsViewSwitch: View {
     @Environment(\.colorScheme) var colorScheme
-    var options = ["Big patterns", "Small patterns"]
-    @Binding var selectedOption: String
+    let options: [Option] = [.bigPatterns, .smallPatterns]
+    @Binding var selectedOption: Option
 
     var body: some View {
         Menu {
@@ -21,7 +26,7 @@ struct PatternsViewSwitch: View {
                     }
                 }) {
                     HStack {
-                        Text(option)
+                        Text(option.rawValue)
                         Spacer()
                         if selectedOption == option {
                             Image(systemName: "checkmark")

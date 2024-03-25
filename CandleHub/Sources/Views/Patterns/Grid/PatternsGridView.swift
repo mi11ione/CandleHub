@@ -10,7 +10,7 @@ import SwiftUI
 struct PatternsGridView: View {
     @Environment(\.colorScheme) var colorScheme
     var viewModel: PatternsGridViewModel
-    @Binding var selectedOption: String
+    @Binding var selectedOption: Option
     var patterns: [Pattern]
     @State private var selectedPattern: Pattern?
 
