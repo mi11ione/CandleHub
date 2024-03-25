@@ -12,6 +12,7 @@ struct PatternsGridView: View {
     var viewModel: PatternsGridViewModel
     @Binding var selectedOption: String
     var patterns: [Pattern]
+    @State private var selectedPattern: Pattern?
 
     private var columns: [GridItem] {
         [GridItem(.adaptive(minimum: viewModel.gridWidth(for: selectedOption)))]
@@ -19,20 +20,8 @@ struct PatternsGridView: View {
 
     var body: some View {
         LazyVGrid(columns: columns, spacing: 20) {
-            ForEach(patterns, id: \.id) { item in
-                VStack {
-                    PatternStickChart(pattern: item, gridWidth: viewModel.gridWidth(for: selectedOption))
-                        .background(Rectangle().fill(Material.thin))
-                        .cornerRadius(30)
-                        .foregroundColor(colorScheme == .dark ? .white : .black)
-                        .font(.title)
-
-                    Text("\(item.name)")
-                        .foregroundColor(colorScheme == .dark ? .white : .black)
-                        .font(.body)
-                        .padding(.top, -6)
-                        .padding(.bottom, -6)
-                }
+            ForEach(patterns, id: \.id) { pattern in
+                PatternGridItemView(pattern: pattern, selectedOption: $selectedOption, viewModel: viewModel)
             }
         }
         .padding([.top, .horizontal])
