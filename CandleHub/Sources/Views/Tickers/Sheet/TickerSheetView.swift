@@ -16,7 +16,7 @@ struct TickerSheetView: View {
         PatternsRepository.patterns[2],
         PatternsRepository.patterns[3],
         PatternsRepository.patterns[5],
-        PatternsRepository.patterns[6]
+        PatternsRepository.patterns[6],
     ]
 
     var body: some View {
@@ -57,9 +57,9 @@ struct TickerSheetView: View {
                 }
                 .frame(height: 360)
                 .padding()
-                
+
                 Text("IdentifiedPatterns").font(.title).bold().padding(.horizontal)
-                
+
                 PatternsGridView(
                     viewModel: PatternsGridViewModel(),
                     selectedOption: $selectedOption,
@@ -69,7 +69,6 @@ struct TickerSheetView: View {
             }
             .padding(.top)
         }
-        
     }
 
     private var priceChangeColor: Color {

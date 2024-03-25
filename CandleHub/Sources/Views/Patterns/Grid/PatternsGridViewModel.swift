@@ -10,10 +10,10 @@ import SwiftUI
 struct PatternsGridViewModel {
     func gridWidth(for selectedOption: Option) -> CGFloat {
         switch selectedOption {
-            case .bigPatterns:
-                350
-            case .smallPatterns:
-                160
+        case .bigPatterns:
+            350
+        case .smallPatterns:
+            160
         }
     }
 
