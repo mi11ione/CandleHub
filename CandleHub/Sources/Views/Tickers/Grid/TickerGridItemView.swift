@@ -27,7 +27,6 @@ struct TickerGridItemView: View {
         .sheet(item: $selectedTicker) { ticker in
             TickerSheetView(ticker: ticker)
         }
-
     }
 
     private var tickerInformation: some View {
