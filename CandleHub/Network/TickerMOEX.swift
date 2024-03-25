@@ -1,6 +1,7 @@
 import Foundation
 
-class TickerMOEX: Hashable, ObservableObject {
+class TickerMOEX: Hashable, ObservableObject, Identifiable {
+    @Published var id = UUID()
     @Published var title: String
     @Published var subTitle: String
     @Published var price: Money

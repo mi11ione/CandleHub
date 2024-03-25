@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CandleStickChartViewModel {
     var candlesByTicker: [String: [Candle]]
-
     private var fetcher: TradingDataNetworkFetching
 
     init(fetcher: TradingDataNetworkFetching, candlesByTicker: [String: [Candle]] = [:]) {
@@ -17,11 +16,11 @@ struct CandleStickChartViewModel {
         self.candlesByTicker = candlesByTicker
     }
 
-    func fetchData(ticker: String) async -> [Candle]? {
+    func fetchData(ticker: String, numberOfCandles: Int = 10) async -> [Candle]? {
         guard let fetchedCandles = await fetcher.getMoexCandles(ticker: ticker, timePeriod: .hour) else {
             return nil
         }
-        return Array(fetchedCandles.suffix(10))
+        return Array(fetchedCandles.suffix(numberOfCandles))
     }
 
     func formatDate(_ date: Date) -> String {

@@ -12,10 +12,12 @@ struct CandleStickChart: View {
     @Environment(\.colorScheme) var colorScheme
     @State var viewModel: CandleStickChartViewModel
     let tickerTitle: String
+    let numberOfCandles: Int
 
-    public init(viewModel: CandleStickChartViewModel, tickerTitle: String) {
+    public init(viewModel: CandleStickChartViewModel, tickerTitle: String, numberOfCandles: Int = 10) {
         self.viewModel = viewModel
         self.tickerTitle = tickerTitle
+        self.numberOfCandles = numberOfCandles
     }
 
     var body: some View {
@@ -65,7 +67,7 @@ struct CandleStickChart: View {
         }
         .onAppear {
             Task {
-                if let data = await viewModel.fetchData(ticker: tickerTitle) {
+                if let data = await viewModel.fetchData(ticker: tickerTitle, numberOfCandles: numberOfCandles) {
                     viewModel.candlesByTicker[tickerTitle] = data
                 }
             }
