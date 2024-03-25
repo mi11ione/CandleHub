@@ -15,7 +15,7 @@ struct PatternStickChart: View {
 
     var body: some View {
         Chart {
-            ForEach(Array(zip(pattern.candles.indices, pattern.candles)), id: \.1.id) { _, candle in
+            ForEach(pattern.candles, id: \.id) { candle in
                 RectangleMark(
                     x: .value("Time", Candle.formatDateHH(candle.date)),
                     yStart: .value("Low", candle.lowPrice),
@@ -37,7 +37,7 @@ struct PatternStickChart: View {
         }
         .padding()
         .padding(.leading)
-        .frame(width: gridWidth, height: 160)
+        .frame(width: gridWidth, height: 150)
         .chartXAxis {
             AxisMarks(position: .bottom, values: .automatic(desiredCount: 6)) {
                 AxisGridLine(centered: true)

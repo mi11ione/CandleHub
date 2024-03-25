@@ -188,9 +188,9 @@ enum PatternsRepository {
         Pattern(
             name: "Abandoned Baby",
             candles: [
-                Candle(date: Candle.stringToDate("2016-05-02T10:44:00+0000"), openPrice: 100, closePrice: 90, highPrice: 101, lowPrice: 89, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-03T10:44:00+0000"), openPrice: 80, closePrice: 80, highPrice: 85, lowPrice: 75, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-04T10:44:00+0000"), openPrice: 90, closePrice: 100, highPrice: 101, lowPrice: 89, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-03T10:44:00+0000"), openPrice: 100, closePrice: 90, highPrice: 101, lowPrice: 89, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-03T11:44:00+0000"), openPrice: 80, closePrice: 80, highPrice: 85, lowPrice: 75, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-03T12:44:00+0000"), openPrice: 90, closePrice: 100, highPrice: 101, lowPrice: 89, value: 0, volume: 0),
             ],
             info: "Info",
             filter: ""
@@ -198,9 +198,9 @@ enum PatternsRepository {
         Pattern(
             name: "Flags and Pennants",
             candles: [
-                Candle(date: Candle.stringToDate("2016-05-05T10:44:00+0000"), openPrice: 100, closePrice: 105, highPrice: 106, lowPrice: 99, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-06T10:44:00+0000"), openPrice: 105, closePrice: 104, highPrice: 106, lowPrice: 103, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-07T10:44:00+0000"), openPrice: 104, closePrice: 107, highPrice: 108, lowPrice: 103, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-06T10:44:00+0000"), openPrice: 100, closePrice: 105, highPrice: 106, lowPrice: 99, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-06T11:44:00+0000"), openPrice: 105, closePrice: 104, highPrice: 106, lowPrice: 103, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-06T12:44:00+0000"), openPrice: 104, closePrice: 107, highPrice: 108, lowPrice: 103, value: 0, volume: 0),
             ],
             info: "Info",
             filter: ""
@@ -208,11 +208,11 @@ enum PatternsRepository {
         Pattern(
             name: "Rising Three Methods",
             candles: [
-                Candle(date: Candle.stringToDate("2016-05-08T10:44:00+0000"), openPrice: 100, closePrice: 110, highPrice: 111, lowPrice: 99, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-09T10:44:00+0000"), openPrice: 111, closePrice: 109, highPrice: 112, lowPrice: 108, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-10T10:44:00+0000"), openPrice: 109, closePrice: 108, highPrice: 110, lowPrice: 107, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-11T10:44:00+0000"), openPrice: 108, closePrice: 107, highPrice: 109, lowPrice: 106, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-12T10:44:00+0000"), openPrice: 107, closePrice: 115, highPrice: 116, lowPrice: 106, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-10T10:44:00+0000"), openPrice: 100, closePrice: 110, highPrice: 111, lowPrice: 99, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-10T11:44:00+0000"), openPrice: 111, closePrice: 109, highPrice: 112, lowPrice: 108, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-10T12:44:00+0000"), openPrice: 109, closePrice: 108, highPrice: 110, lowPrice: 107, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-10T13:44:00+0000"), openPrice: 108, closePrice: 107, highPrice: 109, lowPrice: 106, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-10T14:44:00+0000"), openPrice: 107, closePrice: 115, highPrice: 116, lowPrice: 106, value: 0, volume: 0),
             ],
             info: "Info",
             filter: ""
@@ -220,11 +220,11 @@ enum PatternsRepository {
         Pattern(
             name: "Falling Three Methods",
             candles: [
-                Candle(date: Candle.stringToDate("2016-05-13T10:44:00+0000"), openPrice: 120, closePrice: 110, highPrice: 121, lowPrice: 109, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-14T10:44:00+0000"), openPrice: 109, closePrice: 111, highPrice: 112, lowPrice: 108, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-15T10:44:00+0000"), openPrice: 111, closePrice: 112, highPrice: 113, lowPrice: 110, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-16T10:44:00+0000"), openPrice: 112, closePrice: 113, highPrice: 114, lowPrice: 111, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-17T10:44:00+0000"), openPrice: 113, closePrice: 105, highPrice: 114, lowPrice: 104, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-14T10:44:00+0000"), openPrice: 120, closePrice: 110, highPrice: 121, lowPrice: 109, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-14T11:44:00+0000"), openPrice: 109, closePrice: 111, highPrice: 112, lowPrice: 108, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-14T12:44:00+0000"), openPrice: 111, closePrice: 112, highPrice: 113, lowPrice: 110, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-14T13:44:00+0000"), openPrice: 112, closePrice: 113, highPrice: 114, lowPrice: 111, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-14T14:44:00+0000"), openPrice: 113, closePrice: 105, highPrice: 114, lowPrice: 104, value: 0, volume: 0),
             ],
             info: "Info",
             filter: ""
@@ -233,10 +233,10 @@ enum PatternsRepository {
             name: "Gartley Pattern",
             candles: [
                 Candle(date: Candle.stringToDate("2016-05-18T10:44:00+0000"), openPrice: 100, closePrice: 105, highPrice: 106, lowPrice: 99, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-19T10:44:00+0000"), openPrice: 105, closePrice: 95, highPrice: 106, lowPrice: 94, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-20T10:44:00+0000"), openPrice: 95, closePrice: 100, highPrice: 101, lowPrice: 94, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-21T10:44:00+0000"), openPrice: 100, closePrice: 90, highPrice: 101, lowPrice: 89, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-22T10:44:00+0000"), openPrice: 90, closePrice: 95, highPrice: 96, lowPrice: 89, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-18T11:44:00+0000"), openPrice: 105, closePrice: 95, highPrice: 106, lowPrice: 94, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-18T12:44:00+0000"), openPrice: 95, closePrice: 100, highPrice: 101, lowPrice: 94, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-18T13:44:00+0000"), openPrice: 100, closePrice: 90, highPrice: 101, lowPrice: 89, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-18T14:44:00+0000"), openPrice: 90, closePrice: 95, highPrice: 96, lowPrice: 89, value: 0, volume: 0),
             ],
             info: "Info",
             filter: ""
@@ -244,23 +244,13 @@ enum PatternsRepository {
         Pattern(
             name: "Head and Shoulders",
             candles: [
-                Candle(date: Candle.stringToDate("2016-05-23T10:44:00+0000"), openPrice: 100, closePrice: 110, highPrice: 111, lowPrice: 99, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-24T10:44:00+0000"), openPrice: 110, closePrice: 120, highPrice: 121, lowPrice: 109, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-25T10:44:00+0000"), openPrice: 120, closePrice: 115, highPrice: 122, lowPrice: 114, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-26T10:44:00+0000"), openPrice: 115, closePrice: 105, highPrice: 116, lowPrice: 104, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-05-27T10:44:00+0000"), openPrice: 105, closePrice: 110, highPrice: 111, lowPrice: 104, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-23T11:44:00+0000"), openPrice: 100, closePrice: 110, highPrice: 111, lowPrice: 99, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-23T12:44:00+0000"), openPrice: 110, closePrice: 120, highPrice: 121, lowPrice: 109, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-23T13:44:00+0000"), openPrice: 120, closePrice: 115, highPrice: 122, lowPrice: 114, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-23T14:44:00+0000"), openPrice: 115, closePrice: 105, highPrice: 116, lowPrice: 104, value: 0, volume: 0),
+                Candle(date: Candle.stringToDate("2016-05-23T15:44:00+0000"), openPrice: 105, closePrice: 110, highPrice: 111, lowPrice: 104, value: 0, volume: 0),
             ],
             info: "Info",
-            filter: ""
-        ),
-        Pattern(
-            name: "Three black crows",
-            candles: [
-                Candle(date: Candle.stringToDate("2016-04-14T10:44:00+0000"), openPrice: 220, closePrice: 260, highPrice: 260, lowPrice: 220, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-04-14T11:44:00+0000"), openPrice: 245, closePrice: 250, highPrice: 260, lowPrice: 235, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-04-14T12:44:00+0000"), openPrice: 260, closePrice: 200, highPrice: 260, lowPrice: 190, value: 0, volume: 0),
-            ],
-            info: "Этот паттерн состоит из 3 длинных красных свечей, и каждая из них закрывается ниже. Когда это возникает вверху восходящего тренда, и каждая свеча закрывается близко к низу (нет большой нижней тени), это считается сильным сигналом разворота от бычьего к медвежьему рынку.",
             filter: ""
         ),
         Pattern(

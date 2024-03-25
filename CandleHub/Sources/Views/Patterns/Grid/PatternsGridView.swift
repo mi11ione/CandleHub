@@ -19,17 +19,19 @@ struct PatternsGridView: View {
     }
 
     var body: some View {
-        LazyVGrid(columns: columns, spacing: 20) {
-            ForEach(patterns, id: \.id) { pattern in
-                PatternGridItemView(pattern: pattern, selectedOption: $selectedOption, viewModel: viewModel)
-                    .onTapGesture {
-                        selectedPattern = pattern
-                    }
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(patterns, id: \.id) { pattern in
+                    PatternGridItemView(pattern: pattern, selectedOption: selectedOption, gridWidth: viewModel.gridWidth(for: selectedOption))
+                        .onTapGesture {
+                            selectedPattern = pattern
+                        }
+                }
             }
-            .sheet(item: $selectedPattern) { pattern in
-                PatternSheetView(pattern: pattern, gridWidth: 300)
-            }
+            .padding([.top, .horizontal])
         }
-        .padding([.top, .horizontal])
+        .sheet(item: $selectedPattern) { pattern in
+            PatternSheetView(pattern: pattern, gridWidth: 300)
+        }
     }
 }

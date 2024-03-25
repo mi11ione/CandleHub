@@ -10,20 +10,19 @@ import SwiftUI
 
 struct PatternGridItemView: View {
     let pattern: Pattern
-    @Binding var selectedOption: String
+    let selectedOption: String
+    let gridWidth: CGFloat
     @Environment(\.colorScheme) var colorScheme
-    var viewModel: PatternsGridViewModel
-    @State private var selectedPattern: Pattern?
 
     var body: some View {
         VStack {
-            PatternStickChart(pattern: pattern, gridWidth: viewModel.gridWidth(for: selectedOption))
+            PatternStickChart(pattern: pattern, gridWidth: gridWidth)
                 .background(Rectangle().fill(Material.thin))
                 .cornerRadius(30)
                 .foregroundColor(colorScheme == .dark ? .white : .black)
                 .font(.title)
 
-            Text("\(pattern.name)")
+            Text(pattern.name)
                 .foregroundColor(colorScheme == .dark ? .white : .black)
                 .font(.body)
                 .padding(.top, -6)
