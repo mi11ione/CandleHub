@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PatternsView: View {
     @State private var selectedOption: String = "Big patterns"
-    private var viewModel = PatternsGridViewModel()
 
     var body: some View {
         VStack {
@@ -28,7 +27,6 @@ struct PatternsView: View {
                 Filters()
 
                 PatternsGridView(
-                    viewModel: viewModel,
                     selectedOption: $selectedOption,
                     patterns: PatternsRepository.patterns
                 )

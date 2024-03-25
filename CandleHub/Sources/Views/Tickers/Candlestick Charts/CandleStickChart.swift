@@ -31,7 +31,7 @@ struct CandleStickChart: View {
                         x: .value("Time", viewModel.formatDate(candle.date)),
                         yStart: .value("Low", candle.lowPrice),
                         yEnd: .value("High", candle.highPrice),
-                        width: .fixed(2)
+                        width: .fixed(isPredicted ? 4 : 2)
                     )
                     .clipShape(RoundedRectangle(cornerRadius: 5))
                     .foregroundStyle(colorScheme == .dark ? .white : .black)

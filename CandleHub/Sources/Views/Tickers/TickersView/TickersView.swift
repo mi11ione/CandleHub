@@ -9,12 +9,14 @@ import SwiftUI
 
 struct TickersView: View {
     @Environment(\.colorScheme) var colorScheme
-    @State private var searchText: String = ""
-    @Binding var viewModel: TickersViewModel
-    @FocusState private var isTextFieldFocused: Bool
+    @State var searchText: String = ""
+    @FocusState var isTextFieldFocused: Bool
+    @State var isLoading: Bool = false
+    @State var array: [TickerMOEX]? = nil
+    let fetcher: TradingDataNetworkFetching
 
     private var filteredTickers: [TickerMOEX] {
-        guard let tickers = viewModel.array else { return [] }
+        guard let tickers = array else { return [] }
         if searchText.isEmpty {
             return tickers
         } else {
@@ -36,7 +38,7 @@ struct TickersView: View {
                     TickersViewSwitch()
                 }
 
-                if viewModel.isLoading {
+                if isLoading {
                     Spacer()
                     ProgressView()
                         .scaleEffect(1.5, anchor: .center)
@@ -57,10 +59,17 @@ struct TickersView: View {
         }
         .onAppear {
             Task {
-                let (fetchedArray, newLoadingState) = await viewModel.fetchTickers()
-                viewModel.array = fetchedArray
-                viewModel.isLoading = newLoadingState
+                let (fetchedArray, newLoadingState) = await fetchTickers()
+                array = fetchedArray
+                isLoading = newLoadingState
             }
         }
+    }
+    func fetchTickers(forceRefresh: Bool = false) async -> ([TickerMOEX]?, Bool) {
+        if array == nil || forceRefresh {
+            let fetchedArray = await fetcher.getMoexTickers()
+            return (fetchedArray, false)
+        }
+        return (array, false)
     }
 }

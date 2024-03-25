@@ -134,30 +134,6 @@ enum PatternsRepository {
             filter: ""
         ),
         Pattern(
-            name: "Dragonfly Doji",
-            candles: [
-                Candle(date: Candle.stringToDate("2016-04-26T10:44:00+0000"), openPrice: 100, closePrice: 100, highPrice: 100, lowPrice: 90, value: 0, volume: 0),
-            ],
-            info: "Info",
-            filter: ""
-        ),
-        Pattern(
-            name: "Gravestone Doji",
-            candles: [
-                Candle(date: Candle.stringToDate("2016-04-27T10:44:00+0000"), openPrice: 100, closePrice: 100, highPrice: 110, lowPrice: 100, value: 0, volume: 0),
-            ],
-            info: "Info",
-            filter: ""
-        ),
-        Pattern(
-            name: "Long-legged Doji",
-            candles: [
-                Candle(date: Candle.stringToDate("2016-04-28T10:44:00+0000"), openPrice: 105, closePrice: 105, highPrice: 115, lowPrice: 95, value: 0, volume: 0),
-            ],
-            info: "Info",
-            filter: ""
-        ),
-        Pattern(
             name: "Tweezer Tops",
             candles: [
                 Candle(date: Candle.stringToDate("2016-04-29T10:44:00+0000"), openPrice: 120, closePrice: 110, highPrice: 121, lowPrice: 109, value: 0, volume: 0),
