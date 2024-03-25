@@ -23,7 +23,10 @@ struct CandleStickChart: View {
     var body: some View {
         Chart {
             if let candles = viewModel.candlesByTicker[tickerTitle] {
-                ForEach(candles, id: \.id) { candle in
+                ForEach(candles.indices, id: \.self) { index in
+                    let candle = candles[index]
+                    let isPredicted = index == candles.count - 1
+
                     RectangleMark(
                         x: .value("Time", viewModel.formatDate(candle.date)),
                         yStart: .value("Low", candle.lowPrice),
@@ -37,10 +40,10 @@ struct CandleStickChart: View {
                         x: .value("Time", viewModel.formatDate(candle.date)),
                         yStart: .value("Open", candle.openPrice),
                         yEnd: .value("Close", candle.closePrice),
-                        width: .fixed(7)
+                        width: .fixed(isPredicted ? 12 : 7)
                     )
                     .clipShape(RoundedRectangle(cornerRadius: 2))
-                    .foregroundStyle(candle.openPrice < candle.closePrice ? .red : .green)
+                    .foregroundStyle(isPredicted ? (candle.openPrice < candle.closePrice ? Color.red.opacity(0.5) : Color.green.opacity(0.5)) : (candle.openPrice < candle.closePrice ? .red : .green))
                 }
             }
         }
@@ -69,6 +72,7 @@ struct CandleStickChart: View {
             Task {
                 if let data = await viewModel.fetchData(ticker: tickerTitle, numberOfCandles: numberOfCandles) {
                     viewModel.candlesByTicker[tickerTitle] = data
+                    viewModel.addPredictedCandle(for: tickerTitle)
                 }
             }
         }

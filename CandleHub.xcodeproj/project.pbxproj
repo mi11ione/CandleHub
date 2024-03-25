@@ -34,6 +34,7 @@
 		334D84212BAD8A8900252A7C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334D84202BAD8A8900252A7C /* SearchBar.swift */; };
 		336C9CAB2BADEC030093DE16 /* CandleStickChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336C9CAA2BADEC030093DE16 /* CandleStickChart.swift */; };
 		336E29822BAF058600776F5B /* CSCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E29812BAF058600776F5B /* CSCViewModel.swift */; };
+		3383E5C82BB1BB3A00DC1B64 /* CSCVMExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3383E5C72BB1BB3A00DC1B64 /* CSCVMExtension.swift */; };
 		33AA4BE62BAB87BC0047868E /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA4BE52BAB87BC0047868E /* TabBar.swift */; };
 		33AA4BE82BAB87CE0047868E /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA4BE72BAB87CE0047868E /* Tab.swift */; };
 		33ACF4072BB077F1001ACA8A /* CandleStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33ACF3FD2BB077F1001ACA8A /* CandleStick.swift */; };
@@ -138,6 +139,7 @@
 		334D84202BAD8A8900252A7C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		336C9CAA2BADEC030093DE16 /* CandleStickChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleStickChart.swift; sourceTree = "<group>"; };
 		336E29812BAF058600776F5B /* CSCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSCViewModel.swift; sourceTree = "<group>"; };
+		3383E5C72BB1BB3A00DC1B64 /* CSCVMExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSCVMExtension.swift; sourceTree = "<group>"; };
 		33AA4BE52BAB87BC0047868E /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		33AA4BE72BAB87CE0047868E /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		33ACF3FD2BB077F1001ACA8A /* CandleStick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandleStick.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 			children = (
 				3322328A2BAB97CF00D40FAD /* ViewExtension.swift */,
 				33DCD4B92BB0C7510071781F /* AnimationExtension.swift */,
+				3383E5C72BB1BB3A00DC1B64 /* CSCVMExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -721,6 +724,7 @@
 			files = (
 				AEE833A12BAF143E00786D60 /* Adapter.swift in Sources */,
 				33DCD4B62BB0C6C10071781F /* PatternsGridViewModel.swift in Sources */,
+				3383E5C82BB1BB3A00DC1B64 /* CSCVMExtension.swift in Sources */,
 				33ACF4072BB077F1001ACA8A /* CandleStick.swift in Sources */,
 				3328CDBA2BAC68BC005032AF /* PatternsViewSwitch.swift in Sources */,
 				62B144F212D385EBF52A14E4 /* CandleHubApp.swift in Sources */,

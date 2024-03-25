@@ -10,7 +10,6 @@ import SwiftUI
 struct TickerGridItemView: View {
     let ticker: TickerMOEX
     @Environment(\.colorScheme) var colorScheme
-    @State private var selectedTicker: TickerMOEX?
 
     var body: some View {
         VStack {
@@ -20,12 +19,6 @@ struct TickerGridItemView: View {
                 .background(backgroundRectangle)
                 .cornerRadius(30)
                 .foregroundColor(textColor)
-                .onTapGesture {
-                    selectedTicker = ticker
-                }
-        }
-        .sheet(item: $selectedTicker) { ticker in
-            TickerSheetView(ticker: ticker)
         }
     }
 
