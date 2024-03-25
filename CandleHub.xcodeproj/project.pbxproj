@@ -52,6 +52,8 @@
 		62B144F212D385EBF52A14E4 /* CandleHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */; };
 		636A4BFA2BAF0EBD00420BF5 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4BF92BAF0EBD00420BF5 /* Pattern.swift */; };
 		636A4BFC2BAF1B3E00420BF5 /* PatternStickChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4BFB2BAF1B3E00420BF5 /* PatternStickChart.swift */; };
+		63FBC0D12BB1A35B00FA61CB /* PatternGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC0D02BB1A35B00FA61CB /* PatternGridItemView.swift */; };
+		63FBC0D62BB1A4E700FA61CB /* PatternSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC0D52BB1A4E700FA61CB /* PatternSheetView.swift */; };
 		AE988FCF2BAF205F0036F225 /* OpenRegressionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE988FCB2BAF205F0036F225 /* OpenRegressionModel.mlmodel */; };
 		AE988FD02BAF205F0036F225 /* CloseRegressionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE988FCC2BAF205F0036F225 /* CloseRegressionModel.mlmodel */; };
 		AE988FD12BAF205F0036F225 /* HighRegressionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE988FCD2BAF205F0036F225 /* HighRegressionModel.mlmodel */; };
@@ -155,6 +157,8 @@
 		61634B87A7767804D38F56FD /* CandleHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CandleHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		636A4BF92BAF0EBD00420BF5 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
 		636A4BFB2BAF1B3E00420BF5 /* PatternStickChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternStickChart.swift; sourceTree = "<group>"; };
+		63FBC0D02BB1A35B00FA61CB /* PatternGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternGridItemView.swift; sourceTree = "<group>"; };
+		63FBC0D52BB1A4E700FA61CB /* PatternSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternSheetView.swift; sourceTree = "<group>"; };
 		70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleHubApp.swift; sourceTree = "<group>"; };
 		879B0FC4A003425D16DE20C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8F49A6197360E812E457ECA7 /* CandleHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CandleHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,6 +309,7 @@
 		3328CDB62BAC6891005032AF /* Patterns */ = {
 			isa = PBXGroup;
 			children = (
+				63FBC0D42BB1A4B800FA61CB /* Sheet */,
 				33DCD4B82BB0C6EF0071781F /* PatternsView */,
 				33DCD4B72BB0C6D10071781F /* Grid */,
 				33F596B52BB005BC0019FDE9 /* CandleStick Charts */,
@@ -428,6 +433,7 @@
 			children = (
 				33C15C172BACE20F000464CE /* PatternsGridView.swift */,
 				33DCD4B52BB0C6C10071781F /* PatternsGridViewModel.swift */,
+				63FBC0D02BB1A35B00FA61CB /* PatternGridItemView.swift */,
 			);
 			path = Grid;
 			sourceTree = "<group>";
@@ -500,6 +506,14 @@
 			children = (
 			);
 			name = Cache;
+			sourceTree = "<group>";
+		};
+		63FBC0D42BB1A4B800FA61CB /* Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				63FBC0D52BB1A4E700FA61CB /* PatternSheetView.swift */,
+			);
+			path = Sheet;
 			sourceTree = "<group>";
 		};
 		774F01D912282288147106A0 /* Preview Content */ = {
@@ -719,6 +733,7 @@
 				33AA4BE62BAB87BC0047868E /* TabBar.swift in Sources */,
 				33DCD4B32BB0C6780071781F /* TickerSheetView.swift in Sources */,
 				332232722BAB8DCD00D40FAD /* SettingsView.swift in Sources */,
+				63FBC0D62BB1A4E700FA61CB /* PatternSheetView.swift in Sources */,
 				1C952F6268ED96F1066CFB2C /* ContentView.swift in Sources */,
 				048819BB2BAC77FD00AFDA24 /* TradingDataNetworkFetcher.swift in Sources */,
 				3322327E2BAB970400D40FAD /* OutlineVerticalModifier.swift in Sources */,
@@ -737,6 +752,7 @@
 				336E29822BAF058600776F5B /* CSCViewModel.swift in Sources */,
 				332232862BAB978500D40FAD /* BackgroundStyle.swift in Sources */,
 				336C9CAB2BADEC030093DE16 /* CandleStickChart.swift in Sources */,
+				63FBC0D12BB1A35B00FA61CB /* PatternGridItemView.swift in Sources */,
 				636A4BFA2BAF0EBD00420BF5 /* Pattern.swift in Sources */,
 				636A4BFC2BAF1B3E00420BF5 /* PatternStickChart.swift in Sources */,
 				F5295DB90B37882622BC0944 /* TuistBundle+CandleHub.swift in Sources */,
