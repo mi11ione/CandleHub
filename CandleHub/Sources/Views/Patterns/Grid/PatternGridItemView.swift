@@ -22,16 +22,12 @@ struct PatternGridItemView: View {
                 .cornerRadius(30)
                 .foregroundColor(colorScheme == .dark ? .white : .black)
                 .font(.title)
-            
+
             Text("\(pattern.name)")
                 .foregroundColor(colorScheme == .dark ? .white : .black)
                 .font(.body)
                 .padding(.top, -6)
                 .padding(.bottom, -6)
-        }.onTapGesture {
-            selectedPattern = pattern
-        }.sheet(item: $selectedPattern) { pattern in
-            PatternSheetView(pattern: pattern, gridWidth: 300)
         }
     }
 }

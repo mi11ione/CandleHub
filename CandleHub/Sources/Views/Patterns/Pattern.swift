@@ -10,8 +10,8 @@ import Foundation
 struct Pattern: Hashable, Identifiable {
     static func == (lhs: Pattern, rhs: Pattern) -> Bool {
         lhs.name == rhs.name &&
-        lhs.candles == rhs.candles &&
-        lhs.info == rhs.info
+            lhs.candles == rhs.candles &&
+            lhs.info == rhs.info
     }
 
     let id = UUID()

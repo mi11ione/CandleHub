@@ -22,6 +22,12 @@ struct PatternsGridView: View {
         LazyVGrid(columns: columns, spacing: 20) {
             ForEach(patterns, id: \.id) { pattern in
                 PatternGridItemView(pattern: pattern, selectedOption: $selectedOption, viewModel: viewModel)
+                    .onTapGesture {
+                        selectedPattern = pattern
+                    }
+            }
+            .sheet(item: $selectedPattern) { pattern in
+                PatternSheetView(pattern: pattern, gridWidth: 300)
             }
         }
         .padding([.top, .horizontal])

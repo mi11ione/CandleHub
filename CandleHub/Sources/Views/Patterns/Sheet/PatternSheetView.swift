@@ -25,13 +25,13 @@ struct PatternSheetView: View {
         .padding()
 
         Text(pattern.name)
-        .font(.title)
-        .bold()
-        .padding(.horizontal)
+            .font(.title)
+            .bold()
+            .padding(.horizontal)
         Text(pattern.info)
-        .font(.subheadline)
-        .padding(.horizontal)
-        .padding(.top, 10)
+            .font(.subheadline)
+            .padding(.horizontal)
+            .padding(.top, 10)
         Spacer()
     }
 }
@@ -39,4 +39,3 @@ struct PatternSheetView: View {
 #Preview {
     ContentView()
 }
-
