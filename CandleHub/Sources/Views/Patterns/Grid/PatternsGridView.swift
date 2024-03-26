@@ -3,17 +3,19 @@ import SwiftUI
 struct PatternsGridView: View {
     @Environment(\.colorScheme) var colorScheme
     var viewModel: PatternsGridViewModel
-    @Binding var selectedOption: String
+    var patterns: [Pattern]
+    @Binding var selectedOption: Option
+    @State private var selectedPattern: Pattern?
 
     private var columns: [GridItem] {
-        [GridItem(.adaptive(minimum: gridWidth(for: selectedOption)))]
+        [GridItem(.adaptive(minimum: gridWidth(for: selectedOption.rawValue)))]
     }
 
     var body: some View {
         LazyVGrid(columns: columns, spacing: 20) {
-            ForEach(viewModel.patterns, id: \.id) { item in
+            ForEach(patterns, id: \.id) { item in
                 VStack {
-                    PatternStickChart(pattern: item, gridWidth: gridWidth(for: selectedOption))
+                    PatternStickChart(pattern: item, gridWidth: gridWidth(for: selectedOption.rawValue))
                         .background(Rectangle().fill(Material.thin))
                         .cornerRadius(30)
                         .foregroundColor(colorScheme == .dark ? .white : .black)

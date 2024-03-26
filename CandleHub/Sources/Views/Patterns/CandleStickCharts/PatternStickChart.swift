@@ -30,7 +30,7 @@ struct PatternStickChart: View {
         }
         .padding()
         .padding(.leading)
-        .frame(width: gridWidth, height: 150)
+        .frame(width: gridWidth)
         .chartXAxis {
             AxisMarks(position: .bottom, values: .automatic(desiredCount: 6)) {
                 AxisGridLine(centered: true)

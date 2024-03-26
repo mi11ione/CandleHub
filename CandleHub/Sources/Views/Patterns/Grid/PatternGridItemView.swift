@@ -10,8 +10,7 @@ import SwiftUI
 
 struct PatternGridItemView: View {
     let pattern: Pattern
-    let selectedOption: String
-    let gridWidth: CGFloat
+    @Binding var selectedOption: Option
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {

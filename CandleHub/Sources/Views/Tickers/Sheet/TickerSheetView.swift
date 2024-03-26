@@ -9,49 +9,66 @@ import SwiftUI
 
 struct TickerSheetView: View {
     var ticker: TickerMOEX
+    @State private var selectedOption: Option = .smallPatterns
+    @State private var predictedPatterns: [Pattern] = [
+        PatternsRepository.patterns[0],
+        PatternsRepository.patterns[1],
+        PatternsRepository.patterns[2],
+        PatternsRepository.patterns[3],
+        PatternsRepository.patterns[5],
+        PatternsRepository.patterns[6],
+    ]
 
     var body: some View {
-        VStack(alignment: .leading) {
-            ZStack {
-                Rectangle()
-                    .fill(.ultraThinMaterial)
-                    .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
-                VStack {
-                    ZStack {
-                        Rectangle()
-                            .background(.ultraThinMaterial)
-                            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
-                            .frame(height: 65)
-                            .opacity(0.15)
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Text(ticker.subTitle)
-                                    .font(.title2)
-                                    .bold()
-                                Text("$\(ticker.title)")
-                                    .font(.title3)
+        ScrollView {
+            VStack(alignment: .leading) {
+                ZStack {
+                    Rectangle()
+                        .fill(.ultraThinMaterial)
+                        .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
+                    VStack {
+                        ZStack {
+                            Rectangle()
+                                .background(.ultraThinMaterial)
+                                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
+                                .frame(height: 65)
+                                .opacity(0.15)
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text(ticker.subTitle)
+                                        .font(.title2)
+                                        .bold()
+                                    Text("$\(ticker.title)")
+                                        .font(.title3)
+                                }
+                                Spacer()
+                                VStack(alignment: .trailing) {
+                                    Text(ticker.price.description).font(.title)
+                                    Text("\(String(format: "%.2f", ticker.priceChange.amount)) ₽")
+                                        .font(.title3)
+                                        .foregroundColor(priceChangeColor)
+                                }
                             }
-                            Spacer()
-                            VStack(alignment: .trailing) {
-                                Text(ticker.price.description).font(.title)
-                                Text("\(String(format: "%.2f", ticker.priceChange.amount)) ₽")
-                                    .font(.title3)
-                                    .foregroundColor(priceChangeColor)
-                            }
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
+                        CandleStickChart(viewModel: CandleStickChartViewModel(fetcher: TradingDataNetworkFetcher()), tickerTitle: ticker.title, numberOfCandles: 25)
                     }
-                    CandleStickChart(viewModel: CandleStickChartViewModel(fetcher: TradingDataNetworkFetcher()), tickerTitle: ticker.title, numberOfCandles: 25)
+                    .padding()
                 }
+                .frame(height: 360)
                 .padding()
-            }
-            .frame(height: 360)
-            .padding()
 
-            Text("IdentifiedPatterns").font(.title).bold().padding(.horizontal)
-            Spacer()
+                Text("IdentifiedPatterns").font(.title).bold().padding(.horizontal)
+
+                PatternsGridView(
+                    viewModel: PatternsGridViewModel(),
+                    selectedOption: $selectedOption,
+                    patterns: predictedPatterns
+                )
+                Spacer()
+            }
+            .padding(.top)
         }
-        .padding(.top)
     }
 
     private var priceChangeColor: Color {
