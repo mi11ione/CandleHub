@@ -1,13 +1,15 @@
 import Foundation
 
-enum MoexApi {
+enum RestApi {
     enum Method: String {
         case allTiсkers = "/iss/history/engines/stock/markets/shares/boards/tqbr/securities.json"
         case candles = "/iss/engines/stock/markets/shares/boards/TQBR/securities/"
+        case patterns = "/get-patterns"
+
         func url(tiсker: String?, queryItems: [URLQueryItem]? = nil) -> URL? {
             var components = URLComponents()
             components.scheme = scheme
-            components.host = host
+            components.host = issHost
             if let tiсker {
                 components.path = rawValue + tiсker + candle
             } else {
@@ -18,9 +20,22 @@ enum MoexApi {
             }
             return components.url
         }
+
+        func patternsUrl(queryItems: [URLQueryItem]? = nil) -> URL? {
+            var components = URLComponents()
+            components.scheme = nonSecureScheme
+            components.host = candleHubHost
+            components.path = rawValue
+            if let queryItems {
+                components.queryItems = queryItems
+            }
+            return components.url
+        }
     }
 }
 
+private let nonSecureScheme = "http"
 private let scheme = "https"
-private let host = "iss.moex.com"
+private let issHost = "iss.moex.com"
+private let candleHubHost = "157.230.122.16"
 private let candle = "/candles.json"

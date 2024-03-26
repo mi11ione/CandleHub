@@ -8,6 +8,17 @@
 import SwiftUI
 
 struct PatternsGridViewModel {
+    private let fetcher: TradingDataNetworkFetching
+
+    init(fetcher: TradingDataNetworkFetching) {
+        self.fetcher = fetcher
+    }
+
+    func fetchPatterns() async -> [Pattern]? {
+        let fetchedArray = await fetcher.getPatterns()
+        return fetchedArray
+    }
+
     func gridWidth(for selectedOption: Option) -> CGFloat {
         switch selectedOption {
         case .bigPatterns:

@@ -11,7 +11,7 @@ struct PatternsGridView: View {
     @Environment(\.colorScheme) var colorScheme
     var viewModel: PatternsGridViewModel
     @Binding var selectedOption: Option
-    var patterns: [Pattern]
+    @State var patterns: [Pattern] = []
     @State private var selectedPattern: Pattern?
 
     private var columns: [GridItem] {
@@ -31,5 +31,10 @@ struct PatternsGridView: View {
             }
         }
         .padding([.top, .horizontal])
+        .onAppear {
+            Task {
+                patterns = await viewModel.fetchPatterns() ?? []
+            }
+        }
     }
 }

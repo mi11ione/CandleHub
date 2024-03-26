@@ -10,14 +10,6 @@ import SwiftUI
 struct TickerSheetView: View {
     var ticker: TickerMOEX
     @State private var selectedOption: Option = .smallPatterns
-    @State private var predictedPatterns: [Pattern] = [
-        PatternsRepository.patterns[0],
-        PatternsRepository.patterns[1],
-        PatternsRepository.patterns[2],
-        PatternsRepository.patterns[3],
-        PatternsRepository.patterns[5],
-        PatternsRepository.patterns[6],
-    ]
 
     var body: some View {
         ScrollView {
@@ -61,9 +53,8 @@ struct TickerSheetView: View {
                 Text("IdentifiedPatterns").font(.title).bold().padding(.horizontal)
 
                 PatternsGridView(
-                    viewModel: PatternsGridViewModel(),
-                    selectedOption: $selectedOption,
-                    patterns: predictedPatterns
+                    viewModel: PatternsGridViewModel(fetcher: TradingDataNetworkFetcher()),
+                    selectedOption: $selectedOption
                 )
                 Spacer()
             }

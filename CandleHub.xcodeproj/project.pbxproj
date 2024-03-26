@@ -12,7 +12,7 @@
 		048819BD2BAC77FD00AFDA24 /* Candle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B52BAC77FD00AFDA24 /* Candle.swift */; };
 		048819BE2BAC77FD00AFDA24 /* MoexCandles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B62BAC77FD00AFDA24 /* MoexCandles.swift */; };
 		048819BF2BAC77FD00AFDA24 /* TickerMOEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B72BAC77FD00AFDA24 /* TickerMOEX.swift */; };
-		048819C02BAC77FD00AFDA24 /* MoexApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B82BAC77FD00AFDA24 /* MoexApi.swift */; };
+		048819C02BAC77FD00AFDA24 /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B82BAC77FD00AFDA24 /* RestApi.swift */; };
 		048819C12BAC77FD00AFDA24 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B92BAC77FD00AFDA24 /* Money.swift */; };
 		048819C22BAC77FD00AFDA24 /* MoexTiсkers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819BA2BAC77FD00AFDA24 /* MoexTiсkers.swift */; };
 		1C952F6268ED96F1066CFB2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879B0FC4A003425D16DE20C7 /* ContentView.swift */; };
@@ -50,6 +50,7 @@
 		33E932F42BADC90F0080D003 /* TickersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E932F32BADC90F0080D003 /* TickersViewModel.swift */; };
 		586D143B74732600E264A203 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F31467DA628392289E9BB9B0 /* Preview Assets.xcassets */; };
 		62B144F212D385EBF52A14E4 /* CandleHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */; };
+		635FABD02BB310B200E8A169 /* PatternFromBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FABCF2BB310B200E8A169 /* PatternFromBack.swift */; };
 		636A4BFA2BAF0EBD00420BF5 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4BF92BAF0EBD00420BF5 /* Pattern.swift */; };
 		636A4BFC2BAF1B3E00420BF5 /* PatternStickChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4BFB2BAF1B3E00420BF5 /* PatternStickChart.swift */; };
 		63FBC0D12BB1A35B00FA61CB /* PatternGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC0D02BB1A35B00FA61CB /* PatternGridItemView.swift */; };
@@ -118,7 +119,7 @@
 		048819B52BAC77FD00AFDA24 /* Candle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candle.swift; sourceTree = "<group>"; };
 		048819B62BAC77FD00AFDA24 /* MoexCandles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoexCandles.swift; sourceTree = "<group>"; };
 		048819B72BAC77FD00AFDA24 /* TickerMOEX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerMOEX.swift; sourceTree = "<group>"; };
-		048819B82BAC77FD00AFDA24 /* MoexApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoexApi.swift; sourceTree = "<group>"; };
+		048819B82BAC77FD00AFDA24 /* RestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
 		048819B92BAC77FD00AFDA24 /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 		048819BA2BAC77FD00AFDA24 /* MoexTiсkers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoexTiсkers.swift"; sourceTree = "<group>"; };
 		0A3CF217A9F7C98936191796 /* CandleHubTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CandleHubTests-Info.plist"; sourceTree = "<group>"; };
@@ -155,6 +156,7 @@
 		33E932F32BADC90F0080D003 /* TickersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersViewModel.swift; sourceTree = "<group>"; };
 		346BEF51999A85EE1B26A7C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61634B87A7767804D38F56FD /* CandleHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CandleHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		635FABCF2BB310B200E8A169 /* PatternFromBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternFromBack.swift; sourceTree = "<group>"; };
 		636A4BF92BAF0EBD00420BF5 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
 		636A4BFB2BAF1B3E00420BF5 /* PatternStickChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternStickChart.swift; sourceTree = "<group>"; };
 		63FBC0D02BB1A35B00FA61CB /* PatternGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternGridItemView.swift; sourceTree = "<group>"; };
@@ -208,13 +210,14 @@
 			isa = PBXGroup;
 			children = (
 				048819B42BAC77FD00AFDA24 /* ChartTimePeriod.swift */,
-				048819B82BAC77FD00AFDA24 /* MoexApi.swift */,
+				048819B82BAC77FD00AFDA24 /* RestApi.swift */,
 				048819B62BAC77FD00AFDA24 /* MoexCandles.swift */,
 				048819BA2BAC77FD00AFDA24 /* MoexTiсkers.swift */,
 				048819B92BAC77FD00AFDA24 /* Money.swift */,
 				048819B52BAC77FD00AFDA24 /* Candle.swift */,
 				048819B72BAC77FD00AFDA24 /* TickerMOEX.swift */,
 				048819B32BAC77FD00AFDA24 /* TradingDataNetworkFetcher.swift */,
+				635FABCF2BB310B200E8A169 /* PatternFromBack.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -760,10 +763,11 @@
 				332232802BAB972100D40FAD /* SlideFadeIn.swift in Sources */,
 				AE988FD02BAF205F0036F225 /* CloseRegressionModel.mlmodel in Sources */,
 				048819C22BAC77FD00AFDA24 /* MoexTiсkers.swift in Sources */,
-				048819C02BAC77FD00AFDA24 /* MoexApi.swift in Sources */,
+				048819C02BAC77FD00AFDA24 /* RestApi.swift in Sources */,
 				048819BC2BAC77FD00AFDA24 /* ChartTimePeriod.swift in Sources */,
 				332232822BAB974C00D40FAD /* OutlineOverlay.swift in Sources */,
 				AEE833672BAD788C00786D60 /* Predictor.swift in Sources */,
+				635FABD02BB310B200E8A169 /* PatternFromBack.swift in Sources */,
 				AE988FCF2BAF205F0036F225 /* OpenRegressionModel.mlmodel in Sources */,
 				332232782BAB96A100D40FAD /* TabPreferenceKey.swift in Sources */,
 				048819BF2BAC77FD00AFDA24 /* TickerMOEX.swift in Sources */,
