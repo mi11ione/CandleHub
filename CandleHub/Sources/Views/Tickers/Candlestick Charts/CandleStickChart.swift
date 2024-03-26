@@ -1,54 +1,46 @@
-//
-//  CandleStickChart.swift
-//  CandleHub
-//
-//  Created by mi11ion on 22/3/24.
-//
-
 import Charts
 import SwiftUI
 
 struct CandleStickChart: View {
     @Environment(\.colorScheme) var colorScheme
-    @State var viewModel: CandleStickChartViewModel
+    let candles: [Candle]
     let tickerTitle: String
     let numberOfCandles: Int
-
-    public init(viewModel: CandleStickChartViewModel, tickerTitle: String, numberOfCandles: Int = 10) {
-        self.viewModel = viewModel
+    
+    public init(
+        candles: [Candle],
+        tickerTitle: String,
+        numberOfCandles: Int = 10
+    ) {
+        self.candles = candles
         self.tickerTitle = tickerTitle
         self.numberOfCandles = numberOfCandles
     }
-
+    
     var body: some View {
         Chart {
-            if let candles = viewModel.candlesByTicker[tickerTitle] {
-                ForEach(candles.indices, id: \.self) { index in
-                    let candle = candles[index]
-                    let isPredicted = index == candles.count - 1
-
-                    RectangleMark(
-                        x: .value("Time", viewModel.formatDate(candle.date)),
-                        yStart: .value("Low", candle.lowPrice),
-                        yEnd: .value("High", candle.highPrice),
-                        width: .fixed(isPredicted ? 4 : 2)
-                    )
-                    .clipShape(RoundedRectangle(cornerRadius: 5))
-                    .foregroundStyle(colorScheme == .dark ? .white : .black)
-
-                    RectangleMark(
-                        x: .value("Time", viewModel.formatDate(candle.date)),
-                        yStart: .value("Open", candle.openPrice),
-                        yEnd: .value("Close", candle.closePrice),
-                        width: .fixed(isPredicted ? 12 : 7)
-                    )
-                    .clipShape(RoundedRectangle(cornerRadius: 2))
-                    .foregroundStyle(isPredicted ? (candle.openPrice < candle.closePrice ? Color.red.opacity(0.5) : Color.green.opacity(0.5)) : (candle.openPrice < candle.closePrice ? .red : .green))
-                }
+            ForEach(candles, id: \.id) { candle in
+                RectangleMark(
+                    x: .value("Time", formatDate(candle.date)),
+                    yStart: .value("Low", candle.lowPrice),
+                    yEnd: .value("High", candle.highPrice),
+                    width: .fixed(2)
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 5))
+                .foregroundStyle(colorScheme == .dark ? .white : .black)
+                
+                RectangleMark(
+                    x: .value("Time", formatDate(candle.date)),
+                    yStart: .value("Open", candle.openPrice),
+                    yEnd: .value("Close", candle.closePrice),
+                    width: .fixed(7)
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 2))
+                .foregroundStyle(candle.openPrice < candle.closePrice ? .red : .green)
             }
         }
         .padding(.leading)
-        .chartYScale(domain: viewModel.calculateYAxisDomain(for: tickerTitle))
+        .chartYScale(domain: calculateYAxisDomain(for: candles))
         .chartYAxis {
             AxisMarks(position: .trailing, values: .automatic(desiredCount: 5))
         }
@@ -62,19 +54,30 @@ struct CandleStickChart: View {
                     default:
                         AxisValueLabel(format: .dateTime.hour(.defaultDigits(amPM: .omitted)))
                     }
-
+                    
                     AxisGridLine()
                     AxisTick()
                 }
             }
         }
-        .onAppear {
-            Task {
-                if let data = await viewModel.fetchData(ticker: tickerTitle, numberOfCandles: numberOfCandles) {
-                    viewModel.candlesByTicker[tickerTitle] = data
-                    viewModel.addPredictedCandle(for: tickerTitle)
-                }
-            }
+    }
+    
+    private func formatDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        return formatter.string(from: date)
+    }
+    
+    private func calculateYAxisDomain(for candles: [Candle]) -> ClosedRange<Double> {
+        guard !candles.isEmpty else {
+            return 0 ... 100
         }
+        let lowPrices = candles.map(\.lowPrice)
+        let highPrices = candles.map(\.highPrice)
+        guard let minPrice = lowPrices.min(), let maxPrice = highPrices.max() else {
+            return 0 ... 100
+        }
+        let padding = (maxPrice - minPrice) * 0.15
+        return (minPrice - padding) ... (maxPrice + padding)
     }
 }

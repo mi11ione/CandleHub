@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
+struct TabBarView: View {
     @State private var initialTab: Tab = .tickers
 
     var body: some View {
@@ -9,7 +9,7 @@ struct ContentView: View {
                 Group {
                     switch initialTab {
                     case .tickers:
-                        TickersView(fetcher: TradingDataNetworkFetcher())
+                        TickersView()
                     case .patterns:
                         PatternsView()
                     case .settings:
@@ -26,5 +26,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    TabBarView()
 }

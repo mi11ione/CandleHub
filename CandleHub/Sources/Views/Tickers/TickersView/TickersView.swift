@@ -1,22 +1,15 @@
-//
-//  TickersView.swift
-//  CandleHub
-//
-//  Created by mi11ion on 21/3/24.
-//
-
 import SwiftUI
 
 struct TickersView: View {
     @Environment(\.colorScheme) var colorScheme
-    @State var searchText: String = ""
-    @FocusState var isTextFieldFocused: Bool
-    @State var isLoading: Bool = false
-    @State var array: [TickerMOEX]? = nil
-    let fetcher: TradingDataNetworkFetching
+    
+    @State var viewModel: TickersViewModel = TickersViewModel(fetcher: TradingDataNetworkFetcher())
+    
+    @State private var searchText: String = ""
+    @FocusState private var isTextFieldFocused: Bool
 
     private var filteredTickers: [TickerMOEX] {
-        guard let tickers = array else { return [] }
+        guard let tickers = viewModel.tickers else { return [] }
         if searchText.isEmpty {
             return tickers
         } else {
@@ -38,7 +31,7 @@ struct TickersView: View {
                     TickersViewSwitch()
                 }
 
-                if isLoading {
+                if viewModel.isLoading {
                     Spacer()
                     ProgressView()
                         .scaleEffect(1.5, anchor: .center)
@@ -59,17 +52,10 @@ struct TickersView: View {
         }
         .onAppear {
             Task {
-                let (fetchedArray, newLoadingState) = await fetchTickers()
-                array = fetchedArray
-                isLoading = newLoadingState
+                let (fetchedArray, newLoadingState) = await viewModel.fetchTickers()
+                viewModel.tickers = fetchedArray
+                viewModel.isLoading = newLoadingState
             }
         }
-    }
-    func fetchTickers(forceRefresh: Bool = false) async -> ([TickerMOEX]?, Bool) {
-        if array == nil || forceRefresh {
-            let fetchedArray = await fetcher.getMoexTickers()
-            return (fetchedArray, false)
-        }
-        return (array, false)
     }
 }

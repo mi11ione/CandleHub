@@ -1,9 +1,4 @@
-//
-//  CandleStick.swift
-//  CandleStick
-//
-//  Created by Кирилл Кошкарёв on 23.03.2024.
-//
+import SwiftUI
 
 // Структура для представления свечи
 struct Candlestick {
@@ -37,24 +32,36 @@ func candleColor(open: Double, close: Double) -> CandleColor {
 }
 
 // Функция для поиска паттерна "Two Crows"
-func findTwoCrows(candles: [Candlestick]) -> [[Double]] {
-    var result = [[Double]]()
+func findTwoCrows(candles: [Candle]) -> DetectedPattern {
+    var result: DetectedPattern
+    var dates = [Date]()
+    var signals = [Signal]()
 
     for i in 2 ..< candles.count {
-        let firstCandle = candleColor(open: candles[i - 2].open, close: candles[i - 2].close)
-        let secondCandle = candleColor(open: candles[i - 1].open, close: candles[i - 1].close)
-        let thirdCandle = candleColor(open: candles[i].open, close: candles[i].close)
+        let firstCandle = candleColor(open: candles[i - 2].openPrice, close: candles[i - 2].closePrice)
+        let secondCandle = candleColor(open: candles[i - 1].openPrice, close: candles[i - 1].closePrice)
+        let thirdCandle = candleColor(open: candles[i].openPrice, close: candles[i].closePrice)
 
         var signal = 0
         if firstCandle == .white, secondCandle == .black,
-           thirdCandle == .black, candles[i].open < candles[i - 1].open,
-           candles[i].open > candles[i - 1].close, candles[i].close > candles[i - 2].open,
-           candles[i].close < candles[i - 2].close
+           thirdCandle == .black, candles[i].openPrice < candles[i - 1].openPrice,
+           candles[i].openPrice > candles[i - 1].closePrice, candles[i].closePrice > candles[i - 2].openPrice,
+           candles[i].closePrice < candles[i - 2].closePrice
         {
             signal = -1
         }
-        result.append([candles[i].timestamp, Double(signal)])
+        
+        if signal != 0 {
+            dates.append(candles[i].date)
+            signals.append((signal != -1) ? .buy : .sell)
+        }
+
     }
+    
+    result = DetectedPattern(
+        name: "findTwoCrows",
+        signal: signals,
+        dates: dates)
 
     return result
 }
