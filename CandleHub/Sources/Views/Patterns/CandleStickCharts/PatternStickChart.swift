@@ -11,6 +11,7 @@ import SwiftUI
 struct PatternStickChart: View {
     @Environment(\.colorScheme) var colorScheme
     var pattern: Pattern
+    var gridWidth: CGFloat
 
     var body: some View {
         Chart {
@@ -35,6 +36,8 @@ struct PatternStickChart: View {
             }
         }
         .padding()
+        .padding(.leading)
+        .frame(width: gridWidth, height: 150)
         .chartXAxis {
             AxisMarks(position: .bottom, values: .automatic(desiredCount: 6)) {
                 AxisGridLine(centered: true)
