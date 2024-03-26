@@ -2,9 +2,9 @@ import SwiftUI
 
 struct TickersView: View {
     @Environment(\.colorScheme) var colorScheme
-    
-    @State var viewModel: TickersViewModel = TickersViewModel(fetcher: TradingDataNetworkFetcher())
-    
+
+    @State var viewModel: TickersViewModel = .init(fetcher: TradingDataNetworkFetcher())
+
     @State private var searchText: String = ""
     @FocusState private var isTextFieldFocused: Bool
 

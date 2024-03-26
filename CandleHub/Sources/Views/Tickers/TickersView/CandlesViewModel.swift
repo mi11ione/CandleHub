@@ -9,16 +9,18 @@ struct CandlesViewModel {
     init(
         ticker: TickerMOEX,
         tickerTitle: String,
-        fetcher: TradingDataNetworkFetching) {
-            self.ticker = ticker
-            self.tickerTitle = tickerTitle
-            self.fetcher = fetcher
+        fetcher: TradingDataNetworkFetching
+    ) {
+        self.ticker = ticker
+        self.tickerTitle = tickerTitle
+        self.fetcher = fetcher
     }
 
     mutating func fetchData(numberOfCandles: Int = 10) async {
         guard let fetchedCandles = await fetcher.getMoexCandles(
             ticker: tickerTitle,
-            timePeriod: .hour) else {
+            timePeriod: .hour
+        ) else {
             return
         }
         candles = Array(fetchedCandles.suffix(numberOfCandles))

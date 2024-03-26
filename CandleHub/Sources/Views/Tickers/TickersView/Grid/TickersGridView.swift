@@ -19,7 +19,8 @@ struct TickersGridView: View {
                     viewModel: CandlesViewModel(
                         ticker: ticker,
                         tickerTitle: ticker.title,
-                        fetcher: TradingDataNetworkFetcher()))
+                        fetcher: TradingDataNetworkFetcher()
+                    ))
                     .padding(.bottom)
             }
         }

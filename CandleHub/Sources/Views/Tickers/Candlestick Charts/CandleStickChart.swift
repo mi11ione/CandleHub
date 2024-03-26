@@ -6,7 +6,7 @@ struct CandleStickChart: View {
     let candles: [Candle]
     let tickerTitle: String
     let numberOfCandles: Int
-    
+
     public init(
         candles: [Candle],
         tickerTitle: String,
@@ -16,7 +16,7 @@ struct CandleStickChart: View {
         self.tickerTitle = tickerTitle
         self.numberOfCandles = numberOfCandles
     }
-    
+
     var body: some View {
         Chart {
             ForEach(candles, id: \.id) { candle in
@@ -28,7 +28,7 @@ struct CandleStickChart: View {
                 )
                 .clipShape(RoundedRectangle(cornerRadius: 5))
                 .foregroundStyle(colorScheme == .dark ? .white : .black)
-                
+
                 RectangleMark(
                     x: .value("Time", formatDate(candle.date)),
                     yStart: .value("Open", candle.openPrice),
@@ -54,20 +54,20 @@ struct CandleStickChart: View {
                     default:
                         AxisValueLabel(format: .dateTime.hour(.defaultDigits(amPM: .omitted)))
                     }
-                    
+
                     AxisGridLine()
                     AxisTick()
                 }
             }
         }
     }
-    
+
     private func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
         return formatter.string(from: date)
     }
-    
+
     private func calculateYAxisDomain(for candles: [Candle]) -> ClosedRange<Double> {
         guard !candles.isEmpty else {
             return 0 ... 100

@@ -29,7 +29,7 @@ struct PatternsGridView: View {
         }
         .padding([.top, .horizontal])
     }
-    
+
     private func gridWidth(for selectedOption: String) -> CGFloat {
         selectedOption == "Big patterns" ? 350 : 160
     }

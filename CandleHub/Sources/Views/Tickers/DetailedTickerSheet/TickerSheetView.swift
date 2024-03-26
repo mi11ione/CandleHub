@@ -2,7 +2,7 @@ import SwiftUI
 
 struct TickerSheetView: View {
     @State var viewModel: TickerSheetViewModel
-    
+
     var ticker: TickerMOEX {
         viewModel.ticker
     }

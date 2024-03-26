@@ -1,21 +1,15 @@
 import SwiftUI
 
-
-struct DetectionPatterns {
-        
+enum DetectionPatterns {
     static func detectionPatterns(candles: [Candle]) -> DetectedPattern {
-        
-        return findTwoCrows(candles: candles)
-        
+        findTwoCrows(candles: candles)
     }
 }
 
 struct DetectedPattern {
-    
     var name: String
     var signal: [Signal]
     var dates: [Date]
-    
 }
 
 enum Signal {

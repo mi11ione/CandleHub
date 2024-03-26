@@ -50,18 +50,18 @@ func findTwoCrows(candles: [Candle]) -> DetectedPattern {
         {
             signal = -1
         }
-        
+
         if signal != 0 {
             dates.append(candles[i].date)
             signals.append((signal != -1) ? .buy : .sell)
         }
-
     }
-    
+
     result = DetectedPattern(
         name: "findTwoCrows",
         signal: signals,
-        dates: dates)
+        dates: dates
+    )
 
     return result
 }
@@ -828,9 +828,9 @@ func findLadderBottomPattern(candles: [Candlestick]) -> [[Double]] {
            fourthCandle.open < fourthCandle.close, // Четвертая свеча бычья
            fifthCandle.open < fifthCandle.close, // Пятая свеча бычья
            firstCandle.low < secondCandle.low, secondCandle.low < thirdCandle.low, thirdCandle.low < fourthCandle.low, fourthCandle.low < fifthCandle.low, // Новые минимумы на каждой свече
-           firstCandle.high < secondCandle.high, secondCandle.high < thirdCandle.high, thirdCandle.high < fourthCandle.high, fourthCandle.high < fifthCandle.high, // Новые максимумы на каждой свече
-           fifthCandle.close > fourthCandle.close, // Закрытие пятой свечи выше закрытия четвертой свечи
-           fifthCandle.close - fifthCandle.open > (fifthCandle.close - fifthCandle.open) * 0.75
+           firstCandle.high < secondCandle.high, secondCandle.high<thirdCandle.high, thirdCandle.high < fourthCandle.high, fourthCandle.high < fifthCandle.high, // Новые максимумы на каждой свече
+               fifthCandle.close > fourthCandle.close, // Закрытие пятой свечи выше закрытия четвертой свечи
+               fifthCandle.close - fifthCandle.open>(fifthCandle.close - fifthCandle.open) * 0.75
         { // Закрытие пятой свечи на 75% или больше от разницы между открытием и закрытием пятой свечи
             signal = 1 // Сигнал на покупку
         }
@@ -1027,10 +1027,10 @@ func findPiercingPattern(candles: [Candlestick]) -> [[Double]] {
         var signal = 0
 
         // Проверяем условия для паттерна "Piercing"
-        if firstCandle.close < firstCandle.open, // Закрытие первой свечи ниже открытия
-           secondCandle.close < secondCandle.open, // Закрытие второй свечи ниже открытия
-           firstCandle.close > secondCandle.open, // Закрытие первой свечи выше открытия второй свечи
-           secondCandle.close > (firstCandle.open + firstCandle.close) / 2
+        if firstCandle.close<firstCandle.open, // Закрытие первой свечи ниже открытия
+            secondCandle.close < secondCandle.open, // Закрытие второй свечи ниже открытия
+            firstCandle.close > secondCandle.open, // Закрытие первой свечи выше открытия второй свечи
+            secondCandle.close>(firstCandle.open + firstCandle.close) / 2
         { // Закрытие второй свечи выше средней точки первой свечи
             signal = 1 // Сигнал на покупку
         }
