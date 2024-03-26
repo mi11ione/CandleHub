@@ -30,10 +30,11 @@
 		334D84212BAD8A8900252A7C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334D84202BAD8A8900252A7C /* SearchBar.swift */; };
 		336C9CAB2BADEC030093DE16 /* CandleStickChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336C9CAA2BADEC030093DE16 /* CandleStickChart.swift */; };
 		336E29822BAF058600776F5B /* CandlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E29812BAF058600776F5B /* CandlesViewModel.swift */; };
-		33942C1E2BB33F4800A84480 /* TickersViewSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33942C1C2BB33F4800A84480 /* TickersViewSwitch.swift */; };
-		33942C202BB33F5000A84480 /* TickerGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33942C1F2BB33F5000A84480 /* TickerGridItemView.swift */; };
 		33AA4BE62BAB87BC0047868E /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA4BE52BAB87BC0047868E /* TabBar.swift */; };
 		33AA4BE82BAB87CE0047868E /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA4BE72BAB87CE0047868E /* Tab.swift */; };
+		33B98B742BB347B700551096 /* TickerGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B98B732BB347B700551096 /* TickerGridItemView.swift */; };
+		33B98B762BB3480200551096 /* TickersViewSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B98B752BB3480200551096 /* TickersViewSwitch.swift */; };
+		33B98B792BB349D900551096 /* PatternSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B98B782BB349D900551096 /* PatternSheetView.swift */; };
 		33C15C162BACE1D0000464CE /* TickersGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C15C152BACE1D0000464CE /* TickersGridView.swift */; };
 		33C15C182BACE20F000464CE /* PatternsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C15C172BACE20F000464CE /* PatternsGridView.swift */; };
 		33D3E4112BAB281600A56DDA /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3E4102BAB281600A56DDA /* Filters.swift */; };
@@ -132,11 +133,12 @@
 		334D84202BAD8A8900252A7C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		336C9CAA2BADEC030093DE16 /* CandleStickChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleStickChart.swift; sourceTree = "<group>"; };
 		336E29812BAF058600776F5B /* CandlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlesViewModel.swift; sourceTree = "<group>"; };
-		33942C1C2BB33F4800A84480 /* TickersViewSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TickersViewSwitch.swift; path = ../../../../../../../Downloads/TickersViewSwitch.swift; sourceTree = "<group>"; };
-		33942C1F2BB33F5000A84480 /* TickerGridItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TickerGridItemView.swift; path = ../../../../../../../Downloads/TickerGridItemView.swift; sourceTree = "<group>"; };
 		33AA4BE52BAB87BC0047868E /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		33AA4BE72BAB87CE0047868E /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		33ACF3FF2BB077F1001ACA8A /* CandleStick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CandleStick.xcodeproj; sourceTree = "<group>"; };
+		33B98B732BB347B700551096 /* TickerGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerGridItemView.swift; sourceTree = "<group>"; };
+		33B98B752BB3480200551096 /* TickersViewSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersViewSwitch.swift; sourceTree = "<group>"; };
+		33B98B782BB349D900551096 /* PatternSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternSheetView.swift; sourceTree = "<group>"; };
 		33C15C152BACE1D0000464CE /* TickersGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersGridView.swift; sourceTree = "<group>"; };
 		33C15C172BACE20F000464CE /* PatternsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsGridView.swift; sourceTree = "<group>"; };
 		33D3E4102BAB281600A56DDA /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
@@ -158,7 +160,7 @@
 		AE5038D22BB30C5800945831 /* Candle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candle.swift; sourceTree = "<group>"; };
 		AE5038D42BB30C9300945831 /* CandleStick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleStick.swift; sourceTree = "<group>"; };
 		AE5038D62BB30C9C00945831 /* DetectionPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionPatterns.swift; sourceTree = "<group>"; };
-		AE5038DA2BB3155A00945831 /* TickerSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TickerSheetViewModel.swift; path = CandleHub/Sources/Service/TickerSheetViewModel.swift; sourceTree = SOURCE_ROOT; };
+		AE5038DA2BB3155A00945831 /* TickerSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TickerSheetViewModel.swift; path = CandleHub/Sources/Views/Tickers/DetailedTickerSheet/TickerSheetViewModel.swift; sourceTree = SOURCE_ROOT; };
 		AE988FCB2BAF205F0036F225 /* OpenRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = OpenRegressionModel.mlmodel; sourceTree = "<group>"; };
 		AE988FCC2BAF205F0036F225 /* CloseRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CloseRegressionModel.mlmodel; sourceTree = "<group>"; };
 		AE988FCD2BAF205F0036F225 /* HighRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HighRegressionModel.mlmodel; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				33D3E41E2BAB477E00A56DDA /* Filters */,
 				33DCD4B72BB0C6D10071781F /* Grid */,
 				33F596B52BB005BC0019FDE9 /* CandleStickCharts */,
+				33B98B772BB349B300551096 /* DetailedPatternSheet */,
 			);
 			path = Patterns;
 			sourceTree = "<group>";
@@ -353,6 +356,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		33B98B772BB349B300551096 /* DetailedPatternSheet */ = {
+			isa = PBXGroup;
+			children = (
+				33B98B782BB349D900551096 /* PatternSheetView.swift */,
+			);
+			path = DetailedPatternSheet;
+			sourceTree = "<group>";
+		};
 		33D3E41E2BAB477E00A56DDA /* Filters */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,7 +376,7 @@
 		33DCD4B02BB0C65C0071781F /* Grid */ = {
 			isa = PBXGroup;
 			children = (
-				33942C1F2BB33F5000A84480 /* TickerGridItemView.swift */,
+				33B98B732BB347B700551096 /* TickerGridItemView.swift */,
 				33C15C152BACE1D0000464CE /* TickersGridView.swift */,
 			);
 			path = Grid;
@@ -374,8 +385,8 @@
 		33DCD4B12BB0C66A0071781F /* DetailedTickerSheet */ = {
 			isa = PBXGroup;
 			children = (
-				33DCD4B22BB0C6780071781F /* TickerSheetView.swift */,
 				AE5038DA2BB3155A00945831 /* TickerSheetViewModel.swift */,
+				33DCD4B22BB0C6780071781F /* TickerSheetView.swift */,
 			);
 			path = DetailedTickerSheet;
 			sourceTree = "<group>";
@@ -502,7 +513,7 @@
 		AE5038D92BB3133A00945831 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				33942C1C2BB33F4800A84480 /* TickersViewSwitch.swift */,
+				33B98B752BB3480200551096 /* TickersViewSwitch.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -697,6 +708,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33B98B762BB3480200551096 /* TickersViewSwitch.swift in Sources */,
+				33B98B742BB347B700551096 /* TickerGridItemView.swift in Sources */,
 				AEE833A12BAF143E00786D60 /* Adapter.swift in Sources */,
 				33DCD4B62BB0C6C10071781F /* PatternsGridViewModel.swift in Sources */,
 				3328CDBA2BAC68BC005032AF /* PatternsViewSwitch.swift in Sources */,
@@ -705,8 +718,8 @@
 				33DCD4BA2BB0C7510071781F /* AnimationExtension.swift in Sources */,
 				33E932F42BADC90F0080D003 /* TickersViewModel.swift in Sources */,
 				33AA4BE62BAB87BC0047868E /* TabBar.swift in Sources */,
+				33B98B792BB349D900551096 /* PatternSheetView.swift in Sources */,
 				33DCD4B32BB0C6780071781F /* TickerSheetView.swift in Sources */,
-				33942C1E2BB33F4800A84480 /* TickersViewSwitch.swift in Sources */,
 				332232722BAB8DCD00D40FAD /* SettingsView.swift in Sources */,
 				1C952F6268ED96F1066CFB2C /* TabBarView.swift in Sources */,
 				048819BB2BAC77FD00AFDA24 /* TradingDataNetworkFetcher.swift in Sources */,
@@ -732,7 +745,6 @@
 				AE988FD02BAF205F0036F225 /* CloseRegressionModel.mlmodel in Sources */,
 				048819C22BAC77FD00AFDA24 /* MoexTiсkers.swift in Sources */,
 				048819C02BAC77FD00AFDA24 /* MoexApi.swift in Sources */,
-				33942C202BB33F5000A84480 /* TickerGridItemView.swift in Sources */,
 				048819BC2BAC77FD00AFDA24 /* ChartTimePeriod.swift in Sources */,
 				332232822BAB974C00D40FAD /* OutlineOverlay.swift in Sources */,
 				AEE833672BAD788C00786D60 /* Predictor.swift in Sources */,

@@ -2,7 +2,7 @@
 //  PatternSheetView.swift
 //  CandleHub
 //
-//  Created by 1 on 25.03.2024.
+//  Created by mi11ion on 26/3/24.
 //
 
 import SwiftUI
@@ -33,8 +33,4 @@ struct PatternSheetView: View {
             .padding(.top, 10)
         Spacer()
     }
-}
-
-#Preview {
-    ContentView()
 }
