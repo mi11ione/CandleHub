@@ -1,10 +1,3 @@
-//
-//  TickersGridView.swift
-//  CandleHub
-//
-//  Created by mi11ion on 22/3/24.
-//
-
 import SwiftUI
 
 struct TickersGridView: View {
@@ -22,7 +15,11 @@ struct TickersGridView: View {
     var body: some View {
         LazyVGrid(columns: adaptiveColumn, spacing: 20) {
             ForEach(tickers, id: \.title) { ticker in
-                TickerGridItemView(ticker: ticker)
+                TickerGridItemView(
+                    viewModel: CandlesViewModel(
+                        ticker: ticker,
+                        tickerTitle: ticker.title,
+                        fetcher: TradingDataNetworkFetcher()))
                     .padding(.bottom)
             }
         }

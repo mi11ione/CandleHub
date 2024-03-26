@@ -4,7 +4,7 @@ import SwiftUI
 struct CandleHubApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabBarView()
         }
     }
 }

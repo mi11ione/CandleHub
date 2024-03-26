@@ -1,14 +1,11 @@
-//
-//  TickerSheetView.swift
-//  CandleHub
-//
-//  Created by mi11ion on 24/3/24.
-//
-
 import SwiftUI
 
 struct TickerSheetView: View {
-    var ticker: TickerMOEX
+    @State var viewModel: TickerSheetViewModel
+    
+    var ticker: TickerMOEX {
+        viewModel.ticker
+    }
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -41,7 +38,10 @@ struct TickerSheetView: View {
                         }
                         .padding(.horizontal)
                     }
-                    CandleStickChart(viewModel: CandleStickChartViewModel(fetcher: TradingDataNetworkFetcher()), tickerTitle: ticker.title, numberOfCandles: 25)
+                    CandleStickChart(
+                        candles: viewModel.candles,
+                        tickerTitle: ticker.title
+                    )
                 }
                 .padding()
             }

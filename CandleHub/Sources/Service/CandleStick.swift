@@ -1,10 +1,3 @@
-//
-//  CandleStick.swift
-//  CandleStick
-//
-//  Created by Кирилл Кошкарёв on 23.03.2024.
-//
-
 import SwiftUI
 
 // Структура для представления свечи

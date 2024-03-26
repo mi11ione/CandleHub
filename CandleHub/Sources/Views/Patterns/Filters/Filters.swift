@@ -24,7 +24,7 @@ struct Filters: View {
                 }
                 Spacer()
             }
-            .padding(.horizontal, 20)
+            .padding(.horizontal, 22)
         }
     }
 }

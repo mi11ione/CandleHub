@@ -1,15 +1,24 @@
 import SwiftUI
 
 struct CandlesViewModel {
+    let ticker: TickerMOEX
+    let tickerTitle: String
     var candles: [Candle] = []
     private var fetcher: TradingDataNetworkFetching
 
-    init(fetcher: TradingDataNetworkFetching) {
-        self.fetcher = fetcher
+    init(
+        ticker: TickerMOEX,
+        tickerTitle: String,
+        fetcher: TradingDataNetworkFetching) {
+            self.ticker = ticker
+            self.tickerTitle = tickerTitle
+            self.fetcher = fetcher
     }
 
-    mutating func fetchData(ticker: String, numberOfCandles: Int = 10) async {
-        guard let fetchedCandles = await fetcher.getMoexCandles(ticker: ticker, timePeriod: .hour) else {
+    mutating func fetchData(numberOfCandles: Int = 10) async {
+        guard let fetchedCandles = await fetcher.getMoexCandles(
+            ticker: tickerTitle,
+            timePeriod: .hour) else {
             return
         }
         candles = Array(fetchedCandles.suffix(numberOfCandles))

@@ -1,16 +1,14 @@
-//
-//  TickerGridItemView.swift
-//  CandleHub
-//
-//  Created by mi11ion on 22/3/24.
-//
-
 import SwiftUI
 
 struct TickerGridItemView: View {
-    let ticker: TickerMOEX
+//    let ticker: TickerMOEX
+    @State var viewModel: CandlesViewModel
     @Environment(\.colorScheme) var colorScheme
     @State private var selectedTicker: TickerMOEX?
+    
+    var ticker: TickerMOEX {
+        viewModel.ticker
+    }
 
     var body: some View {
         VStack {
@@ -25,7 +23,16 @@ struct TickerGridItemView: View {
                 }
         }
         .sheet(item: $selectedTicker) { ticker in
-            TickerSheetView(ticker: ticker)
+            TickerSheetView(viewModel: 
+                                TickerSheetViewModel(
+                                    ticker: ticker,
+                                    candles: viewModel.candles)
+            )
+        }
+        .onAppear {
+            Task {
+                await viewModel.fetchData()
+            }
         }
     }
 
@@ -33,8 +40,11 @@ struct TickerGridItemView: View {
         HStack {
             tickerDetails
             Spacer()
-            CandleStickChart(viewModel: CandleStickChartViewModel(fetcher: TradingDataNetworkFetcher()), tickerTitle: ticker.title)
-                .frame(width: 175)
+            CandleStickChart(
+                candles: viewModel.candles,
+                tickerTitle: ticker.title
+            )
+            .frame(width: 175)
         }
     }
 

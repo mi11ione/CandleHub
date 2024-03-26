@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct PatternsViewSwitch: View {
-    var options = ["Big patterns", "Small patterns"]
     @Environment(\.colorScheme) var colorScheme
-    @ObservedObject var viewModel: GridViewModel
+    var options = ["Big patterns", "Small patterns"]
     @Binding var selectedOption: String
 
     var body: some View {
         Menu {
             ForEach(options, id: \.self) { option in
                 Button(action: {
-                    toggleOption(option)
-                    viewModel.updateLayout(for: option)
+                    withAnimation(.spring(response: 0.5, dampingFraction: 1, blendDuration: 0)) {
+                        selectedOption = option
+                    }
                 }) {
                     HStack {
                         Text(option)
@@ -42,10 +42,5 @@ struct PatternsViewSwitch: View {
             .cornerRadius(10)
         }
         .padding(.trailing, 20)
-    }
-
-    private func toggleOption(_ option: String) {
-        selectedOption = option
-        viewModel.updateLayout(for: option)
     }
 }

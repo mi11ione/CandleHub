@@ -1,10 +1,3 @@
-//
-//  PatternStickChart.swift
-//  CandleHub
-//
-//  Created by 1 on 23.03.2024.
-//
-
 import Charts
 import SwiftUI
 
