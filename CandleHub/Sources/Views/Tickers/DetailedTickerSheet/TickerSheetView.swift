@@ -50,7 +50,7 @@ struct TickerSheetView: View {
             .frame(height: 360)
             .padding()
 
-            Text("IdentifiedPatterns").font(.title).bold().padding(.horizontal)
+            Text("Identified Patterns").font(.title).bold().padding(.horizontal)
 
             List {
                 ForEach(DetectionPatterns.detectionPatterns(candles: viewModel.candles).indices, id: \.self) { index in
