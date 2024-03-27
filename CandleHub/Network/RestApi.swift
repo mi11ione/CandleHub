@@ -2,19 +2,16 @@ import Foundation
 
 enum RestApi {
     enum Method: String {
-        case allTiсkers = "/iss/history/engines/stock/markets/shares/boards/tqbr/securities.json"
-        case candles = "/iss/engines/stock/markets/shares/boards/TQBR/securities/"
+        case allTiсkers = "/all-tickers"
+        case candles = "/candle"
         case patterns = "/get-patterns"
 
-        func url(tiсker: String?, queryItems: [URLQueryItem]? = nil) -> URL? {
+        func url(queryItems: [URLQueryItem]? = nil) -> URL? {
             var components = URLComponents()
-            components.scheme = scheme
-            components.host = issHost
-            if let tiсker {
-                components.path = rawValue + tiсker + candle
-            } else {
-                components.path = rawValue
-            }
+            components.scheme = nonSecureScheme
+            components.host = candleHubHost
+            components.path = rawValue
+
             if let queryItems {
                 components.queryItems = queryItems
             }
@@ -36,6 +33,5 @@ enum RestApi {
 
 private let nonSecureScheme = "http"
 private let scheme = "https"
-private let issHost = "iss.moex.com"
 private let candleHubHost = "157.230.122.16"
 private let candle = "/candles.json"

@@ -1,20 +1,15 @@
-//
-//  TickersView.swift
-//  CandleHub
-//
-//  Created by mi11ion on 21/3/24.
-//
-
 import SwiftUI
 
 struct TickersView: View {
     @Environment(\.colorScheme) var colorScheme
+
+    @State var viewModel: TickersViewModel = .init(fetcher: TradingDataNetworkFetcher())
+
     @State private var searchText: String = ""
-    @Binding var viewModel: TickersViewModel
     @FocusState private var isTextFieldFocused: Bool
 
     private var filteredTickers: [TickerMOEX] {
-        guard let tickers = viewModel.array else { return [] }
+        guard let tickers = viewModel.tickers else { return [] }
         if searchText.isEmpty {
             return tickers
         } else {
@@ -58,7 +53,7 @@ struct TickersView: View {
         .onAppear {
             Task {
                 let (fetchedArray, newLoadingState) = await viewModel.fetchTickers()
-                viewModel.array = fetchedArray
+                viewModel.tickers = fetchedArray
                 viewModel.isLoading = newLoadingState
             }
         }

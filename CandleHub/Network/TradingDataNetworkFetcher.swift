@@ -13,7 +13,6 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
 
         repeat {
             guard let url = RestApi.Method.allTiсkers.url(
-                tiсker: nil,
                 queryItems: [URLQueryItem(name: "start", value: String(cursor.index + cursor.pageSize))]
             ) else {
                 assertionFailure()
@@ -37,8 +36,9 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
     func getMoexCandles(ticker: String, timePeriod: ChartTimePeriod) async -> [Candle]? {
         var queryItems = [URLQueryItem]()
         queryItems.append(URLQueryItem(name: "iss.reverse", value: "true"))
+        queryItems.append(URLQueryItem(name: "ticker", value: ticker))
         queryItems.append(timePeriod.queryItem)
-        guard let url = RestApi.Method.candles.url(tiсker: ticker, queryItems: queryItems) else {
+        guard let url = RestApi.Method.candles.url(queryItems: queryItems) else {
             assertionFailure()
             return nil
         }
@@ -242,21 +242,19 @@ private func parsePatternsFromBack(patternsFromBack: [PatternFromBack]) -> [Patt
     var patterns = [Pattern]()
     for patternIndex in patternsFromBack.indices {
         var candles: [Candle] = []
-
-        for candleIndex in patternsFromBack[patternIndex].candles.indices {
-            for candle in patternsFromBack[patternIndex].candles {
-                candles.append(
-                    Candle(
-                        date: Candle.stringToDate(candle.date),
-                        openPrice: candle.openPrice,
-                        closePrice: candle.closePrice,
-                        highPrice: candle.highPrice,
-                        lowPrice: candle.lowPrice,
-                        value: candle.value,
-                        volume: candle.volume
-                    )
+        
+        patternsFromBack[patternIndex].candles.forEach { candle in
+            candles.append(
+                Candle(
+                    date: Candle.stringToDate(candle.date),
+                    openPrice: candle.openPrice,
+                    closePrice: candle.closePrice,
+                    highPrice: candle.highPrice,
+                    lowPrice: candle.lowPrice,
+                    value: candle.value,
+                    volume: candle.volume
                 )
-            }
+            )
         }
 
         patterns.append(
