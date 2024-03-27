@@ -1,18 +1,11 @@
-//
-//  FilterButton.swift
-//  CandleHub
-//
-//  Created by mi11ion on 20/3/24.
-//
-
 import SwiftUI
 
 struct FilterButton: View {
     @Environment(\.colorScheme) var colorScheme
-    
+
     var filter: String
     @Binding var isSelected: Bool
-    
+
     var onSelectionChange: ((Bool) -> Void)?
 
     var body: some View {
@@ -32,6 +25,7 @@ struct FilterButton: View {
                 .cornerRadius(10)
         }
     }
+
     private var backgroundView: some View {
         Group {
             if isSelected == false {

@@ -1,15 +1,12 @@
-//
-//  PatternsViewSwitch.swift
-//  CandleHub
-//
-//  Created by mi11ion on 21/3/24.
-//
-
 import SwiftUI
 
 enum Option: String {
     case bigPatterns = "Big patterns"
     case smallPatterns = "Small patterns"
+
+    var localizedName: String {
+        NSLocalizedString(rawValue, comment: "")
+    }
 }
 
 struct PatternsViewSwitch: View {
@@ -26,7 +23,7 @@ struct PatternsViewSwitch: View {
                     }
                 }) {
                     HStack {
-                        Text(option.rawValue)
+                        Text(option.localizedName)
                         Spacer()
                         if selectedOption == option {
                             Image(systemName: "checkmark")

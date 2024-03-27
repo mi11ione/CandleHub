@@ -1,22 +1,19 @@
-//
-//  Filters.swift
-//  CandleHub
-//
-//  Created by mi11ion on 20/3/24.
-//
-
 import SwiftUI
 
 struct Filters: View {
-    let filters = [
+    let filterKeys = [
         "Single",
         "Double",
         "Triple",
         "Complex",
     ]
-    
+
+    var filters: [String] {
+        filterKeys.map { NSLocalizedString($0, comment: "") }
+    }
+
     @Binding var selectedFilter: String
-    
+
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
