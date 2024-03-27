@@ -41,6 +41,5 @@ struct PatternsView: View {
                 patterns = await viewModel.fetchPatterns() ?? []
             }
         }
-        
     }
 }

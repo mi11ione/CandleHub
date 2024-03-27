@@ -3,9 +3,9 @@ import Foundation
 struct Pattern: Hashable, Identifiable {
     static func == (lhs: Pattern, rhs: Pattern) -> Bool {
         lhs.name == rhs.name &&
-        lhs.candles == rhs.candles &&
-        lhs.info == rhs.info &&
-        lhs.filter == rhs.filter
+            lhs.candles == rhs.candles &&
+            lhs.info == rhs.info &&
+            lhs.filter == rhs.filter
     }
 
     let id = UUID()

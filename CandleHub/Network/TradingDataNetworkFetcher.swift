@@ -242,8 +242,8 @@ private func parsePatternsFromBack(patternsFromBack: [PatternFromBack]) -> [Patt
     var patterns = [Pattern]()
     for patternIndex in patternsFromBack.indices {
         var candles: [Candle] = []
-        
-        patternsFromBack[patternIndex].candles.forEach { candle in
+
+        for candle in patternsFromBack[patternIndex].candles {
             candles.append(
                 Candle(
                     date: Candle.stringToDate(candle.date),
