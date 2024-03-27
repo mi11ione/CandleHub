@@ -5,6 +5,7 @@ struct PatternStickChart: View {
     @Environment(\.colorScheme) var colorScheme
     var pattern: Pattern
     var gridWidth: CGFloat
+    var gridHeight: CGFloat = 150
 
     var body: some View {
         Chart {
@@ -29,7 +30,7 @@ struct PatternStickChart: View {
             }
         }
         .padding()
-        .frame(width: gridWidth, height: 150)
+        .frame(width: gridWidth, height: gridHeight)
         .chartXAxis {
             AxisMarks(position: .bottom, values: .automatic(desiredCount: 6)) {
                 AxisGridLine(centered: true)

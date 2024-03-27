@@ -3,6 +3,7 @@ import Foundation
 protocol TradingDataNetworkFetching {
     func getMoexTickers() async -> [TickerMOEX]?
     func getMoexCandles(ticker: String, timePeriod: ChartTimePeriod) async -> [Candle]?
+    func getPatterns() async -> [Pattern]?
 }
 
 final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObject {
@@ -11,8 +12,7 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
         var cursor = Cursor(index: 0, total: 0, pageSize: 0)
 
         repeat {
-            guard let url = MoexApi.Method.allTiсkers.url(
-                tiсker: nil,
+            guard let url = RestApi.Method.allTiсkers.url(
                 queryItems: [URLQueryItem(name: "start", value: String(cursor.index + cursor.pageSize))]
             ) else {
                 assertionFailure()
@@ -36,8 +36,9 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
     func getMoexCandles(ticker: String, timePeriod: ChartTimePeriod) async -> [Candle]? {
         var queryItems = [URLQueryItem]()
         queryItems.append(URLQueryItem(name: "iss.reverse", value: "true"))
+        queryItems.append(URLQueryItem(name: "ticker", value: ticker))
         queryItems.append(timePeriod.queryItem)
-        guard let url = MoexApi.Method.candles.url(tiсker: ticker, queryItems: queryItems) else {
+        guard let url = RestApi.Method.candles.url(queryItems: queryItems) else {
             assertionFailure()
             return nil
         }
@@ -47,6 +48,24 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
             let moexCandles = try decodeJSON(type: MoexCandles.self, from: data)
             let candles = parseMoexCandles(moexCandles: moexCandles)
             return candles
+        } catch {
+            print(error)
+        }
+        return nil
+    }
+
+    func getPatterns() async -> [Pattern]? {
+        var queryItems = [URLQueryItem]()
+        guard let url = RestApi.Method.patterns.patternsUrl() else {
+            assertionFailure()
+            return nil
+        }
+        print(url)
+        do {
+            let data = try await request(url)
+            let patternsFromBack = try decodeJSON(type: [PatternFromBack].self, from: data)
+            let patterns = parsePatternsFromBack(patternsFromBack: patternsFromBack)
+            return patterns
         } catch {
             print(error)
         }
@@ -217,6 +236,37 @@ private func parseMoexCandles(moexCandles: MoexCandles) -> [Candle] {
         candles.append(candle)
     }
     return candles
+}
+
+private func parsePatternsFromBack(patternsFromBack: [PatternFromBack]) -> [Pattern] {
+    var patterns = [Pattern]()
+    for patternIndex in patternsFromBack.indices {
+        var candles: [Candle] = []
+
+        for candle in patternsFromBack[patternIndex].candles {
+            candles.append(
+                Candle(
+                    date: Candle.stringToDate(candle.date),
+                    openPrice: candle.openPrice,
+                    closePrice: candle.closePrice,
+                    highPrice: candle.highPrice,
+                    lowPrice: candle.lowPrice,
+                    value: candle.value,
+                    volume: candle.volume
+                )
+            )
+        }
+
+        patterns.append(
+            Pattern(
+                name: patternsFromBack[patternIndex].name,
+                candles: candles,
+                info: patternsFromBack[patternIndex].info,
+                filter: ""
+            )
+        )
+    }
+    return patterns
 }
 
 enum NetworkingError: Error {
