@@ -2,6 +2,7 @@ import SwiftUI
 
 struct TickerSheetView: View {
     @State var viewModel: TickerSheetViewModel
+    @State var selectedPattern: DetectedPattern?
 
     var ticker: TickerMOEX {
         viewModel.ticker
@@ -40,7 +41,8 @@ struct TickerSheetView: View {
                     }
                     CandleStickChart(
                         candles: viewModel.candles,
-                        tickerTitle: ticker.title
+                        tickerTitle: ticker.title,
+                        patternCandlesDates: viewModel.handleGetDatesFromPatterns(pattern: selectedPattern ?? nil)
                     )
                 }
                 .padding()
@@ -49,6 +51,19 @@ struct TickerSheetView: View {
             .padding()
 
             Text("IdentifiedPatterns").font(.title).bold().padding(.horizontal)
+
+            List {
+                ForEach(DetectionPatterns.detectionPatterns(candles: viewModel.candles).indices, id: \.self) { index in
+                    if let pattern = DetectionPatterns.detectionPatterns(candles: viewModel.candles)[index] {
+                        Text(pattern.name)
+                            .onTapGesture {
+                                selectedPattern = pattern
+                            }
+                            .font(.caption2)
+                    }
+                }
+            }
+
             Spacer()
         }
         .padding(.top)
