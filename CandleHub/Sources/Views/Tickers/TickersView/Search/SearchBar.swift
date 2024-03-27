@@ -1,10 +1,3 @@
-//
-//  SearchBar.swift
-//  CandleHub
-//
-//  Created by mi11ion on 22/3/24.
-//
-
 import SwiftUI
 
 struct SearchBar: View {

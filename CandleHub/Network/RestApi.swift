@@ -4,7 +4,7 @@ enum RestApi {
     enum Method: String {
         case allTiсkers = "/all-tickers"
         case candles = "/candle"
-        case patterns = "/get-patterns"
+        case patterns = "/all-patterns"
 
         func url(queryItems: [URLQueryItem]? = nil) -> URL? {
             var components = URLComponents()

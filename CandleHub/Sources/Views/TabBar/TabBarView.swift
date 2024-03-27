@@ -12,8 +12,8 @@ struct TabBarView: View {
                         TickersView()
                     case .patterns:
                         PatternsView()
-                    case .settings:
-                        SettingsView()
+                    case .about:
+                        AboutView()
                     }
                 }
                 TabBar(selectedTab: $initialTab)
