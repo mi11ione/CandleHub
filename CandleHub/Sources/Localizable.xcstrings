@@ -82,6 +82,17 @@
         }
       }
     },
+    "Coming soon..." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скоро..."
+          }
+        }
+      }
+    },
     "complex" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -189,6 +200,17 @@
         }
       }
     },
+    "Okay" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ну ок"
+          }
+        }
+      }
+    },
     "Kirill Koshkarev" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -210,6 +232,9 @@
           }
         }
       }
+    },
+    "Okay" : {
+
     },
     "Patterns" : {
       "localizations" : {

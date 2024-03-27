@@ -17,7 +17,7 @@ struct AboutView: View {
                         Image("Icon")
                             .resizable()
                             .frame(width: 60, height: 60)
-                            .cornerRadius(12)
+                            .cornerRadius(14)
 
                         VStack(alignment: .leading) {
                             Text("CandleHub")
