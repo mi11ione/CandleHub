@@ -10,6 +10,7 @@ import SwiftUI
 struct PatternsView: View {
     @State private var selectedOption: Option = .bigPatterns
     @State private var selectedPattern: Pattern?
+    @State private var selectedFilter: String = ""
     private var patterns: [Pattern] = PatternsRepository.patterns
 
     var body: some View {
@@ -26,10 +27,10 @@ struct PatternsView: View {
                 }
             }
             ScrollView {
-                Filters()
+                Filters(selectedFilter: $selectedFilter)
 
                 PatternsGridView(
-                    patterns: patterns,
+                    patterns: selectedFilter.isEmpty ? patterns : patterns.filter { $0.filter == selectedFilter },
                     selectedOption: $selectedOption
                 )
             }

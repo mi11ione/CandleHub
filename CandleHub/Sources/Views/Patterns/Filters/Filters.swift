@@ -14,12 +14,16 @@ struct Filters: View {
         "Triple",
         "Complex",
     ]
-
+    
+    @Binding var selectedFilter: String
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 ForEach(filters, id: \.self) { filter in
-                    FilterButton(filter: filter)
+                    FilterButton(filter: filter, isSelected: .constant(filter == selectedFilter), onSelectionChange: { isSelected in
+                        selectedFilter = isSelected ? filter : ""
+                    })
                 }
                 Spacer()
             }
