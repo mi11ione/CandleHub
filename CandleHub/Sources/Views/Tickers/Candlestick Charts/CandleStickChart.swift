@@ -56,7 +56,6 @@ struct CandleStickChart: View {
                     .clipShape(RoundedRectangle(cornerRadius: 5))
                     .foregroundStyle(colorScheme == .dark ? .orange : .orange)
                     .opacity(0.2)
-                    
                 }
             }
         }

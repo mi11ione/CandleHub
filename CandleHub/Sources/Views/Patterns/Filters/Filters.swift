@@ -14,9 +14,9 @@ struct Filters: View {
         "Triple",
         "Complex",
     ]
-    
+
     @Binding var selectedFilter: String
-    
+
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {

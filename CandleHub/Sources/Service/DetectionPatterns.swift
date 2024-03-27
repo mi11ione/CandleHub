@@ -1,9 +1,7 @@
 import SwiftUI
 
 struct DetectionPatterns: Hashable {
-    
     static func detectionPatterns(candles: [Candle]) -> [DetectedPattern?] {
-        
         var patterns: [DetectedPattern?] = []
         patterns.append(findTwoCrows(candles: candles))
         patterns.append(findThreeWhiteSoldiers(candles: candles))
@@ -25,10 +23,9 @@ struct DetectionPatterns: Hashable {
         patterns.append(findEveningDojiStar(candles: candles))
         patterns.append(findGravestoneDoji(candles: candles))
         patterns.append(findHammer(candles: candles))
-        
+
         return patterns
     }
-    
 }
 
 struct DetectedPattern: Hashable {

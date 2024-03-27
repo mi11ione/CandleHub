@@ -14,7 +14,7 @@ struct PatternsGridView: View {
                         PatternStickChart(pattern: pattern, gridWidth: gridWidth(for: selectedOption))
                             .background(Material.thin)
                             .cornerRadius(30)
-                        
+
                         Text(pattern.name)
                             .padding(.vertical, 8)
                     }

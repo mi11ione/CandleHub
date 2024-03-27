@@ -42,7 +42,7 @@ func findTwoCrows(candles: [Candle]) -> DetectedPattern? {
             signals.append((signal != -1) ? .buy : .sell)
         }
     }
-    
+
     if signals.isEmpty {
         return nil
     } else {
@@ -52,7 +52,6 @@ func findTwoCrows(candles: [Candle]) -> DetectedPattern? {
             dates: dates
         )
     }
-    
 }
 
 // Функция для поиска паттерна "Three White Soldiers"
@@ -79,7 +78,7 @@ func findThreeWhiteSoldiers(candles: [Candle]) -> DetectedPattern? {
             signals.append((signal != -1) ? .buy : .sell)
         }
     }
-    
+
     if signals.isEmpty {
         return nil
     } else {
@@ -90,7 +89,6 @@ func findThreeWhiteSoldiers(candles: [Candle]) -> DetectedPattern? {
         )
     }
 }
-
 
 func findThreeBlackCrows(candles: [Candle]) -> DetectedPattern? {
     var dates = [Date]()
@@ -424,7 +422,6 @@ func findConcealingBabySwallow(candles: [Candle]) -> DetectedPattern? {
     }
 }
 
-
 func findBeltHold(candles: [Candle]) -> DetectedPattern? {
     var dates = [Date]()
     var signals = [Signal]()
@@ -494,6 +491,7 @@ func findBreakaway(candles: [Candle]) -> DetectedPattern? {
         )
     }
 }
+
 func findDoji(candles: [Candle]) -> DetectedPattern? {
     var dates = [Date]()
     var signals = [Signal]()
@@ -701,4 +699,3 @@ func findHammer(candles: [Candle]) -> DetectedPattern? {
         )
     }
 }
-

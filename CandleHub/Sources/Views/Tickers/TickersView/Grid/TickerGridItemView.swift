@@ -42,7 +42,7 @@ struct TickerGridItemView: View {
             Spacer()
             CandleStickChart(
                 candles: viewModel.candles,
-                tickerTitle: ticker.title, 
+                tickerTitle: ticker.title,
                 patternCandlesDates: [Date()]
             )
             .frame(width: 175)

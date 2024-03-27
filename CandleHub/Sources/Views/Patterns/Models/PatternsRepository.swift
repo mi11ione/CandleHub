@@ -31,7 +31,7 @@ enum PatternsRepository {
         Pattern(
             name: "Closing Marubozu",
             candles: [
-                Candle(date: Candle.stringToDate("2016-04-14T10:44:00+0000"), openPrice: 260, closePrice: 220, highPrice: 260, lowPrice: 220, value: 0, volume: 0)
+                Candle(date: Candle.stringToDate("2016-04-14T10:44:00+0000"), openPrice: 260, closePrice: 220, highPrice: 260, lowPrice: 220, value: 0, volume: 0),
             ],
             info: "",
             filter: "Single"
@@ -64,7 +64,7 @@ enum PatternsRepository {
             name: "Engulfing",
             candles: [
                 Candle(date: Candle.stringToDate("2016-04-14T10:44:00+0000"), openPrice: 220, closePrice: 230, highPrice: 230, lowPrice: 210, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-04-14T11:44:00+0000"), openPrice: 235, closePrice: 215, highPrice: 240, lowPrice: 215, value: 0, volume: 0)
+                Candle(date: Candle.stringToDate("2016-04-14T11:44:00+0000"), openPrice: 235, closePrice: 215, highPrice: 240, lowPrice: 215, value: 0, volume: 0),
             ],
             info: "",
             filter: "Double"
@@ -84,7 +84,7 @@ enum PatternsRepository {
             candles: [
                 Candle(date: Candle.stringToDate("2016-04-14T10:44:00+0000"), openPrice: 220, closePrice: 200, highPrice: 225, lowPrice: 195, value: 0, volume: 0),
                 Candle(date: Candle.stringToDate("2016-04-14T11:44:00+0000"), openPrice: 190, closePrice: 190, highPrice: 195, lowPrice: 185, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-04-14T12:44:00+0000"), openPrice: 210, closePrice: 230, highPrice: 235, lowPrice: 205, value: 0, volume: 0)
+                Candle(date: Candle.stringToDate("2016-04-14T12:44:00+0000"), openPrice: 210, closePrice: 230, highPrice: 235, lowPrice: 205, value: 0, volume: 0),
             ],
             info: "",
             filter: "Triple"
@@ -96,7 +96,7 @@ enum PatternsRepository {
                 Candle(date: Candle.stringToDate("2016-04-14T11:44:00+0000"), openPrice: 220, closePrice: 215, highPrice: 230, lowPrice: 210, value: 0, volume: 0),
                 Candle(date: Candle.stringToDate("2016-04-14T12:44:00+0000"), openPrice: 215, closePrice: 235, highPrice: 240, lowPrice: 215, value: 0, volume: 0),
                 Candle(date: Candle.stringToDate("2016-04-14T13:44:00+0000"), openPrice: 240, closePrice: 250, highPrice: 255, lowPrice: 240, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-04-14T14:44:00+0000"), openPrice: 255, closePrice: 245, highPrice: 260, lowPrice: 240, value: 0, volume: 0)
+                Candle(date: Candle.stringToDate("2016-04-14T14:44:00+0000"), openPrice: 255, closePrice: 245, highPrice: 260, lowPrice: 240, value: 0, volume: 0),
             ],
             info: "",
             filter: "Complex"
@@ -105,7 +105,7 @@ enum PatternsRepository {
             name: "Harami",
             candles: [
                 Candle(date: Candle.stringToDate("2016-04-14T10:44:00+0000"), openPrice: 250, closePrice: 200, highPrice: 260, lowPrice: 195, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-04-14T11:44:00+0000"), openPrice: 210, closePrice: 230, highPrice: 235, lowPrice: 205, value: 0, volume: 0)
+                Candle(date: Candle.stringToDate("2016-04-14T11:44:00+0000"), openPrice: 210, closePrice: 230, highPrice: 235, lowPrice: 205, value: 0, volume: 0),
             ],
             info: "",
             filter: "Double"
@@ -114,7 +114,7 @@ enum PatternsRepository {
             name: "Piercing Line",
             candles: [
                 Candle(date: Candle.stringToDate("2016-04-14T10:44:00+0000"), openPrice: 250, closePrice: 200, highPrice: 255, lowPrice: 195, value: 0, volume: 0),
-                Candle(date: Candle.stringToDate("2016-04-14T11:44:00+0000"), openPrice: 190, closePrice: 240, highPrice: 245, lowPrice: 185, value: 0, volume: 0)
+                Candle(date: Candle.stringToDate("2016-04-14T11:44:00+0000"), openPrice: 190, closePrice: 240, highPrice: 245, lowPrice: 185, value: 0, volume: 0),
             ],
             info: "",
             filter: ""

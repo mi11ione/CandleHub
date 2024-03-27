@@ -1,5 +1,5 @@
-import SwiftUI
 import Charts
+import SwiftUI
 
 struct PatternStickChart: View {
     @Environment(\.colorScheme) var colorScheme

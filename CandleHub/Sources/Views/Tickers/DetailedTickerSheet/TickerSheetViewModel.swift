@@ -14,37 +14,30 @@ struct TickerSheetViewModel {
         self.candles = candles
         detectedPatterns = DetectionPatterns.detectionPatterns(candles: candles)
     }
-    
+
     func handleDetecionPatterns(candles: [Candle]) -> some View {
-        
-        var str: String = ""
+        var str = ""
         let patterns: [DetectedPattern?] = DetectionPatterns.detectionPatterns(candles: candles)
-        
-        patterns.forEach { detectedPattern in
+
+        for detectedPattern in patterns {
             if detectedPattern != nil {
                 str.append(detectedPattern!.name)
                 str.append("\n")
             }
         }
-        
+
         return Text(str)
-        
-        
     }
-    
-    func handleGetDatesFromPatterns(pattern: DetectedPattern?) -> [Date]{
-        
+
+    func handleGetDatesFromPatterns(pattern: DetectedPattern?) -> [Date] {
         var dates: [Date] = []
-        
+
         if let pattern = pattern {
-            
-            pattern.dates.forEach { date in
+            for date in pattern.dates {
                 dates.append(date)
             }
         }
-        
+
         return dates
-        
     }
-    
 }
