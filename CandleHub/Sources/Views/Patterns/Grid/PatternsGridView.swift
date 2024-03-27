@@ -6,28 +6,18 @@ struct PatternsGridView: View {
     @Binding var selectedOption: Option
     @State private var selectedPattern: Pattern?
 
-    private var columns: [GridItem] {
-        [GridItem(.adaptive(minimum: gridWidth(for: selectedOption)))]
-    }
-
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20) {
                 ForEach(patterns, id: \.id) { pattern in
                     VStack {
                         PatternStickChart(pattern: pattern, gridWidth: gridWidth(for: selectedOption))
-                            .background(Rectangle().fill(Material.thin))
+                            .background(Material.thin)
                             .cornerRadius(30)
-                            .foregroundColor(colorScheme == .dark ? .white : .black)
-                            .font(.title)
                         
-                        Text("\(pattern.name)")
-                            .foregroundColor(colorScheme == .dark ? .white : .black)
-                            .font(.body)
-                            .padding(.top, -6)
-                            .padding(.bottom, -6)
+                        Text(pattern.name)
+                            .padding(.vertical, 8)
                     }
-                    .frame(height: 166)
                     .onTapGesture {
                         selectedPattern = pattern
                     }
@@ -40,16 +30,16 @@ struct PatternsGridView: View {
         }
     }
 
+    var columns: [GridItem] {
+        [GridItem(.adaptive(minimum: gridWidth(for: selectedOption)))]
+    }
+
     func gridWidth(for selectedOption: Option) -> CGFloat {
         switch selectedOption {
         case .bigPatterns:
-            350
+            return 350
         case .smallPatterns:
-            160
+            return 160
         }
-    }
-
-    func adaptiveColumn(for selectedOption: Option) -> [GridItem] {
-        [GridItem(.adaptive(minimum: gridWidth(for: selectedOption)))]
     }
 }
