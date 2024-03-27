@@ -17,18 +17,12 @@ struct PatternsGridView: View {
                 ForEach(patterns, id: \.id) { pattern in
                     VStack {
                         PatternStickChart(pattern: pattern, gridWidth: gridWidth(for: selectedOption))
-                            .background(Rectangle().fill(Material.thin))
+                            .background(Material.thin)
                             .cornerRadius(30)
-                            .foregroundColor(colorScheme == .dark ? .white : .black)
-                            .font(.title)
                         
-                        Text("\(pattern.name)")
-                            .foregroundColor(colorScheme == .dark ? .white : .black)
-                            .font(.body)
-                            .padding(.top, -6)
-                            .padding(.bottom, -6)
+                        Text(pattern.name)
+                            .padding(.vertical, 8)
                     }
-                    .frame(height: 166)
                     .onTapGesture {
                         selectedPattern = pattern
                     }
@@ -39,7 +33,6 @@ struct PatternsGridView: View {
             }
             .padding([.top, .horizontal])
         }
-        .padding([.top, .horizontal])
         .onAppear {
             Task {
                 patterns = await viewModel.fetchPatterns() ?? []

@@ -12,7 +12,6 @@ struct Filters: View {
         "Single",
         "Double",
         "Triple",
-        "Continuation",
         "Complex",
     ]
 
