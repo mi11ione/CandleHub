@@ -11,6 +11,7 @@ struct PatternFromBack: Decodable {
     let name: String
     let info: String
     let candles: [Pattern]
+    let filter: String
 
     struct Pattern: Decodable {
         let closePrice: Double
