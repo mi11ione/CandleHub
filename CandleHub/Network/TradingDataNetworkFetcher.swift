@@ -55,7 +55,7 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
     }
 
     func getPatterns() async -> [Pattern]? {
-        var queryItems = [URLQueryItem]()
+        _ = [URLQueryItem]()
         guard let url = RestApi.Method.patterns.patternsUrl() else {
             assertionFailure()
             return nil

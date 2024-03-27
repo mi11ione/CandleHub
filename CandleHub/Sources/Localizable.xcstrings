@@ -41,6 +41,16 @@
         }
       }
     },
+    "1.0 release 1" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1.0 релиз 1"
+          }
+        }
+      }
+    },
     "About" : {
       "localizations" : {
         "ru" : {
@@ -104,17 +114,6 @@
         }
       }
     },
-    "English" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Английский"
-          }
-        }
-      }
-    },
     "Grid" : {
       "localizations" : {
         "ru" : {
@@ -125,14 +124,8 @@
         }
       }
     },
-    "IdentifiedPatterns" : {
+    "Identified Patterns" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Identified Patterns"
-          }
-        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -141,36 +134,68 @@
         }
       }
     },
-    "language" : {
+    "Ilya Matveev" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Language"
-          }
-        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Язык"
+            "value" : "Илья Матвеев"
           }
         }
       }
     },
-    "language_preference" : {
+    "Ilya Solovyev" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Language Preference"
-          }
-        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Предпочитаемый язык"
+            "value" : "Илья Соловьёв"
+          }
+        }
+      }
+    },
+    "Jacob Trofimov" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Яков Трофимов"
+          }
+        }
+      }
+    },
+    "Kasymkhan Khubiyev" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Касымхан Хубиев"
+          }
+        }
+      }
+    },
+    "Kirill Koshkarev" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кирилл Кошкарёв"
+          }
+        }
+      }
+    },
+    "Mentor" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ментор"
           }
         }
       }
@@ -185,13 +210,24 @@
         }
       }
     },
-    "Russian" : {
-      "extractionState" : "stale",
+    "Roman Tverdokhleb" : {
+      "extractionState" : "manual",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Русский"
+            "value" : "Роман Твердохлеб"
+          }
+        }
+      }
+    },
+    "Roman Zhuzhgov" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Роман Жужгов"
           }
         }
       }
@@ -207,6 +243,17 @@
         }
       }
     },
+    "Sergey Yakunin" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сергей Якунин"
+          }
+        }
+      }
+    },
     "Single" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -214,6 +261,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Одиночные"
+          }
+        }
+      }
+    },
+    "Sirius" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сириус"
           }
         }
       }
@@ -247,6 +305,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тройные"
+          }
+        }
+      }
+    },
+    "Version" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версия"
           }
         }
       }

@@ -1,10 +1,3 @@
-//
-//  PatternFromBack.swift
-//  CandleHub
-//
-//  Created by 1 on 26.03.2024.
-//
-
 import Foundation
 
 struct PatternFromBack: Decodable {
