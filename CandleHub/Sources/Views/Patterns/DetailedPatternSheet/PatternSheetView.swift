@@ -1,10 +1,3 @@
-//
-//  PatternSheetView.swift
-//  CandleHub
-//
-//  Created by mi11ion on 26/3/24.
-//
-
 import SwiftUI
 
 struct PatternSheetView: View {

@@ -7,27 +7,25 @@ struct PatternsGridView: View {
     @State private var selectedPattern: Pattern?
 
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(patterns, id: \.id) { pattern in
-                    VStack {
-                        PatternStickChart(pattern: pattern, gridWidth: gridWidth(for: selectedOption))
-                            .background(Material.thin)
-                            .cornerRadius(30)
+        LazyVGrid(columns: columns, spacing: 20) {
+            ForEach(patterns, id: \.id) { pattern in
+                VStack {
+                    PatternStickChart(pattern: pattern, gridWidth: gridWidth(for: selectedOption))
+                        .background(Material.thin)
+                        .cornerRadius(30)
 
-                        Text(pattern.name)
-                            .padding(.vertical, 8)
-                    }
-                    .onTapGesture {
-                        selectedPattern = pattern
-                    }
+                    Text(pattern.name)
+                        .padding(.vertical, 8)
                 }
-                .sheet(item: $selectedPattern) { pattern in
-                    PatternSheetView(pattern: pattern, gridWidth: 300)
+                .onTapGesture {
+                    selectedPattern = pattern
                 }
             }
-            .padding([.top, .horizontal])
+            .sheet(item: $selectedPattern) { pattern in
+                PatternSheetView(pattern: pattern, gridWidth: 300)
+            }
         }
+        .padding([.top, .horizontal])
     }
 
     var columns: [GridItem] {
