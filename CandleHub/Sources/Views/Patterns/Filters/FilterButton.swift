@@ -9,32 +9,29 @@ import SwiftUI
 
 struct FilterButton: View {
     @Environment(\.colorScheme) var colorScheme
-
+    
     var filter: String
-    @State private var isSelected: Bool = false
+    @Binding var isSelected: Bool
+    
+    var onSelectionChange: ((Bool) -> Void)?
 
     var body: some View {
         Button(action: {
-            toggleSelection()
+            withAnimation(.smooth) {
+                let newState = !isSelected
+                isSelected = newState
+                onSelectionChange?(newState)
+            }
         }) {
             Text(filter)
                 .font(.headline)
-                .foregroundColor(textColor)
+                .foregroundColor(isSelected ? (colorScheme == .dark ? .black : .white) : (colorScheme == .dark ? .white : .black))
                 .padding(.horizontal, 15)
                 .padding(.vertical, 7)
                 .background(backgroundView)
                 .cornerRadius(10)
         }
     }
-
-    private func toggleSelection() {
-        isSelected.toggle()
-    }
-
-    private var textColor: Color {
-        isSelected ? (colorScheme == .dark ? .black : .white) : (colorScheme == .dark ? .white : .black)
-    }
-
     private var backgroundView: some View {
         Group {
             if isSelected == false {

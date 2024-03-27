@@ -21,7 +21,7 @@ struct PatternsViewSwitch: View {
         Menu {
             ForEach(options, id: \.self) { option in
                 Button(action: {
-                    withAnimation(.spring(response: 0.5, dampingFraction: 1, blendDuration: 0)) {
+                    withAnimation(.spring) {
                         selectedOption = option
                     }
                 }) {

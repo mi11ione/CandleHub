@@ -40,7 +40,6 @@
 		33D3E4112BAB281600A56DDA /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3E4102BAB281600A56DDA /* Filters.swift */; };
 		33D3E4202BAB479500A56DDA /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3E41F2BAB479500A56DDA /* FilterButton.swift */; };
 		33DCD4B32BB0C6780071781F /* TickerSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCD4B22BB0C6780071781F /* TickerSheetView.swift */; };
-		33DCD4B62BB0C6C10071781F /* PatternsGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCD4B52BB0C6C10071781F /* PatternsGridViewModel.swift */; };
 		33DCD4BA2BB0C7510071781F /* AnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCD4B92BB0C7510071781F /* AnimationExtension.swift */; };
 		33DCD4BC2BB0CBF20071781F /* PatternsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCD4BB2BB0CBF20071781F /* PatternsRepository.swift */; };
 		33E932F42BADC90F0080D003 /* TickersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E932F32BADC90F0080D003 /* TickersViewModel.swift */; };
@@ -145,7 +144,6 @@
 		33D3E4102BAB281600A56DDA /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		33D3E41F2BAB479500A56DDA /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		33DCD4B22BB0C6780071781F /* TickerSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerSheetView.swift; sourceTree = "<group>"; };
-		33DCD4B52BB0C6C10071781F /* PatternsGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsGridViewModel.swift; sourceTree = "<group>"; };
 		33DCD4B92BB0C7510071781F /* AnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExtension.swift; sourceTree = "<group>"; };
 		33DCD4BB2BB0CBF20071781F /* PatternsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsRepository.swift; sourceTree = "<group>"; };
 		33E932F32BADC90F0080D003 /* TickersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersViewModel.swift; sourceTree = "<group>"; };
@@ -409,7 +407,6 @@
 		33DCD4B72BB0C6D10071781F /* Grid */ = {
 			isa = PBXGroup;
 			children = (
-				33DCD4B52BB0C6C10071781F /* PatternsGridViewModel.swift */,
 				33C15C172BACE20F000464CE /* PatternsGridView.swift */,
 			);
 			path = Grid;
@@ -715,7 +712,6 @@
 				33B98B742BB347B700551096 /* TickerGridItemView.swift in Sources */,
 				AE5038F42BB42A5700945831 /* Converter.swift in Sources */,
 				AEE833A12BAF143E00786D60 /* Adapter.swift in Sources */,
-				33DCD4B62BB0C6C10071781F /* PatternsGridViewModel.swift in Sources */,
 				3328CDBA2BAC68BC005032AF /* PatternsViewSwitch.swift in Sources */,
 				AE5038D52BB30C9400945831 /* CandleStick.swift in Sources */,
 				62B144F212D385EBF52A14E4 /* CandleHubApp.swift in Sources */,
