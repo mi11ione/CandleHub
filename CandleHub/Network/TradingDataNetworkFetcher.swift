@@ -56,7 +56,7 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
 
     func getPatterns() async -> [Pattern]? {
         var queryItems = [URLQueryItem]()
-        queryItems.append(URLQueryItem(name: "language", value: Locale.current.languageCode ?? "ru"))
+        queryItems.append(URLQueryItem(name: "language", value: Locale.current.languageCode ?? "en"))
         guard let url = RestApi.Method.patterns.patternsUrl(queryItems: queryItems) else {
             assertionFailure()
             return nil

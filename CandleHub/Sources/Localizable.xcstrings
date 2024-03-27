@@ -88,18 +88,7 @@
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сложные"
-          }
-        }
-      }
-    },
-    "Complex" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Сложные"
+            "value" : "сложные"
           }
         }
       }
@@ -120,18 +109,18 @@
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Двойные"
+            "value" : "двойные"
           }
         }
       }
     },
-    "Double" : {
+    "en" : {
       "extractionState" : "manual",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Двойные"
+            "value" : "ru"
           }
         }
       }
@@ -276,13 +265,13 @@
         }
       }
     },
-    "Single" : {
+    "single" : {
       "extractionState" : "manual",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Одиночные"
+            "value" : "одиночные"
           }
         }
       }
@@ -326,18 +315,7 @@
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Тройные"
-          }
-        }
-      }
-    },
-    "Triple" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Тройные"
+            "value" : "тройные"
           }
         }
       }
