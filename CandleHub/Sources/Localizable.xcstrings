@@ -82,6 +82,17 @@
         }
       }
     },
+    "complex" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сложные"
+          }
+        }
+      }
+    },
     "Complex" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -99,6 +110,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Крипта"
+          }
+        }
+      }
+    },
+    "double" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Двойные"
           }
         }
       }
@@ -294,6 +316,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тикеры"
+          }
+        }
+      }
+    },
+    "triple" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тройные"
           }
         }
       }

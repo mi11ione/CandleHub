@@ -8,7 +8,7 @@ struct PatternsView: View {
 
     @State private var patterns: [Pattern] = []
 
-    private let filterKeys = ["Single", "Double", "Triple", "Complex"]
+    private let filterKeys = ["single", "double", "triple", "complex"]
 
     private func filterKey(from localizedFilter: String) -> String {
         filterKeys.first(where: { NSLocalizedString($0, comment: "") == localizedFilter }) ?? ""

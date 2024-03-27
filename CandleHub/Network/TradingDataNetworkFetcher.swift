@@ -55,8 +55,9 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
     }
 
     func getPatterns() async -> [Pattern]? {
-        _ = [URLQueryItem]()
-        guard let url = RestApi.Method.patterns.patternsUrl() else {
+        var queryItems = [URLQueryItem]()
+        queryItems.append(URLQueryItem(name: "language", value: Locale.current.languageCode ?? "ru"))
+        guard let url = RestApi.Method.patterns.patternsUrl(queryItems: queryItems) else {
             assertionFailure()
             return nil
         }
@@ -262,7 +263,7 @@ private func parsePatternsFromBack(patternsFromBack: [PatternFromBack]) -> [Patt
                 name: patternsFromBack[patternIndex].name,
                 candles: candles,
                 info: patternsFromBack[patternIndex].info,
-                filter: ""
+                filter: patternsFromBack[patternIndex].filter
             )
         )
     }
