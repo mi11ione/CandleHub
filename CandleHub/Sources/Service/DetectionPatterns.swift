@@ -29,6 +29,7 @@ struct DetectionPatterns: Hashable {
 }
 
 struct DetectedPattern: Hashable {
+    var id = UUID()
     var name: String
     var signal: Signal
     var dates: [Date]

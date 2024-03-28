@@ -60,7 +60,7 @@ struct TickerSheetView: View {
             
             ScrollView {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 160))], spacing: 20) {
-                    ForEach(viewModel.detectedPatterns.compactMap { $0 }, id: \.self) { pattern in
+                    ForEach(viewModel.detectedPatterns.compactMap { $0 }, id: \.id) { pattern in
                         VStack {
                             PatternStickChart(
                                 pattern: Converter.convertDetectedPatternIntoPattern(detectedPattern: pattern, candles: viewModel.candles),
