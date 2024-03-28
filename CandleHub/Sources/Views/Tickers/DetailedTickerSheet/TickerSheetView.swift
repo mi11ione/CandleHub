@@ -83,7 +83,14 @@ struct TickerSheetView: View {
         }
             
             Spacer()
+        
+            .onAppear {
+                Task {
+                    await viewModel.fetchData()
+                }
+            }
         }
+
     
 
     private var priceChangeColor: Color {

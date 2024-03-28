@@ -24,6 +24,7 @@ struct TickerGridItemView: View {
         .sheet(item: $selectedTicker) { ticker in
             TickerSheetView(viewModel:
                 TickerSheetViewModel(
+                    fetcher: TradingDataNetworkFetcher(), 
                     ticker: ticker,
                     candles: viewModel.candles
                 )

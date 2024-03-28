@@ -281,7 +281,7 @@ private func parseCandlesToJson(candles: [Candle]) -> [[String: Any]] {
         json_element["openPrice"] = candle.openPrice
         json_element["highPrice"] = candle.highPrice
         json_element["id"] = candle.id.uuidString
-        json_element["date"] = "2024-03-27T21:33:06Z"
+        json_element["date"] = candle.date.ISO8601Format()// "2024-03-27T21:33:06Z"
         json_element["lowPrice"] = candle.lowPrice
         json_element["closePrice"] = candle.closePrice
         json_element["value"] = candle.value
@@ -330,8 +330,8 @@ private func parseDetectedPatternsFromBack(patternsFromBack: [DetectedPatternFro
             DetectedPattern(
                 name: pattern.name,
                 signal: pattern.signal,
-                dates: pattern.dates.map {
-                    Candle.stringToDate($0)
+                dates: pattern.dates.map { date in
+                    Candle.stringToDate(date)
                 }
             )
         )
