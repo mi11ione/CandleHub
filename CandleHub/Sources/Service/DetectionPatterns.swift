@@ -28,13 +28,19 @@ struct DetectionPatterns: Hashable {
     }
 }
 
-struct DetectedPattern: Hashable {
+struct DetectedPattern: Hashable, Decodable {
     var name: String
     var signal: Signal
     var dates: [Date]
 }
 
-enum Signal {
+enum Signal: String, Decodable {
     case buy
     case sell
+}
+
+struct DetectedPatternFromBack: Hashable, Decodable {
+    var name: String
+    var signal: Signal
+    var dates: [String]
 }
