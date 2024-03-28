@@ -167,13 +167,13 @@
         }
       }
     },
-    "Ilya Solovyev" : {
+    "Ilya Solovyev 👑" : {
       "extractionState" : "manual",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Илья Соловьёв"
+            "value" : "Илья Соловьёв 👑"
           }
         }
       }

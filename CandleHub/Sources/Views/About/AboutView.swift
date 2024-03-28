@@ -33,7 +33,7 @@ struct AboutView: View {
                 }
 
                 Section("Mentor") {
-                    Link("Ilya Solovyev", destination: URL(string: "https://t.me/ilyasNN")!)
+                    Link("Ilya Solovyev 👑", destination: URL(string: "https://t.me/ilyasNN")!)
                 }
 
                 Section("Y&&Y") {
