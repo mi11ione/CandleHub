@@ -35,8 +35,8 @@ struct DetectedPattern: Hashable, Decodable {
 }
 
 enum Signal: String, Decodable {
-    case buy = "buy"
-    case sell = "sell"
+    case buy
+    case sell
 }
 
 struct DetectedPatternFromBack: Hashable, Decodable {

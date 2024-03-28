@@ -26,7 +26,7 @@ struct CandlesViewModel {
             return
         }
         candles = Array(fetchedCandles.suffix(numberOfCandles))
-        
+
         guard let fetchedPatterns = await fetcher.getDetectedPatterns(candles: candles)
         else {
             return

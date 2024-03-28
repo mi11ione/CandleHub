@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct PatternsView: View {
-    @StateObject private var viewModel: PatternsGridViewModel = PatternsGridViewModel(fetcher: TradingDataNetworkFetcher())
+    @StateObject private var viewModel: PatternsGridViewModel = .init(fetcher: TradingDataNetworkFetcher())
     @State private var selectedOption: Option = .bigPatterns
     @State private var selectedFilter: String = ""
 

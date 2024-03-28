@@ -18,7 +18,6 @@ enum RestApi {
             }
             return components.url
         }
-
     }
 }
 

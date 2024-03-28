@@ -75,7 +75,7 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
         }
         return nil
     }
-    
+
     func getDetectedPatterns(candles: [Candle]) async -> [DetectedPattern]? {
         var queryItems = [URLQueryItem]()
         queryItems.append(URLQueryItem(name: "language", value: Locale.current.languageCode ?? "ru"))
@@ -119,12 +119,12 @@ private func request(_ url: URL, body: Data? = nil, method: String = "GET") asyn
     if let body {
         request.httpBody = body
     }
-    
+
     request.setValue(
         "application/json",
         forHTTPHeaderField: "Content-Type"
     )
-    
+
     let (data, response) = try await session.data(for: request)
     guard let httpURLResponse = response.httpURLResponse, httpURLResponse.isSuccessful else {
         throw NetworkingError.requestFailed
@@ -276,7 +276,7 @@ private func parseMoexCandles(moexCandles: MoexCandles) -> [Candle] {
 
 private func parseCandlesToJson(candles: [Candle]) -> [[String: Any]] {
     var json: [[String: Any]] = []
-    candles.forEach { candle in
+    for candle in candles {
         var json_element: [String: Any] = [:]
         json_element["openPrice"] = candle.openPrice
         json_element["highPrice"] = candle.highPrice
@@ -324,8 +324,8 @@ private func parsePatternsFromBack(patternsFromBack: [PatternFromBack]) -> [Patt
 
 private func parseDetectedPatternsFromBack(patternsFromBack: [DetectedPatternFromBack]) -> [DetectedPattern] {
     var patterns = [DetectedPattern]()
-    
-    patternsFromBack.forEach { pattern in
+
+    for pattern in patternsFromBack {
         patterns.append(
             DetectedPattern(
                 name: pattern.name,
@@ -333,7 +333,7 @@ private func parseDetectedPatternsFromBack(patternsFromBack: [DetectedPatternFro
                 dates: pattern.dates.map {
                     Candle.stringToDate($0)
                 }
-           )
+            )
         )
     }
     return patterns

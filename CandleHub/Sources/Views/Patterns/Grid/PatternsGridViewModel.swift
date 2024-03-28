@@ -15,7 +15,7 @@ class PatternsGridViewModel: ObservableObject {
             }
         }
     }
-    
+
     func fetchDetectedPatterns(candles: [Candle]) async -> [DetectedPattern]? {
         let fetchedArray = await fetcher.getDetectedPatterns(candles: candles)
         return fetchedArray
