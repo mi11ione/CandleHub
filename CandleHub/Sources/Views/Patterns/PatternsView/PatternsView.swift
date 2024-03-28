@@ -3,10 +3,8 @@ import SwiftUI
 struct PatternsView: View {
     @State private var selectedOption: Option = .bigPatterns
     private var viewModel = PatternsGridViewModel(fetcher: TradingDataNetworkFetcher())
-    @State private var selectedPattern: Pattern?
-    @State private var selectedFilter: String = ""
-
     @State private var patterns: [Pattern] = []
+    @State private var selectedFilter: String = ""
 
     private let filterKeys = ["single", "double", "triple", "complex"]
 
@@ -32,7 +30,8 @@ struct PatternsView: View {
 
                 PatternsGridView(
                     patterns: selectedFilter.isEmpty ? patterns : patterns.filter { $0.filter == filterKey(from: selectedFilter) },
-                    selectedOption: $selectedOption
+                    selectedOption: $selectedOption,
+                    viewModel: viewModel
                 )
             }
         }
