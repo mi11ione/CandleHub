@@ -26,7 +26,7 @@ struct PatternStickChart: View {
                     width: .fixed(10)
                 )
                 .clipShape(RoundedRectangle(cornerRadius: 2))
-                .foregroundStyle(candle.openPrice < candle.closePrice ? Color.green : Color.red)
+                .foregroundStyle(candle.openPrice > candle.closePrice ? Color.green : Color.red)
             }
         }
         .padding()

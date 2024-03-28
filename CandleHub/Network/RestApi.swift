@@ -5,6 +5,7 @@ enum RestApi {
         case allTiсkers = "/all-tickers"
         case candles = "/candle"
         case patterns = "/all-patterns"
+        case predict_patterns = "/detect-pattern"
 
         func url(queryItems: [URLQueryItem]? = nil) -> URL? {
             var components = URLComponents()
@@ -12,17 +13,6 @@ enum RestApi {
             components.host = candleHubHost
             components.path = rawValue
 
-            if let queryItems {
-                components.queryItems = queryItems
-            }
-            return components.url
-        }
-
-        func patternsUrl(queryItems: [URLQueryItem]? = nil) -> URL? {
-            var components = URLComponents()
-            components.scheme = nonSecureScheme
-            components.host = candleHubHost
-            components.path = rawValue
             if let queryItems {
                 components.queryItems = queryItems
             }
