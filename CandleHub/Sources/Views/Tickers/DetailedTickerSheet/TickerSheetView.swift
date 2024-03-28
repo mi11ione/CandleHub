@@ -1,6 +1,9 @@
+import Charts
 import SwiftUI
 
 struct TickerSheetView: View {
+    @Environment(\.colorScheme) var colorScheme
+    
     @State var viewModel: TickerSheetViewModel
     @State var selectedPattern: DetectedPattern?
 
@@ -49,25 +52,32 @@ struct TickerSheetView: View {
             }
             .frame(height: 360)
             .padding()
-
+            
             Text("IdentifiedPatterns").font(.title).bold().padding(.horizontal)
-
-            List {
-                ForEach(DetectionPatterns.detectionPatterns(candles: viewModel.candles).indices, id: \.self) { index in
-                    if let pattern = DetectionPatterns.detectionPatterns(candles: viewModel.candles)[index] {
-                        Text(pattern.name)
-                            .onTapGesture {
-                                selectedPattern = pattern
-                            }
-                            .font(.caption2)
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 160))], spacing: 20) {
+                    ForEach(viewModel.detectedPatterns, id: \.self) { pattern in
+                        VStack {
+                            PatternStickChart(pattern: pattern, gridWidth: 160)
+                                .background(Material.thin)
+                                .cornerRadius(30)
+                            
+                            Text(pattern.name)
+                                .padding(.vertical, 8)
+                        }
+                        .onTapGesture {
+                            selectedPattern = pattern
+                        }
                     }
                 }
+                .padding([.top, .horizontal])
             }
-
+            .ignoresSafeArea()
+        }
+            
             Spacer()
         }
-        .padding(.top)
-    }
+    
 
     private var priceChangeColor: Color {
         if ticker.priceChange.amount > 0 {
