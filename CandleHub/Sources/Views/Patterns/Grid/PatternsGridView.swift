@@ -2,29 +2,22 @@ import SwiftUI
 
 struct PatternsGridView: View {
     var patterns: [Pattern]
-    @Binding var selectedOption: Option
+    var selectedOption: Option
     @State private var selectedPattern: Pattern?
-    var viewModel: PatternsGridViewModel
-
+    var gridWidth: CGFloat
+    
     var body: some View {
-        LazyVGrid(columns: viewModel.adaptiveColumn(for: selectedOption), spacing: 20) {
-            ForEach(patterns, id: \.id) { pattern in
-                VStack {
-                    PatternStickChart(pattern: pattern, gridWidth: viewModel.gridWidth(for: selectedOption))
-                        .background(Material.thin)
-                        .cornerRadius(30)
-
-                    Text(pattern.name)
-                        .padding(.vertical, 8)
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: gridWidth))], spacing: 20) {
+            ForEach(patterns) { pattern in
+                PatternCell(pattern: pattern, gridWidth: gridWidth)
+                    .onTapGesture {
+                        selectedPattern = pattern
+                    }
                 }
-                .onTapGesture {
-                    selectedPattern = pattern
-                }
+                .sheet(item: $selectedPattern) { pattern in
+                    PatternSheetView(pattern: pattern, gridWidth: 300)
             }
-            .sheet(item: $selectedPattern) { pattern in
-                PatternSheetView(pattern: pattern, gridWidth: 300)
-            }
+            .padding([.top, .horizontal])
         }
-        .padding([.top, .horizontal])
     }
 }

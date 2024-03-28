@@ -200,17 +200,6 @@
         }
       }
     },
-    "Okay" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ну ок"
-          }
-        }
-      }
-    },
     "Kirill Koshkarev" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -234,7 +223,15 @@
       }
     },
     "Okay" : {
-
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ну ок"
+          }
+        }
+      }
     },
     "Patterns" : {
       "localizations" : {

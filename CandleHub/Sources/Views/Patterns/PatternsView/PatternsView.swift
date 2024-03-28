@@ -1,9 +1,8 @@
 import SwiftUI
 
 struct PatternsView: View {
+    @StateObject private var viewModel: PatternsGridViewModel = PatternsGridViewModel(fetcher: TradingDataNetworkFetcher())
     @State private var selectedOption: Option = .bigPatterns
-    private var viewModel = PatternsGridViewModel(fetcher: TradingDataNetworkFetcher())
-    @State private var patterns: [Pattern] = []
     @State private var selectedFilter: String = ""
 
     private let filterKeys = ["single", "double", "triple", "complex"]
@@ -27,17 +26,16 @@ struct PatternsView: View {
             }
             ScrollView {
                 Filters(selectedFilter: $selectedFilter)
-
                 PatternsGridView(
-                    patterns: selectedFilter.isEmpty ? patterns : patterns.filter { $0.filter == filterKey(from: selectedFilter) },
-                    selectedOption: $selectedOption,
-                    viewModel: viewModel
+                    patterns: selectedFilter.isEmpty ? viewModel.patterns : viewModel.patterns.filter { $0.filter == filterKey(from: selectedFilter) },
+                    selectedOption: selectedOption,
+                    gridWidth: viewModel.gridWidth(for: selectedOption)
                 )
             }
         }
         .onAppear {
             Task {
-                patterns = await viewModel.fetchPatterns() ?? []
+                await viewModel.fetchPatterns()
             }
         }
     }
