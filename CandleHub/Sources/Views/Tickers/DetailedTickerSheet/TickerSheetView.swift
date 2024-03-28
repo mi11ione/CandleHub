@@ -53,14 +53,21 @@ struct TickerSheetView: View {
             .frame(height: 360)
             .padding()
             
-            Text("IdentifiedPatterns").font(.title).bold().padding(.horizontal)
+            Text("Identified Patterns")
+                .font(.title)
+                .bold()
+                .padding(.horizontal)
+            
             ScrollView {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 160))], spacing: 20) {
-                    ForEach(viewModel.detectedPatterns, id: \.self) { pattern in
+                    ForEach(viewModel.detectedPatterns.compactMap { $0 }, id: \.self) { pattern in
                         VStack {
-                            PatternStickChart(pattern: pattern, gridWidth: 160)
-                                .background(Material.thin)
-                                .cornerRadius(30)
+                            PatternStickChart(
+                                pattern: Converter.convertDetectedPatternIntoPattern(detectedPattern: pattern, candles: viewModel.candles),
+                                gridWidth: 160
+                            )
+                            .background(Material.thin)
+                            .cornerRadius(30)
                             
                             Text(pattern.name)
                                 .padding(.vertical, 8)
