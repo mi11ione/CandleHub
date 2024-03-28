@@ -2,10 +2,10 @@ import SwiftUI
 
 struct Filters: View {
     let filterKeys = [
-        "Single",
-        "Double",
-        "Triple",
-        "Complex",
+        "single",
+        "double",
+        "triple",
+        "complex",
     ]
 
     var filters: [String] {

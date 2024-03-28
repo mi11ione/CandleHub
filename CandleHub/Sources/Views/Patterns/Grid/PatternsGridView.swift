@@ -35,9 +35,13 @@ struct PatternsGridView: View {
     func gridWidth(for selectedOption: Option) -> CGFloat {
         switch selectedOption {
         case .bigPatterns:
-            return 350
+            350
         case .smallPatterns:
-            return 160
+            160
         }
+    }
+
+    func adaptiveColumn(for selectedOption: Option) -> [GridItem] {
+        [GridItem(.adaptive(minimum: gridWidth(for: selectedOption)))]
     }
 }

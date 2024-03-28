@@ -41,6 +41,16 @@
         }
       }
     },
+    "1.0 release 1" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1.0 релиз 1"
+          }
+        }
+      }
+    },
     "About" : {
       "localizations" : {
         "ru" : {
@@ -72,13 +82,24 @@
         }
       }
     },
-    "Complex" : {
+    "Coming soon..." : {
       "extractionState" : "manual",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сложные"
+            "value" : "Скоро..."
+          }
+        }
+      }
+    },
+    "complex" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "сложные"
           }
         }
       }
@@ -93,24 +114,24 @@
         }
       }
     },
-    "Double" : {
+    "double" : {
       "extractionState" : "manual",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Двойные"
+            "value" : "двойные"
           }
         }
       }
     },
-    "English" : {
-      "extractionState" : "stale",
+    "en" : {
+      "extractionState" : "manual",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Английский"
+            "value" : "ru"
           }
         }
       }
@@ -125,14 +146,8 @@
         }
       }
     },
-    "IdentifiedPatterns" : {
+    "Identified Patterns" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Identified Patterns"
-          }
-        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -141,39 +156,85 @@
         }
       }
     },
-    "language" : {
+    "Ilya Matveev" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Language"
-          }
-        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Язык"
+            "value" : "Илья Матвеев"
           }
         }
       }
     },
-    "language_preference" : {
+    "Ilya Solovyev" : {
       "extractionState" : "manual",
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Language Preference"
-          }
-        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Предпочитаемый язык"
+            "value" : "Илья Соловьёв"
           }
         }
       }
+    },
+    "Jacob Trofimov" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Яков Трофимов"
+          }
+        }
+      }
+    },
+    "Kasymkhan Khubiyev" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Касымхан Хубиев"
+          }
+        }
+      }
+    },
+    "Okay" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ну ок"
+          }
+        }
+      }
+    },
+    "Kirill Koshkarev" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кирилл Кошкарёв"
+          }
+        }
+      }
+    },
+    "Mentor" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ментор"
+          }
+        }
+      }
+    },
+    "Okay" : {
+
     },
     "Patterns" : {
       "localizations" : {
@@ -185,13 +246,24 @@
         }
       }
     },
-    "Russian" : {
-      "extractionState" : "stale",
+    "Roman Tverdokhleb" : {
+      "extractionState" : "manual",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Русский"
+            "value" : "Роман Твердохлеб"
+          }
+        }
+      }
+    },
+    "Roman Zhuzhgov" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Роман Жужгов"
           }
         }
       }
@@ -207,13 +279,35 @@
         }
       }
     },
-    "Single" : {
+    "Sergey Yakunin" : {
       "extractionState" : "manual",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Одиночные"
+            "value" : "Сергей Якунин"
+          }
+        }
+      }
+    },
+    "single" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "одиночные"
+          }
+        }
+      }
+    },
+    "Sirius" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сириус"
           }
         }
       }
@@ -240,13 +334,24 @@
         }
       }
     },
-    "Triple" : {
+    "triple" : {
       "extractionState" : "manual",
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Тройные"
+            "value" : "тройные"
+          }
+        }
+      }
+    },
+    "Version" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версия"
           }
         }
       }

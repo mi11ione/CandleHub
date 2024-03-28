@@ -28,28 +28,6 @@ public struct Candle: Identifiable, Equatable, Hashable {
         self.volume = volume
     }
 
-    public init(
-        date: String,
-        openPrice: Double,
-        closePrice: Double,
-        highPrice: Double,
-        lowPrice: Double,
-        value: Double,
-        volume: Double
-    ) {
-        self.date = Date(timeIntervalSinceNow: 0)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        self.date = dateFormatter.date(from: date) ?? Date(timeIntervalSinceNow: 0)
-        self.openPrice = openPrice
-        self.closePrice = closePrice
-        self.highPrice = highPrice
-        self.lowPrice = lowPrice
-        self.value = value
-        self.volume = volume
-    }
-
     static func stringToDate(_ date: String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")

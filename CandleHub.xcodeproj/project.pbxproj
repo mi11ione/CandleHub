@@ -11,7 +11,7 @@
 		048819BC2BAC77FD00AFDA24 /* ChartTimePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B42BAC77FD00AFDA24 /* ChartTimePeriod.swift */; };
 		048819BE2BAC77FD00AFDA24 /* MoexCandles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B62BAC77FD00AFDA24 /* MoexCandles.swift */; };
 		048819BF2BAC77FD00AFDA24 /* TickerMOEX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B72BAC77FD00AFDA24 /* TickerMOEX.swift */; };
-		048819C02BAC77FD00AFDA24 /* MoexApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B82BAC77FD00AFDA24 /* MoexApi.swift */; };
+		048819C02BAC77FD00AFDA24 /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B82BAC77FD00AFDA24 /* RestApi.swift */; };
 		048819C12BAC77FD00AFDA24 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819B92BAC77FD00AFDA24 /* Money.swift */; };
 		048819C22BAC77FD00AFDA24 /* MoexTiсkers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048819BA2BAC77FD00AFDA24 /* MoexTiсkers.swift */; };
 		1C952F6268ED96F1066CFB2C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879B0FC4A003425D16DE20C7 /* TabBarView.swift */; };
@@ -30,6 +30,7 @@
 		334D84212BAD8A8900252A7C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334D84202BAD8A8900252A7C /* SearchBar.swift */; };
 		336C9CAB2BADEC030093DE16 /* CandleStickChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336C9CAA2BADEC030093DE16 /* CandleStickChart.swift */; };
 		336E29822BAF058600776F5B /* CandlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E29812BAF058600776F5B /* CandlesViewModel.swift */; };
+		337887012BB4AF9D00307BC5 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 337887002BB4AF9D00307BC5 /* Localizable.xcstrings */; };
 		33AA4BE62BAB87BC0047868E /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA4BE52BAB87BC0047868E /* TabBar.swift */; };
 		33AA4BE82BAB87CE0047868E /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AA4BE72BAB87CE0047868E /* Tab.swift */; };
 		33B98B742BB347B700551096 /* TickerGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B98B732BB347B700551096 /* TickerGridItemView.swift */; };
@@ -37,15 +38,15 @@
 		33B98B792BB349D900551096 /* PatternSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B98B782BB349D900551096 /* PatternSheetView.swift */; };
 		33C15C162BACE1D0000464CE /* TickersGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C15C152BACE1D0000464CE /* TickersGridView.swift */; };
 		33C15C182BACE20F000464CE /* PatternsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C15C172BACE20F000464CE /* PatternsGridView.swift */; };
-		33D2B6C12BB45DD100978D29 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 33D2B6C02BB45DD100978D29 /* Localizable.xcstrings */; };
 		33D3E4112BAB281600A56DDA /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3E4102BAB281600A56DDA /* Filters.swift */; };
 		33D3E4202BAB479500A56DDA /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D3E41F2BAB479500A56DDA /* FilterButton.swift */; };
 		33DCD4B32BB0C6780071781F /* TickerSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCD4B22BB0C6780071781F /* TickerSheetView.swift */; };
 		33DCD4BA2BB0C7510071781F /* AnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCD4B92BB0C7510071781F /* AnimationExtension.swift */; };
-		33DCD4BC2BB0CBF20071781F /* PatternsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCD4BB2BB0CBF20071781F /* PatternsRepository.swift */; };
 		33E932F42BADC90F0080D003 /* TickersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E932F32BADC90F0080D003 /* TickersViewModel.swift */; };
 		586D143B74732600E264A203 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F31467DA628392289E9BB9B0 /* Preview Assets.xcassets */; };
 		62B144F212D385EBF52A14E4 /* CandleHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */; };
+		635FABD02BB310B200E8A169 /* PatternFromBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FABCF2BB310B200E8A169 /* PatternFromBack.swift */; };
+		635FABDD2BB4448300E8A169 /* PatternsGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FABDB2BB4448300E8A169 /* PatternsGridViewModel.swift */; };
 		636A4BFA2BAF0EBD00420BF5 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4BF92BAF0EBD00420BF5 /* Pattern.swift */; };
 		636A4BFC2BAF1B3E00420BF5 /* PatternStickChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4BFB2BAF1B3E00420BF5 /* PatternStickChart.swift */; };
 		AE5038D32BB30C5800945831 /* Candle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5038D22BB30C5800945831 /* Candle.swift */; };
@@ -116,7 +117,7 @@
 		048819B42BAC77FD00AFDA24 /* ChartTimePeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartTimePeriod.swift; sourceTree = "<group>"; };
 		048819B62BAC77FD00AFDA24 /* MoexCandles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoexCandles.swift; sourceTree = "<group>"; };
 		048819B72BAC77FD00AFDA24 /* TickerMOEX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerMOEX.swift; sourceTree = "<group>"; };
-		048819B82BAC77FD00AFDA24 /* MoexApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoexApi.swift; sourceTree = "<group>"; };
+		048819B82BAC77FD00AFDA24 /* RestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
 		048819B92BAC77FD00AFDA24 /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 		048819BA2BAC77FD00AFDA24 /* MoexTiсkers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoexTiсkers.swift"; sourceTree = "<group>"; };
 		0A3CF217A9F7C98936191796 /* CandleHubTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CandleHubTests-Info.plist"; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 		334D84202BAD8A8900252A7C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		336C9CAA2BADEC030093DE16 /* CandleStickChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleStickChart.swift; sourceTree = "<group>"; };
 		336E29812BAF058600776F5B /* CandlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlesViewModel.swift; sourceTree = "<group>"; };
+		337887002BB4AF9D00307BC5 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		33AA4BE52BAB87BC0047868E /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		33AA4BE72BAB87CE0047868E /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		33ACF3FF2BB077F1001ACA8A /* CandleStick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CandleStick.xcodeproj; sourceTree = "<group>"; };
@@ -142,15 +144,15 @@
 		33B98B782BB349D900551096 /* PatternSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternSheetView.swift; sourceTree = "<group>"; };
 		33C15C152BACE1D0000464CE /* TickersGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersGridView.swift; sourceTree = "<group>"; };
 		33C15C172BACE20F000464CE /* PatternsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsGridView.swift; sourceTree = "<group>"; };
-		33D2B6C02BB45DD100978D29 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		33D3E4102BAB281600A56DDA /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		33D3E41F2BAB479500A56DDA /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		33DCD4B22BB0C6780071781F /* TickerSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerSheetView.swift; sourceTree = "<group>"; };
 		33DCD4B92BB0C7510071781F /* AnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExtension.swift; sourceTree = "<group>"; };
-		33DCD4BB2BB0CBF20071781F /* PatternsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternsRepository.swift; sourceTree = "<group>"; };
 		33E932F32BADC90F0080D003 /* TickersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersViewModel.swift; sourceTree = "<group>"; };
 		346BEF51999A85EE1B26A7C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61634B87A7767804D38F56FD /* CandleHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CandleHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		635FABCF2BB310B200E8A169 /* PatternFromBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternFromBack.swift; sourceTree = "<group>"; };
+		635FABDB2BB4448300E8A169 /* PatternsGridViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PatternsGridViewModel.swift; path = CandleHub/Sources/Views/Patterns/Grid/PatternsGridViewModel.swift; sourceTree = SOURCE_ROOT; };
 		636A4BF92BAF0EBD00420BF5 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
 		636A4BFB2BAF1B3E00420BF5 /* PatternStickChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternStickChart.swift; sourceTree = "<group>"; };
 		70E4DBBCD941D60924F891B6 /* CandleHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleHubApp.swift; sourceTree = "<group>"; };
@@ -206,13 +208,14 @@
 			isa = PBXGroup;
 			children = (
 				048819B42BAC77FD00AFDA24 /* ChartTimePeriod.swift */,
-				048819B82BAC77FD00AFDA24 /* MoexApi.swift */,
+				048819B82BAC77FD00AFDA24 /* RestApi.swift */,
 				AE5038D22BB30C5800945831 /* Candle.swift */,
 				048819B62BAC77FD00AFDA24 /* MoexCandles.swift */,
 				048819BA2BAC77FD00AFDA24 /* MoexTiсkers.swift */,
 				048819B92BAC77FD00AFDA24 /* Money.swift */,
 				048819B72BAC77FD00AFDA24 /* TickerMOEX.swift */,
 				048819B32BAC77FD00AFDA24 /* TradingDataNetworkFetcher.swift */,
+				635FABCF2BB310B200E8A169 /* PatternFromBack.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 		33DCD4B82BB0C6EF0071781F /* PatternsView */ = {
 			isa = PBXGroup;
 			children = (
+				635FABDB2BB4448300E8A169 /* PatternsGridViewModel.swift */,
 				3328CDB72BAC68A3005032AF /* PatternsView.swift */,
 				3328CDB92BAC68BC005032AF /* PatternsViewSwitch.swift */,
 			);
@@ -465,7 +469,7 @@
 				AEE833652BAD787900786D60 /* Service */,
 				3322328F2BAB983700D40FAD /* Views */,
 				3322327A2BAB96D200D40FAD /* Extras */,
-				33D2B6C02BB45DD100978D29 /* Localizable.xcstrings */,
+				337887002BB4AF9D00307BC5 /* Localizable.xcstrings */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -507,7 +511,6 @@
 			isa = PBXGroup;
 			children = (
 				636A4BF92BAF0EBD00420BF5 /* Pattern.swift */,
-				33DCD4BB2BB0CBF20071781F /* PatternsRepository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -694,7 +697,7 @@
 			files = (
 				B5BDCD8C3452CCD3118DCDEE /* Assets.xcassets in Resources */,
 				586D143B74732600E264A203 /* Preview Assets.xcassets in Resources */,
-				33D2B6C12BB45DD100978D29 /* Localizable.xcstrings in Resources */,
+				337887012BB4AF9D00307BC5 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,10 +752,11 @@
 				332232762BAB95E500D40FAD /* TabItem.swift in Sources */,
 				AE988FD02BAF205F0036F225 /* CloseRegressionModel.mlmodel in Sources */,
 				048819C22BAC77FD00AFDA24 /* MoexTiсkers.swift in Sources */,
-				048819C02BAC77FD00AFDA24 /* MoexApi.swift in Sources */,
+				048819C02BAC77FD00AFDA24 /* RestApi.swift in Sources */,
 				048819BC2BAC77FD00AFDA24 /* ChartTimePeriod.swift in Sources */,
 				332232822BAB974C00D40FAD /* OutlineOverlay.swift in Sources */,
 				AEE833672BAD788C00786D60 /* Predictor.swift in Sources */,
+				635FABD02BB310B200E8A169 /* PatternFromBack.swift in Sources */,
 				AE5038D72BB30C9C00945831 /* DetectionPatterns.swift in Sources */,
 				AE5038DB2BB3155A00945831 /* TickerSheetViewModel.swift in Sources */,
 				AE988FCF2BAF205F0036F225 /* OpenRegressionModel.mlmodel in Sources */,
@@ -760,8 +764,8 @@
 				048819BF2BAC77FD00AFDA24 /* TickerMOEX.swift in Sources */,
 				AE988FD22BAF205F0036F225 /* LowRegressionModel.mlmodel in Sources */,
 				33C15C182BACE20F000464CE /* PatternsGridView.swift in Sources */,
-				33DCD4BC2BB0CBF20071781F /* PatternsRepository.swift in Sources */,
 				AE988FD12BAF205F0036F225 /* HighRegressionModel.mlmodel in Sources */,
+				635FABDD2BB4448300E8A169 /* PatternsGridViewModel.swift in Sources */,
 				3322327C2BAB96E900D40FAD /* OutlineModifier.swift in Sources */,
 				048819BE2BAC77FD00AFDA24 /* MoexCandles.swift in Sources */,
 			);

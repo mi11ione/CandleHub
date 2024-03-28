@@ -10,7 +10,7 @@ struct PatternSheetView: View {
                 Rectangle()
                     .fill(.ultraThinMaterial)
                     .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
-                PatternStickChart(pattern: pattern, gridWidth: 300)
+                PatternStickChart(pattern: pattern, gridWidth: 300, gridHeight: 300)
             }
         }
         .frame(height: 360)
