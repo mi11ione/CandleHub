@@ -4,6 +4,7 @@ protocol TradingDataNetworkFetching {
     func getMoexTickers() async -> [TickerMOEX]?
     func getMoexCandles(ticker: String, timePeriod: ChartTimePeriod) async -> [Candle]?
     func getPatterns() async -> [Pattern]?
+    func getDetectedPatterns(candles: [Candle]) async -> [DetectedPattern]?
 }
 
 final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObject {
@@ -59,7 +60,7 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
         let languageCode = Locale.current.language.languageCode?.identifier ?? "en"
         queryItems.append(URLQueryItem(name: "language", value: languageCode))
 
-        guard let url = RestApi.Method.patterns.patternsUrl(queryItems: queryItems) else {
+        guard let url = RestApi.Method.patterns.url(queryItems: queryItems) else {
             assertionFailure()
             return nil
         }
@@ -68,6 +69,27 @@ final class TradingDataNetworkFetcher: TradingDataNetworkFetching, ObservableObj
             let data = try await request(url)
             let patternsFromBack = try decodeJSON(type: [PatternFromBack].self, from: data)
             let patterns = parsePatternsFromBack(patternsFromBack: patternsFromBack)
+            return patterns
+        } catch {
+            print(error)
+        }
+        return nil
+    }
+
+    func getDetectedPatterns(candles: [Candle]) async -> [DetectedPattern]? {
+        var queryItems = [URLQueryItem]()
+        queryItems.append(URLQueryItem(name: "language", value: Locale.current.languageCode ?? "ru"))
+        guard let url = RestApi.Method.predict_patterns.url(queryItems: queryItems) else {
+            assertionFailure()
+            return nil
+        }
+
+        let body = try? JSONSerialization.data(withJSONObject: parseCandlesToJson(candles: candles))
+        print(url)
+        do {
+            let data = try await request(url, body: body, method: "POST")
+            let patternsFromBack = try decodeJSON(type: [DetectedPatternFromBack].self, from: data)
+            let patterns = parseDetectedPatternsFromBack(patternsFromBack: patternsFromBack)
             return patterns
         } catch {
             print(error)
@@ -88,11 +110,22 @@ private func decodeJSON<T: Decodable>(type: T.Type, from data: Data) throws -> T
     return response
 }
 
-private func request(_ url: URL) async throws -> Data {
+private func request(_ url: URL, body: Data? = nil, method: String = "GET") async throws -> Data {
     let configuration = URLSessionConfiguration.default
     configuration.timeoutIntervalForRequest = 10
     let session = URLSession(configuration: configuration)
-    let (data, response) = try await session.data(for: URLRequest(url: url))
+    var request = URLRequest(url: url)
+    request.httpMethod = method
+    if let body {
+        request.httpBody = body
+    }
+
+    request.setValue(
+        "application/json",
+        forHTTPHeaderField: "Content-Type"
+    )
+
+    let (data, response) = try await session.data(for: request)
     guard let httpURLResponse = response.httpURLResponse, httpURLResponse.isSuccessful else {
         throw NetworkingError.requestFailed
     }
@@ -241,6 +274,23 @@ private func parseMoexCandles(moexCandles: MoexCandles) -> [Candle] {
     return candles
 }
 
+private func parseCandlesToJson(candles: [Candle]) -> [[String: Any]] {
+    var json: [[String: Any]] = []
+    for candle in candles {
+        var json_element: [String: Any] = [:]
+        json_element["openPrice"] = candle.openPrice
+        json_element["highPrice"] = candle.highPrice
+        json_element["id"] = candle.id.uuidString
+        json_element["date"] = "2024-03-27T21:33:06Z"
+        json_element["lowPrice"] = candle.lowPrice
+        json_element["closePrice"] = candle.closePrice
+        json_element["value"] = candle.value
+        json_element["volume"] = candle.volume
+        json.append(json_element)
+    }
+    return json
+}
+
 private func parsePatternsFromBack(patternsFromBack: [PatternFromBack]) -> [Pattern] {
     var patterns = [Pattern]()
     for patternIndex in patternsFromBack.indices {
@@ -266,6 +316,23 @@ private func parsePatternsFromBack(patternsFromBack: [PatternFromBack]) -> [Patt
                 candles: candles,
                 info: patternsFromBack[patternIndex].info,
                 filter: patternsFromBack[patternIndex].filter
+            )
+        )
+    }
+    return patterns
+}
+
+private func parseDetectedPatternsFromBack(patternsFromBack: [DetectedPatternFromBack]) -> [DetectedPattern] {
+    var patterns = [DetectedPattern]()
+
+    for pattern in patternsFromBack {
+        patterns.append(
+            DetectedPattern(
+                name: pattern.name,
+                signal: pattern.signal,
+                dates: pattern.dates.map {
+                    Candle.stringToDate($0)
+                }
             )
         )
     }
