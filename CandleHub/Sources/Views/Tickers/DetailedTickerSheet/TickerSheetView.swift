@@ -1,6 +1,9 @@
+import Charts
 import SwiftUI
 
 struct TickerSheetView: View {
+    @Environment(\.colorScheme) var colorScheme
+
     @State var viewModel: TickerSheetViewModel
     @State var selectedPattern: DetectedPattern?
 
@@ -50,23 +53,42 @@ struct TickerSheetView: View {
             .frame(height: 360)
             .padding()
 
-            Text("Identified Patterns").font(.title).bold().padding(.horizontal)
+            Text("Identified Patterns")
+                .font(.title)
+                .bold()
+                .padding(.horizontal)
 
-            List {
-                ForEach(DetectionPatterns.detectionPatterns(candles: viewModel.candles).indices, id: \.self) { index in
-                    if let pattern = DetectionPatterns.detectionPatterns(candles: viewModel.candles)[index] {
-                        Text(pattern.name)
-                            .onTapGesture {
-                                selectedPattern = pattern
-                            }
-                            .font(.caption2)
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 160))], spacing: 20) {
+                    ForEach(viewModel.detectedPatterns.compactMap { $0 }, id: \.id) { pattern in
+                        VStack {
+                            PatternStickChart(
+                                pattern: Converter.convertDetectedPatternIntoPattern(detectedPattern: pattern, candles: viewModel.candles),
+                                gridWidth: 160
+                            )
+                            .background(Material.thin)
+                            .cornerRadius(30)
+
+                            Text(pattern.name)
+                                .padding(.vertical, 8)
+                        }
+                        .onTapGesture {
+                            selectedPattern = pattern
+                        }
                     }
                 }
+                .padding([.top, .horizontal])
             }
-
-            Spacer()
+            .ignoresSafeArea()
         }
-        .padding(.top)
+
+        Spacer()
+
+            .onAppear {
+                Task {
+                    await viewModel.fetchData()
+                }
+            }
     }
 
     private var priceChangeColor: Color {
