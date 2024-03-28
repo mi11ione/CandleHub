@@ -4,6 +4,7 @@ struct CandlesViewModel {
     let ticker: TickerMOEX
     let tickerTitle: String
     var candles: [Candle] = []
+    var detectedPatterns: [DetectedPattern] = []
     private var fetcher: TradingDataNetworkFetching
 
     init(
@@ -20,9 +21,17 @@ struct CandlesViewModel {
         guard let fetchedCandles = await fetcher.getMoexCandles(
             ticker: tickerTitle,
             timePeriod: .hour
-        ) else {
+        )
+        else {
             return
         }
         candles = Array(fetchedCandles.suffix(numberOfCandles))
+        
+        guard let fetchedPatterns = await fetcher.getDetectedPatterns(candles: candles)
+        else {
+            return
+        }
+
+        detectedPatterns = fetchedPatterns
     }
 }
