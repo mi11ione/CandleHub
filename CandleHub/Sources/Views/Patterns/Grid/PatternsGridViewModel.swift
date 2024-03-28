@@ -1,27 +1,25 @@
 import SwiftUI
 
-struct PatternsGridViewModel {
+class PatternsGridViewModel: ObservableObject {
     private let fetcher: TradingDataNetworkFetching
+    @Published var patterns: [Pattern] = []
 
     init(fetcher: TradingDataNetworkFetching) {
         self.fetcher = fetcher
     }
 
-    func fetchPatterns() async -> [Pattern]? {
-        let fetchedArray = await fetcher.getPatterns()
-        return fetchedArray
+    func fetchPatterns() async {
+        if let fetchedPatterns = await fetcher.getPatterns() {
+            DispatchQueue.main.async {
+                self.patterns = fetchedPatterns
+            }
+        }
     }
 
     func gridWidth(for selectedOption: Option) -> CGFloat {
         switch selectedOption {
-        case .bigPatterns:
-            350
-        case .smallPatterns:
-            160
+        case .bigPatterns: return 350
+        case .smallPatterns: return 160
         }
-    }
-
-    func adaptiveColumn(for selectedOption: Option) -> [GridItem] {
-        [GridItem(.adaptive(minimum: gridWidth(for: selectedOption)))]
     }
 }
