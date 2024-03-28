@@ -51,16 +51,15 @@
 		636A4BFA2BAF0EBD00420BF5 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4BF92BAF0EBD00420BF5 /* Pattern.swift */; };
 		636A4BFC2BAF1B3E00420BF5 /* PatternStickChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636A4BFB2BAF1B3E00420BF5 /* PatternStickChart.swift */; };
 		AE5038D32BB30C5800945831 /* Candle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5038D22BB30C5800945831 /* Candle.swift */; };
-		AE5038D52BB30C9400945831 /* CandleStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5038D42BB30C9300945831 /* CandleStick.swift */; };
-		AE5038D72BB30C9C00945831 /* DetectionPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5038D62BB30C9C00945831 /* DetectionPatterns.swift */; };
 		AE5038DB2BB3155A00945831 /* TickerSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5038DA2BB3155A00945831 /* TickerSheetViewModel.swift */; };
 		AE5039132BB567AE00945831 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5039122BB567AE00945831 /* Converter.swift */; };
+		AE50392F2BB5A63E00945831 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE50392E2BB5A63E00945831 /* Adapter.swift */; };
+		AE5039312BB5A6BF00945831 /* DetectionPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5039302BB5A6BF00945831 /* DetectionPatterns.swift */; };
 		AE988FCF2BAF205F0036F225 /* OpenRegressionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE988FCB2BAF205F0036F225 /* OpenRegressionModel.mlmodel */; };
 		AE988FD02BAF205F0036F225 /* CloseRegressionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE988FCC2BAF205F0036F225 /* CloseRegressionModel.mlmodel */; };
 		AE988FD12BAF205F0036F225 /* HighRegressionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE988FCD2BAF205F0036F225 /* HighRegressionModel.mlmodel */; };
 		AE988FD22BAF205F0036F225 /* LowRegressionModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AE988FCE2BAF205F0036F225 /* LowRegressionModel.mlmodel */; };
 		AEE833672BAD788C00786D60 /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE833662BAD788C00786D60 /* Predictor.swift */; };
-		AEE833A12BAF143E00786D60 /* Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE833732BADD4E300786D60 /* Adapter.swift */; };
 		B5BDCD8C3452CCD3118DCDEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 346BEF51999A85EE1B26A7C7 /* Assets.xcassets */; };
 		F5295DB90B37882622BC0944 /* TuistBundle+CandleHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06755176204E80DA842F124 /* TuistBundle+CandleHub.swift */; };
 		FE4D8F95B8EDBA9ED4487517 /* CandleHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938817186F191291621E964F /* CandleHubTests.swift */; };
@@ -163,16 +162,15 @@
 		938817186F191291621E964F /* CandleHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleHubTests.swift; sourceTree = "<group>"; };
 		A06755176204E80DA842F124 /* TuistBundle+CandleHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+CandleHub.swift"; sourceTree = "<group>"; };
 		AE5038D22BB30C5800945831 /* Candle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candle.swift; sourceTree = "<group>"; };
-		AE5038D42BB30C9300945831 /* CandleStick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleStick.swift; sourceTree = "<group>"; };
-		AE5038D62BB30C9C00945831 /* DetectionPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionPatterns.swift; sourceTree = "<group>"; };
 		AE5038DA2BB3155A00945831 /* TickerSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TickerSheetViewModel.swift; path = CandleHub/Sources/Views/Tickers/DetailedTickerSheet/TickerSheetViewModel.swift; sourceTree = SOURCE_ROOT; };
 		AE5039122BB567AE00945831 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		AE50392E2BB5A63E00945831 /* Adapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
+		AE5039302BB5A6BF00945831 /* DetectionPatterns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectionPatterns.swift; sourceTree = "<group>"; };
 		AE988FCB2BAF205F0036F225 /* OpenRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = OpenRegressionModel.mlmodel; sourceTree = "<group>"; };
 		AE988FCC2BAF205F0036F225 /* CloseRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CloseRegressionModel.mlmodel; sourceTree = "<group>"; };
 		AE988FCD2BAF205F0036F225 /* HighRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = HighRegressionModel.mlmodel; sourceTree = "<group>"; };
 		AE988FCE2BAF205F0036F225 /* LowRegressionModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = LowRegressionModel.mlmodel; sourceTree = "<group>"; };
 		AEE833662BAD788C00786D60 /* Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predictor.swift; sourceTree = "<group>"; };
-		AEE833732BADD4E300786D60 /* Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adapter.swift; sourceTree = "<group>"; };
 		AEE833902BAF091C00786D60 /* CandleStick.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CandleStick.xcodeproj; path = CandleStick/CandleStick.xcodeproj; sourceTree = "<group>"; };
 		B32DC36E8BAFBC6C2D3308B8 /* CandleHub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CandleHub-Info.plist"; sourceTree = "<group>"; };
 		F31467DA628392289E9BB9B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -529,10 +527,9 @@
 		AEE833652BAD787900786D60 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				AE5038D42BB30C9300945831 /* CandleStick.swift */,
+				AE5039302BB5A6BF00945831 /* DetectionPatterns.swift */,
+				AE50392E2BB5A63E00945831 /* Adapter.swift */,
 				AEE833662BAD788C00786D60 /* Predictor.swift */,
-				AE5038D62BB30C9C00945831 /* DetectionPatterns.swift */,
-				AEE833732BADD4E300786D60 /* Adapter.swift */,
 				AE5039122BB567AE00945831 /* Converter.swift */,
 			);
 			path = Service;
@@ -722,9 +719,7 @@
 				33B98B762BB3480200551096 /* TickersViewSwitch.swift in Sources */,
 				33B98B742BB347B700551096 /* TickerGridItemView.swift in Sources */,
 				3371971A2BB58C94000893AE /* PatternCell.swift in Sources */,
-				AEE833A12BAF143E00786D60 /* Adapter.swift in Sources */,
 				3328CDBA2BAC68BC005032AF /* PatternsViewSwitch.swift in Sources */,
-				AE5038D52BB30C9400945831 /* CandleStick.swift in Sources */,
 				62B144F212D385EBF52A14E4 /* CandleHubApp.swift in Sources */,
 				33DCD4BA2BB0C7510071781F /* AnimationExtension.swift in Sources */,
 				33E932F42BADC90F0080D003 /* TickersViewModel.swift in Sources */,
@@ -743,6 +738,7 @@
 				33D3E4202BAB479500A56DDA /* FilterButton.swift in Sources */,
 				3328CDB82BAC68A3005032AF /* PatternsView.swift in Sources */,
 				AE5039132BB567AE00945831 /* Converter.swift in Sources */,
+				AE50392F2BB5A63E00945831 /* Adapter.swift in Sources */,
 				048819C12BAC77FD00AFDA24 /* Money.swift in Sources */,
 				334D84212BAD8A8900252A7C /* SearchBar.swift in Sources */,
 				332232942BAB9A0D00D40FAD /* TickersView.swift in Sources */,
@@ -761,8 +757,8 @@
 				332232822BAB974C00D40FAD /* OutlineOverlay.swift in Sources */,
 				AEE833672BAD788C00786D60 /* Predictor.swift in Sources */,
 				635FABD02BB310B200E8A169 /* PatternFromBack.swift in Sources */,
-				AE5038D72BB30C9C00945831 /* DetectionPatterns.swift in Sources */,
 				AE5038DB2BB3155A00945831 /* TickerSheetViewModel.swift in Sources */,
+				AE5039312BB5A6BF00945831 /* DetectionPatterns.swift in Sources */,
 				AE988FCF2BAF205F0036F225 /* OpenRegressionModel.mlmodel in Sources */,
 				332232782BAB96A100D40FAD /* TabPreferenceKey.swift in Sources */,
 				048819BF2BAC77FD00AFDA24 /* TickerMOEX.swift in Sources */,

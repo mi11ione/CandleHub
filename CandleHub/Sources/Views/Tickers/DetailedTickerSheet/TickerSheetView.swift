@@ -3,7 +3,7 @@ import SwiftUI
 
 struct TickerSheetView: View {
     @Environment(\.colorScheme) var colorScheme
-    
+
     @State var viewModel: TickerSheetViewModel
     @State var selectedPattern: DetectedPattern?
 
@@ -52,12 +52,12 @@ struct TickerSheetView: View {
             }
             .frame(height: 360)
             .padding()
-            
+
             Text("Identified Patterns")
                 .font(.title)
                 .bold()
                 .padding(.horizontal)
-            
+
             ScrollView {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 160))], spacing: 20) {
                     ForEach(viewModel.detectedPatterns.compactMap { $0 }, id: \.id) { pattern in
@@ -68,7 +68,7 @@ struct TickerSheetView: View {
                             )
                             .background(Material.thin)
                             .cornerRadius(30)
-                            
+
                             Text(pattern.name)
                                 .padding(.vertical, 8)
                         }
@@ -81,17 +81,15 @@ struct TickerSheetView: View {
             }
             .ignoresSafeArea()
         }
-            
-            Spacer()
-        
+
+        Spacer()
+
             .onAppear {
                 Task {
                     await viewModel.fetchData()
                 }
             }
-        }
-
-    
+    }
 
     private var priceChangeColor: Color {
         if ticker.priceChange.amount > 0 {
